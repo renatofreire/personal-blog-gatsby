@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Renato Freire - Blog`,
-    description: `Renato Calzzetta Moraes Freire - Desenvolvedor Web`,
+    description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
     author: `@renatofreire`,
   },
   plugins: [
@@ -18,13 +18,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `renatofreire-blog`,
+        short_name: `renatofreire-blog`,
+        description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
+        background_color: `#333`,
+        theme_color: `#73e3e8`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        theme_color_in_head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
