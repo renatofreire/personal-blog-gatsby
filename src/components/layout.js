@@ -1,9 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Layout = ({ children }) => {
-  return <main>{children}</main>
-}
+import GlobalStyles from "../styles/global-style"
+
+import Header from "./Header"
+
+const Layout = ({ children }) => (
+  <>
+    <GlobalStyles />
+    <Header />
+    <main>{children}</main>
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
