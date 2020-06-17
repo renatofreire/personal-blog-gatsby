@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import colors from "./colors"
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -49,5 +50,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+a:active, a:focus,
+button:active, button:focus  {
+	border: 1px dotted ${colors.brand2};
+}
 `
+
 export default GlobalStyles
