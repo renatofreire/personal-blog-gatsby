@@ -52,6 +52,9 @@ table {
 }
 
 
+body {
+	font-size: 16px;
+}
 
 a:active, a:focus,
 button:active, button:focus  {

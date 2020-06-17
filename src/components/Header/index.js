@@ -11,8 +11,7 @@ import MenuButton from "./MenuButton"
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
-    <>
-      <S.HeaderSpacer />
+    <S.HeaderSpacer>
       <S.Header>
         <PageContainer>
           <S.Navigation>
@@ -27,7 +26,7 @@ const Header = () => {
           </S.Navigation>
         </PageContainer>
       </S.Header>
-    </>
+    </S.HeaderSpacer>
   )
 }
 
