@@ -21,6 +21,7 @@ const SocialLinks = ({ className, iconSize, appearance }) => {
           key={name}
           href={`${url}${user}`}
           title={`acesse meu perfil no ${name}`}
+          rel="noopener noreferrer"
         >
           <img
             width={iconSize}

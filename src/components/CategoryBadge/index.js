@@ -27,7 +27,7 @@ CategoryBadge.defaultProps = {
 
 CategoryBadge.propTypes = {
   className: PropTypes.string,
-  color: PropTypes.number,
+  size: PropTypes.number,
   color: PropTypes.string,
 }
 

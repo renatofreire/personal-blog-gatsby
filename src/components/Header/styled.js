@@ -17,6 +17,7 @@ export const Header = styled.header`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   max-height: 60px;
 `
 export const Navigation = styled.nav`
@@ -39,6 +40,7 @@ export const LinksContainer = styled.div`
     width: 100%;
     max-width: 250px;
     position: absolute;
+    z-index: 99;
     right: -250px;
     box-sizing: border-box;
     flex-direction: column;
@@ -48,6 +50,7 @@ export const LinksContainer = styled.div`
     padding: 32px 8px;
     height: 100px;
     justify-content: space-around;
+    box-shadow: 2px 2px 6px ${colors.dark};
   }
 
   &.menu-open {
