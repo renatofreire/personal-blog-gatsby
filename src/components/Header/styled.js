@@ -59,7 +59,7 @@ export const Link = styled(GatsbyLink)`
   font: ${fonts.text};
   text-decoration: none;
   color: ${colors.white};
-  margin-left: 5px;
+  margin-left: 10px;
 `
 export const Button = styled.button`
   display: none;

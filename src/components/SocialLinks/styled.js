@@ -6,4 +6,8 @@ export const Container = styled.div`
 
 export const SocialLink = styled.a`
   margin: 0 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
