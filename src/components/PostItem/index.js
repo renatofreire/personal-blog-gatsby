@@ -11,7 +11,8 @@ const PostItem = ({
   title,
   category,
   date,
-  imageCover,
+  image,
+  altImage,
   excerpt,
   tags,
   url,
@@ -21,7 +22,9 @@ const PostItem = ({
   return (
     <S.PostContainer>
       <S.Title>{title}</S.Title>
-      <S.CoverImage src={imageCover} alt="" />
+      <S.ImageContainer to={url}>
+        <S.CoverImage src={image?.publicURL} alt={altImage} />
+      </S.ImageContainer>
       <S.PostContent>
         <S.InfoContainer>
           <S.CategoryContainer>
@@ -32,16 +35,18 @@ const PostItem = ({
           </S.CategoryContainer>
           <S.Date>Postado em {date}</S.Date>
         </S.InfoContainer>
-        <S.Excerpt>{excerpt}</S.Excerpt>
+        <S.Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
       </S.PostContent>
-      <S.TagsContainer>
-        <S.TagsTitle>tags:</S.TagsTitle>
-        <S.TagsList>
-          {tags.map(tag => (
-            <S.TagItem key={tag}>{tag}</S.TagItem>
-          ))}
-        </S.TagsList>
-      </S.TagsContainer>
+      {tags && (
+        <S.TagsContainer>
+          <S.TagsTitle>tags:</S.TagsTitle>
+          <S.TagsList>
+            {tags.map(tag => (
+              <S.TagItem key={tag}>{tag}</S.TagItem>
+            ))}
+          </S.TagsList>
+        </S.TagsContainer>
+      )}
       <S.PostLink to={url}>ver mais</S.PostLink>
     </S.PostContainer>
   )
@@ -51,7 +56,8 @@ PostItem.propTypes = {
   title: propTypes.string.isRequired,
   category: propTypes.string.isRequired,
   date: propTypes.string.isRequired,
-  imageCover: propTypes.string.isRequired,
+  image: propTypes.object.isRequired,
+  altImage: propTypes.string.isRequired,
   excerpt: propTypes.string.isRequired,
   tags: propTypes.arrayOf(propTypes.string).isRequired,
   url: propTypes.string.isRequired,

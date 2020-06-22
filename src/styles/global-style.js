@@ -56,10 +56,30 @@ body {
 	font-size: 16px;
 }
 
+p > a{
+	color: ${colors.link};
+}
+
+p > a:visited {
+	color: ${colors.visitedLink}
+}
+
 a:active, a:focus,
 button:active, button:focus  {
 	border: 1px dotted ${colors.brand2};
 }
+
+code {
+	font-family: "Courier New", Courier, monospace;
+	background-color: ${colors.codeBackground};
+	padding: 0px 2px;
+	color: ${colors.code}
+}
+
+strong {
+	font-weight: bold;
+}
+
 `
 
 export default GlobalStyles

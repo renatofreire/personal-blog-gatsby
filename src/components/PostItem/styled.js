@@ -28,17 +28,31 @@ export const PostContainer = styled.article`
 
 export const Title = styled(TitleComponent)`
   grid-area: title;
+  font-size: 1.3em;
 `
-export const CoverImage = styled.img`
+
+export const ImageContainer = styled(Link)`
   grid-area: image;
+  display: flex;
+  justify-content: center;
 
   @media (max-width: 799px) {
     justify-self: center;
   }
 `
+
+export const CoverImage = styled.img`
+  max-width: 250px;
+
+  @media (max-width: 799px) {
+    width: 100%;
+  }
+`
+
 export const PostContent = styled.div`
   grid-area: content;
 `
+
 export const InfoContainer = styled.div`
   display: flex;
   align-items: center;
@@ -107,7 +121,7 @@ export const PostLink = styled(Link)`
   grid-area: link;
   height: 2em;
   color: ${colors.dark};
-  font-family: ${fonts.infos};
+  font: ${fonts.infos};
   text-decoration: none;
   display: flex;
   align-items: center;

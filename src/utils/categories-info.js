@@ -26,6 +26,11 @@ const categories = {
     slug: "carreira",
     color: colors.category5,
   },
+  dev: {
+    label: "desenvolvimento",
+    slug: "desenvolvimento",
+    color: colors.brand3,
+  },
 }
 
 const blankCategory = {
