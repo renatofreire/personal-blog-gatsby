@@ -72,10 +72,17 @@ export const Content = styled.div`
   ol,
   ul {
     width: 100%;
-    list-style: arabic-latin;
     box-sizing: border-box;
     margin-bottom: 1em;
     padding-left: 1.5em;
+  }
+
+  ol {
+    list-style: arabic-latin;
+  }
+
+  ul {
+    list-style: disc;
   }
 
   ol li {
@@ -85,5 +92,40 @@ export const Content = styled.div`
 
   ol li::marker {
     font-weight: bold;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    margin-bottom: 1em;
+    width: 100%;
+    max-width: 980px;
+  }
+
+  th {
+    background-color: ${colors.brand2};
+    color: ${colors.dark};
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border-left: 3px solid ${colors.white};
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: ${colors.background};
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: ${colors.lightGray};
+  }
+
+  td {
+    padding: 10px;
+    border-left: 3px solid ${colors.white};
+  }
+
+  th:first-child,
+  td:first-child {
+    border-left: none;
   }
 `

@@ -69,7 +69,8 @@ button:active, button:focus  {
 	border: 1px dotted ${colors.brand2};
 }
 
-code {
+table code,
+p > code {
 	font-family: "Courier New", Courier, monospace;
 	background-color: ${colors.codeBackground};
 	padding: 0px 2px;
@@ -78,6 +79,34 @@ code {
 
 strong {
 	font-weight: bold;
+}
+
+
+.gatsby-highlight {
+  background-color: #272822;
+  border-radius: 0.3em;
+  padding: 0px 5px;
+  overflow: auto;
+	max-width: 980px;
+	margin-bottom: 1em;
+
+	code {
+		font-family: "Courier New", Courier, monospace;
+	}
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+	padding-top: 0px;
+  overflow: initial;
+}
+
+.gatsby-highlight .line-numbers-rows {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
 }
 `
 

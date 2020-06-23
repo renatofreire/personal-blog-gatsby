@@ -39,19 +39,19 @@ O _callback_ nada mais é do que uma função. Ou seja, vamos passar para o mét
 
 Para os exemplos desse post, vamos usar uma função bem simples como _callback_. Vamos pensar em uma função que receba um número e retorne o dobro desse número:
 
-{% highlight js linenos %}
+````javascript
 const dobro = x => x\*2; //usando arrow function
 
 dobro(1); //2
 dobro(2); //4
 dobro(3); //6
-{% endhighlight %}
+```
 
 ## Fazendo da maneira clássica: `for`
 
 Se tivermos um _array_ com números e quisermos obter o dobro de cada número do _array_ usando a função que criamos acima, poderíamos fazer algo assim:
 
-{% highlight js linenos %}
+```javascript
 const dobro = x => x\*2;
 
 var numeros = [1, 2, 3];
@@ -62,7 +62,7 @@ dobros[i] = dobro(numeros[i]);
 }
 
 console.log(dobros) //[2, 4, 6]
-{% endhighlight %}
+```
 
 Nesse caso, até conseguiremos atingir o resultado final, mas temos alguns problemas práticos e conceituais.
 
@@ -77,7 +77,7 @@ Então como podemos fazer essa mesma tarefa de maneira mais robusta e menos comp
 Relembrando: o método `map` recebe uma função, que será aplicada em cada item do _array_ e no final o `map` retornará um novo array com os resultados.
 Colocando isso em código fica:
 
-{% highlight js linenos %}
+```javascript
 const dobro = x => x \* 2;
 
 const numeros = [1, 2 ,3];
@@ -85,7 +85,7 @@ const numeros = [1, 2 ,3];
 const dobros = numeros.map(dobro);
 
 console.log(dobros); //[2 , 4, 6]
-{% endhighlight %}
+```
 
 Um pouco mais limpo, certo? Não precisamos lidar com variáveis de controle, não precisamos acessar nenhum _array_ usando índices e definimos o valor de `dobros` diretamente em sua inicialização.
 
@@ -96,12 +96,12 @@ Tentando traduzir de uma maneira mais visual, o map funciona da seguinte forma:
 
 Também é bastante comum no dia a dia passarmos a função que queremos direto para o método `map`, sem a necessidade de declarar essa função previamente. Seguindo essa abordagem, nosso exemplo fica assim:
 
-{% highlight js linenos %}
+```javascript
 const numeros = [1,2,3];
 const dobros = numeros.map(x => x \* 2);
 
 console.log(dobros); //[2, 4, 6]
-{% endhighlight %}
+```
 
 Dessa forma, temos a desvantagem de a função não ser reaproveitável em outras partes do código, mas ganhamos um código mais enxuto.
 
@@ -121,3 +121,4 @@ Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método
 [arrow-functions]: https://renatofreire.dev/falando-um-pouco-sobre-arrow-functions
 [map-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [map-img]: /assets/imgs/posts/map.jpg
+````

@@ -40,6 +40,13 @@ module.exports = {
             },
           },
           "gatsby-remark-lazy-load",
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              showLineNumbers: true,
+              noInlineHighlight: true,
+            },
+          },
         ],
       },
     },

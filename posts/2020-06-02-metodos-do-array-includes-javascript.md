@@ -46,46 +46,44 @@ Retorna `true` (verdadeiro) se o elemento buscado existir no array ou `false` (f
 
 O funcionamento é relativamente simples. Para descobrir se um elemento existe no array, usamos o método `includes` passando o elemento que estamos procurando.
 
-{% highlight js linenos %}
-const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+```javascript
+const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-numbers.includes(4); // returns true
-numbers.includes(5); // returns false
+numbers.includes(4) // returns true
+numbers.includes(5) // returns false
 
-const fruits = ['apple', 'pear', 'raspberries', 'blueberries', 'avocado'];
-const tropicalFruit = 'avocado';
-const notFruit = 'cheese';
-fruits.includes(tropicalFruit); // returns true
-fruits.includes(notFruit); // returns false
-{% endhighlight %}
+const fruits = ["apple", "pear", "raspberries", "blueberries", "avocado"]
+const tropicalFruit = "avocado"
+const notFruit = "cheese"
+fruits.includes(tropicalFruit) // returns true
+fruits.includes(notFruit) // returns false
+```
 
 ### Passando um índice para iniciar a busca
 
 Se passarmos o segundo parâmetro, a busca irá começar a partir desse índice.
 
-{% highlight js linenos %}
-const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+```javascript
+const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-numbers.includes(4); // returns true
-numbers.includes(4, 3); // returns false
-
-{% endhighlight %}
+numbers.includes(4) // returns true
+numbers.includes(4, 3) // returns false
+```
 
 ### Cuidado com arrays que contém objetos
 
 Comparação entre objetos em javascript é uma tarefa complexa, e no caso do `includes` pode gerar confusão. Isso acontece porquê, por mais que dois objetos tenham as mesmas propriedades e os mesmos valores, se eles não apontarem para mesmo referencia de memória eles não são considerados iguais. E como o `includes` se baseia em uma igualdade para poder definir se o elemento existe no array, isso é algo que devemos levar em consideração.
 
-{% highlight js linenos %}
+```javascript
+const batman = { name: "Bruce Wayne" }
+const superman = { name: "Clark Kent" }
+const heroes = [batman, superman]
 
-const batman = {name: 'Bruce Wayne'};
-const superman = {name: 'Clark Kent'};
-const heroes = [batman, superman];
+heroes.includes(superman) // returns true
 
-heroes.includes(superman); // returns true
-
-const doppelganger = {name: 'Clark Kent'};
-heroes.includes(doppelganger); // returns false
-{% endhighlight %}
+const doppelganger = { name: "Clark Kent" }
+heroes.includes(doppelganger) // returns false
+```
 
 ### Curiosidade
 
@@ -94,14 +92,13 @@ Se chamarmos o método sem passar nenhum parâmetro, o valor de `searchElement` 
 Talvez não seja correto afirmar que o valor padrão do primeiro parâmeto é `undefined`, pois imagino que isso aconteça simplesmente porque o valor não é definido.
 É interessante notar que se algum elemento do array for `undefined`, chamar o método `includes` sem parâmetro irá retornar `true`.
 
-{% highlight js linenos %}
+```javascript
+const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+numbers.includes() // returns false
 
-const numbers = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-numbers.includes(); // returns false
-
-const arrayWithUndefined = [2, 4, undefined, 8];
-arrayWithUndefined.includes(); //retruns true
-{% endhighlight %}
+const arrayWithUndefined = [2, 4, undefined, 8]
+arrayWithUndefined.includes() //retruns true
+```
 
 ## Conclusão
 

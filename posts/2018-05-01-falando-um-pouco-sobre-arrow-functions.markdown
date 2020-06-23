@@ -32,150 +32,151 @@ Traduzindo para uma frase mais completa, tornar a sintaxe mais curta significa d
 Para podermos comparar, vou usar um exemplo simples, uma função que recebe dois números e retorna a soma deles.
 
 Na versão clássica:
-{% highlight js linenos %}
+
+````javascript
 function somaClassica(a,b){
 return a+b;
 }
 console.log(somaClassica(1,5)); //6
-{% endhighlight %}
+```
 
 Agora a versão mais curta possível com Arrow Function:
-{% highlight js linenos %}
+```javascript
 const somaArrow = (a,b) => a+b;
 
 console.log(somaArrow(a,b)); //6
-{% endhighlight %}
+```
 
 Repare que eu disse “versão mais curta possível”, por que existem algumas maneira diferentes de usarmos a Arrow Function, dependendo da quantidade de parâmetros e do código que estará dentro da função.
 
 **Funções sem parâmetros**
-{% highlight js linenos %}
+```javascript
 function oi(){
 return 'Oi';
 }
 
 console.log(oi()); //'Oi'
-{% endhighlight %}
+```
 
 <p></p>
-{% highlight js linenos %}
+```javascript
 const oiArrow = () => 'Oi';
 
 console.log(oiArrow()); //'Oi'
-{% endhighlight %}
+```
 
 Para funções sem parâmetros, passamos os parênteses vazios.
 
 **Funções com apenas 1 parâmetro**
-{% highlight js linenos %}
+```javascript
 function oi(nome){
 return 'Oi, '+nome;
 }
 
 console.log(oi('Renato')); //'Oi, Renato'
-{% endhighlight %}
+```
 
 <p></p>
-{% highlight js linenos %}
+```javascript
 const oiArrow = nome => 'Oi, '+nome;
 
 console.log(oiArrow('Renato')); //'Oi, Renato'
-{% endhighlight %}
+```
 
 **Funções com vários parâmetros**
-{% highlight js linenos %}
+```javascript
 function oi(nome, sobrenome){
 return 'Oi, '+nome+' '+sobrenome;
 }
 
 console.log(oi('Renato', 'Freire')); //'Oi, Renato Freire'
-{% endhighlight %}
+```
 
 <p></p>
-{% highlight js linenos %}
+```javascript
 const oiArrow = (nome, sobrenome) => 'Oi, '+nome+' '+sobrenome;
 
 console.log(oiArrow('Renato')); //'Oi, Renato Freire'
-{% endhighlight %}
+```
 Quando a função recebe dois ou mais parâmetros os parênteses são obrigatórios.
 
 **Quando a função possui apenas uma expressão:**
-{% highlight js linenos %}
+```javascript
 function quadrado(n){
 return n\*n;
 }
 
 console.log(quadrado(3)); //9
-{% endhighlight %}
+```
 
 <p></p>
-{% highlight js linenos %}
+```javascript
 const quadradoArrow = n => n*n;
 
 console.log(quadradoArrow(3)); //9
-{% endhighlight %}
+```
 
 Como o corpo da função é uma expressão simples, não foi necessário usar as chaves “{}” e o valor da expressão é automaticamente retornado, sem a necessidade de usar o “_return_”.
 
 **Quando a função possui um bloco de código:**
-{% highlight js linenos %}
+```javascript
 function quadrado(n){
 let q = n\*n;
 return 'O quadrado de '+n+' é '+q;
 }
 
 console.log(quadrado(3)); //'O quadrado de 3 é 9'
-{% endhighlight %}
+```
 
 <p></p>
-{% highlight js linenos %}
+```javascript
 const quadradoArrow = n => {
   let q = n*n;
 	return 'O quadrado de '+n+' é '+q;
 };
 
 console.log(quadradoArrow(3)); //O quadrado de 3 é 9
-{% endhighlight %}
+```
 Nesse caso, o corpo da função é um bloco de código, então o uso das chaves “{}” é obrigatório. Também não podemos esquecer de que precisamos usar o “_return_” se quisermos retornar algum valor.
 
 **Resumindo a questão de parâmetros e corpo da função:**
 Função sem parâmetros, parênteses vazios:
-{% highlight js linenos %}
+```javascript
 const arrow1 = () => 'Oi';
-{% endhighlight %}
+```
 
 <p></p>
 Função com um parâmetro, parênteses não são necessários:
-{% highlight js linenos %}
-const arrow2 = a => a*a; 
-{% endhighlight %}
+```javascript
+const arrow2 = a => a*a;
+```
 
 <p></p>
 Função com vários parâmetros, os parênteses são obrigatórios
-{% highlight js linenos %}
+```javascript
 const arrow3 = (a,b) => a+b;
-{% endhighlight %}
+```
 
 <p></p>
 Corpo da função com um bloco de código, obrigatório o uso de chaves “{}” e de *return* se algum valor precisar ser retornado
-{% highlight js linenos %}
+```javascript
 const arrow4 = a => {
     let q = a*a;
     return 'O resultado é: '+q;
 }
-{% endhighlight %}
+```
 
 <p></p>
 Corpo da função é uma única expressão, não é obrigatório o uso de chaves e o resultado da expressão é retornado automaticamente.
-{% highlight js linenos %}
+```javascript
 const arrow5 = a => a * a;
-{% endhighlight %}
+```
 
 <p></p>
 Apenas para deixar claro, mesmo que o corpo da função seja uma única expressão, se as chaves forem usadas, o resultado não é retornado automaticamente.
-{% highlight js linenos %}
+```javascript
 const arrow6 = a => {return a * a};
-{% endhighlight %}
+```
 
 **Mais uma observação sobre as Arrow Functions:** elas são sempre anônimas, isso significa que você não pode dar nomes à uma função desse tipo. Contudo, no _Javascript_ é possível salvar uma função dentro de uma variável, e esse comportamento se aplica as _Arrow Functions_ também.
 
@@ -189,7 +190,7 @@ Para corrigir esses problemas, são usados alguns artifícios, como `.bind` ou c
 
 Vou criar um exemplo bem básico, com um `setTimeout` para ilustrar:
 
-{% highlight js linenos %}
+```javascript
 let pessoa = {
 camisa : 'vermelha',
 calca : 'azul',
@@ -200,12 +201,12 @@ sapato : 'preto',
     }
 
 };
-{% endhighlight %}
+```
 
 Se chamarmos a função `pessoa.vestuario()` o retorno será: _Eu estou vestindo uma camisa vermelha, uma calça azul e um sapato preto_
 
 Tudo funcionou certinho até agora. Mas se adicionarmos o `setTimeout` na função `pessoa.vestuario()`:
-{% highlight js linenos %}
+```javascript
 let pessoa = {
 camisa : 'vermelha',
 calca : 'azul',
@@ -218,13 +219,13 @@ sapato : 'preto',
     }
 
 };
-{% endhighlight %}
+```
 
 E novamente chamamos a função `pessoa.vestuario()`, teremos o seguinte resultado após 150 milisegundos: _Eu estou vestindo uma camisa `undefined`, uma calça `undefined` e um sapato `undefined`_
 Isso acontece por que a função é executada em um escopo diferente do objeto “Pessoa”.
 
 Mas se usarmos uma Arrow Function no setTimeout, temos a função mantendo seu escopo:
-{% highlight js linenos %}
+```javascript
 let pessoa = {
 camisa : 'vermelha',
 calca : 'azul',
@@ -237,7 +238,7 @@ sapato : 'preto',
     }
 
 };
-{% endhighlight %}
+```
 
 Executando o `pessoa.vestuario()`, dessa vez temos o resultado esperado: _Eu estou vestindo uma camisa vermelha, uma calça azul e um sapato preto_
 
@@ -266,3 +267,4 @@ Então é isso pessoal. Esse é um pequeno resumo sobre Arrow Functions, vou dei
 Se encontrar algum erro ou tiver alguma dúvida ou quiser acrescentar algum conhecimento neste post, por favor deixe um comentário :)
 
 **Um grande abraço e até o próximo post.**
+````

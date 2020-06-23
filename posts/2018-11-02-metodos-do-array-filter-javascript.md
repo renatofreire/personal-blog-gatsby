@@ -39,7 +39,7 @@ Bom, teoria é importante, mas geralmente fica mais fácil de entender vendo o c
 
 De maneira bem resumida, o _callback_ é uma função. E essa função será executada para cada item do _array_. Vamos usar como exemplo uma função que retorna `true` se um número é par e `false` caso não seja par:
 
-{% highlight js linenos %}
+````javascript
 const par = x => x%2 === 0;
 
 par(0); // true
@@ -47,7 +47,7 @@ par(1); // false
 par(2); // true
 par(3); // false
 
-{% endhighlight %}
+```
 
 Vamos usar essa função nos exemplos a seguir.
 
@@ -55,7 +55,7 @@ Vamos usar essa função nos exemplos a seguir.
 
 Vamos realizar a missão de pegar um _array_ com vários números e selecionar somente os números pares, começando usando o `for()`:
 
-{% highlight js linenos %}
+```javascript
 const par = x => x%2 === 0;
 
 const numeros = [1,2,3,4,20,22,38,41];
@@ -69,7 +69,7 @@ pares.push(numeros[i]);
 }
 console.log(pares);
 //Array(5)[ 2, 4, 20, 22, 38 ]
-{% endhighlight %}
+```
 
 No final a gente conseguiu atingir nosso objetivo: obtivemos um _array_ somente com os número pares. Porém o `for` tem alguns pontos negativos, como a complexidade do código. Temos que instanciar o _array_ `pares` antes de inciar o laço, além disso temos que iniciar uma variável de controle `i` e acessar o _array_ `numeros` através do index. Também temos de fazer um `if` para aí sim fazer um `.push()` no _array_ `pares`.
 
@@ -79,7 +79,7 @@ Agora vamos usar uma abordagem diferente para resolver o mesmo problema.
 
 Nosso objetivo será o mesmo, vamos obter somente os números pares de um array com números:
 
-{% highlight js linenos %}
+```javascript
 
 const par = x => x%2 === 0;
 
@@ -89,21 +89,21 @@ const pares = numeros.filter(par)
 
 console.log(pares);
 //Array(5)[ 2, 4, 20, 22, 38 ]
-{% endhighlight %}
+```
 
 Vamos entender o que aconteceu. O método `filter` faz uma iteração para cada item do _array_ (nesse caso `numeros`). Cada item será passada como parâmetro para a função que foi passada como _callback_ para o filter (nesse caso `par()`). Se a função retornar `true` o item será retornado no novo _array_ gerado (nesse caso `pares`).
 
-Dessa forma conseguimos obter o mesmo resultado com um código mais simples.  
+Dessa forma conseguimos obter o mesmo resultado com um código mais simples.
 Podemos deixar esse código um pouco mais enxuto se, ao invés de criarmos a função `par` passarmos ela diretamente para o `filter`:
 
-{% highlight js linenos %}
+```javascript
 const numeros = [1,2,3,4,20,22,38,41];
 
 const pares = numeros.filter(x => x%2===0);
 
 console.log(pares);
 //Array(5)[ 2, 4, 20, 22, 38 ]
-{% endhighlight %}
+```
 
 Se não precisarmos reutilizar a função `par` em outras partes do código, essa abordagem é bastante útil.
 
@@ -112,7 +112,7 @@ Se não precisarmos reutilizar a função `par` em outras partes do código, ess
 O método `filter` com certeza é muito útil e prático para o uso no dia a dia, porém tem alguns pontos que precisam ser considerados. Por exemplo se quisessemos obter dois _array_, um com números pares e outro com os números ímpares, teríamos que fazer o `filter` duas vezes, com duas funções diferentes. Já usando o `for` poderíamos fazer em um único laço.
 
 Usando `for`:
-{% highlight js linenos %}
+```javascript
 const numeros = [1,2,3,4,20,22,38,41];
 
 let pares = [];
@@ -122,7 +122,7 @@ for(i=0;i < numeros.length;i++){
 if( numeros[i]%2 === 0 ){
 pares.push(numeros[i]);
 }else{
-impares.push(numeros[i]);  
+impares.push(numeros[i]);
  }
 }
 
@@ -131,10 +131,10 @@ console.log(pares);
 
 console.log(impares);
 //Array(3) [ 1, 3, 41 ]
-{% endhighlight %}
+```
 
 Com `filter`:
-{% highlight js linenos %}
+```javascript
 const numeros = [1,2,3,4,20,22,38,41];
 
 const pares = numeros.filter(x => x%2===0);
@@ -146,7 +146,7 @@ console.log(pares);
 
 console.log(impares);
 //Array(3) [ 1, 3, 41 ]
-{% endhighlight %}
+```
 
 Nesses casos precisamos fazer uma escolha entre um código mais "limpo" e um código mais performático. Não existe uma resposta certa. As duas abordagens alcançam o mesmo resultado e cada uma possui suas vantagens e desvantagens.
 
@@ -158,7 +158,7 @@ Como todos nossos exemplos até agora foram bastante simples, vou deixar aqui ma
 
 Vamos supor que temos um _array_ com vários objetos que representam pessoas, com seus nomes e idade. Vamos obter um _array_ com as pessoas que ainda não estejam na maioridade (com menos de 18 anos) e outro _array_ com as pessoas idosas (com 60 anos ou mais).
 
-{% highlight js linenos %}
+```javascript
 const pessoas = [
 {
 nome: 'João',
@@ -220,13 +220,13 @@ console.log(maisDe60Anos);
 { nome: 'Raquel', idade: 83 },
 ]
 _/
-{% endhighlight %}
+```
 
 ### Filtrando _strings_
 
 Usando o mesmo _array_ `pessoas` do exemplo anterior, vamos filtrar as pessoas que tem a letra "r" no nome (em qualquer parte, não apenas no começo). Para isso vamos usar os métodos `toLowerCase()` (pois "R" é difente de "r") e `includes()` da classe _String_. Se tiver dúvidas, você pode conferir a documentação do [toLowerCase][lowercase-mdn] e do [includes][includes-mdn].
 
-{% highlight js linenos %}
+```javascript
 //o mesmo array pessoas usado no exemplo anterior
 
 const pessoasComRNoNome = pessoas.filter(
@@ -247,13 +247,13 @@ console.log(pessoasComRNoNome);
 { nome: "Valdir", idade: 29 }
 ]
 _/
-{% endhighlight %}
+```
 
 ### Filtrando com base em outro _array_
 
 Para esse exemplo vamos considerar dois _arrays_. Um deles terá a lista com as capitais dos estados brasileiros. O segundo _array_, será uma lista com as 30 cidades mais populosas do Brasil. Nosso objetivo aqui é descobrir quais são as capitais que estão entre as 30 cidades mais populosas do país.
 
-{% highlight js linenos %}
+```javascript
 const capitais = [
 "Rio Branco",
 "Maceió",
@@ -344,7 +344,7 @@ Array(18) [
 "São Paulo"
 ]
 _/
-{% endhighlight %}
+```
 
 ## Resumindo
 
@@ -364,3 +364,4 @@ Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método
 [filter-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
 [lowercase-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 [includes-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
+````

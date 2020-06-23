@@ -88,15 +88,13 @@ O método `reduce` irá retornar o valor que for retornado pela função de `cal
 
 Nesse primeiro exemplo, nosso objetivo é retornar a somatória de todos os itens de um _array_.
 
-{% highlight js linenos %}
-
-const numbersToSum = [0, 1, 2, 3, 4];
+```javascript
+const numbersToSum = [0, 1, 2, 3, 4]
 
 const callbackFunction = (acc, cur, idx, arr) => acc + cur
 
-const sum = numbersToSum.reduce(callbackFunction); // sum = 10
-
-{% endhighlight %}
+const sum = numbersToSum.reduce(callbackFunction) // sum = 10
+```
 
 A função `callbackFunction` é chamada para cada item do _array_ `numbersToSum` e o retorno dela é passado para a próxima iteração.
 Os parâmetros da `callbackFunction` são:
@@ -122,17 +120,15 @@ Repare que o `retorno` da última linha é o que é retornado pelo `reduce` ao f
 
 Nesse segundo exemplo, vamos ter o mesmo objetivo do exemplo anterior, mas dessa vez vamos passar um valor inicial para `reduce`.
 
-{% highlight js linenos %}
-
-const numbersToSum = [0, 1, 2, 3, 4];
+```javascript
+const numbersToSum = [0, 1, 2, 3, 4]
 
 const callbackFunction = (acc, cur, idx, arr) => acc + cur
 
-const initialValue = 5;
+const initialValue = 5
 
-const sum = numbersToSum.reduce(callbackFunction, initialValue); // sum = 15
-
-{% endhighlight %}
+const sum = numbersToSum.reduce(callbackFunction, initialValue) // sum = 15
+```
 
 A função `callbackFunction` é chamada para cada item do _array_ `numbersToSum` e o retorno dela é passado para a próxima iteração, porém na primeira iteração, o parâmetro `acc` tem o valor de `initialValue`, que nesse caso é `5`.
 

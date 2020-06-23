@@ -60,15 +60,16 @@ Até agora vimos a parte mais teórica, agora vamos para alguns exemplos de como
 Vamos começar com o caso de uso mais comum, que é passar dois números positivos como parâmetro.
 
 O nosso desafio é o seguinte: a partir de um array com dez elementos, vamos gerar dois arrays, um com os cinco primeiros elementos e outro com os cinco últimos:
-{% highlight js linenos %}
-const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
 
-const firstHalf = originalArray.slice(0, 5);
-console.log(firstHalf); //[2, 4, 6, 8, 10]
+```javascript
+const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+const firstHalf = originalArray.slice(0, 5)
+console.log(firstHalf) //[2, 4, 6, 8, 10]
 
 const lastHalf = originalArray.slice(5, 10)
-console.log(lastHalf); //[12, 14, 16, 18, 20];
-{% endhighlight %}
+console.log(lastHalf) //[12, 14, 16, 18, 20];
+```
 
 Para gerarmos o `firstHalf` passamos os parâmetros `0` e `5`, ou seja, estamos começando nossa cópia no elemento de índice `0`(2) e indo até o elemento de índice `4`(10). Lembrando que o elemento na posição `5`(12) não é incluído na cópia.
 
@@ -77,12 +78,13 @@ Para gerarmos o `firstHalf` passamos os parâmetros `0` e `5`, ou seja, estamos 
 Quando omitimos o segundo parâmetro, o método `slice` considera ele como sendo o comprimento do array.
 
 Vamos usar o mesmo array usado no exemplo anterior:
-{% highlight js linenos %}
-const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+
+```javascript
+const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 const lastHalf = originalArray.slice(5)
-console.log(lastHalf); //[12, 14, 16, 18, 20];
-{% endhighlight %}
+console.log(lastHalf) //[12, 14, 16, 18, 20];
+```
 
 Como não passamos o último parâmetro, o valor _default_ dele foi usado. Na prática, podemos dizer que quando `end` não é passado a cópia vai até o final do array.
 
@@ -90,12 +92,12 @@ Como não passamos o último parâmetro, o valor _default_ dele foi usado. Na pr
 
 De forma prática, podemos dizer que se não passarmos nenhum parâmetro o método `slice` irá retornar uma cópia igual ao array original.
 
-{% highlight js linenos %}
-const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+```javascript
+const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 const copiedArray = originalArray.slice()
-console.log(copiedArray); //[2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
-{% endhighlight %}
+console.log(copiedArray) //[2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+```
 
 Isso acontece porquê o valor _default_ de `begin` é `0` e o valor _default_ de `end` é o comprimento do array. Nesse exemplo seria o mesmo que `originalArray.slice(0, 10)`.
 Apesar de ser uma forma fácil de copiar um array, precisamos tomar cuidado, pois se o array original tiver objetos ou outros arrays em seus elementos, a cópia irá conter apenas a referências desses objetos e não uma cópia do objeto. Ainda vamos falar mais sobre isso nesse post.
@@ -104,36 +106,48 @@ Apesar de ser uma forma fácil de copiar um array, precisamos tomar cuidado, poi
 
 Também temos a possibilidade de passar números negativos para o método `slice`, nesse caso o ponto inicial para contar as posições a serem copiadas é o último elemento do array e não mais o primeiro elemento.
 
-{% highlight js linenos %}
-const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+```javascript
+const originalArray = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 const negativeIndexes = originalArray.slice(-5, -2)
-console.log(negativeIndexes); //[12, 14, 16];
+console.log(negativeIndexes) //[12, 14, 16];
 
 const positiveIndexes = originalArray.slice(5, 8)
-console.log(positiveIndexes); //[12, 14, 16];
-{% endhighlight %}
+console.log(positiveIndexes) //[12, 14, 16];
+```
 
 ### Mais um exemplo :)
 
 Imagine agora que temos um array com os meses do ano, e queremos dividir esse array em quatro partes, ou seja, dividir o ano em trimestres:
 
-{% highlight js linenos %}
-const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+```javascript
+const months = [
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
+]
 
-const firstQuarter = months.slice(0, 3);
-console.log(firstQuarter);//["Janeiro", "Fevereiro"le, "Março"]
+const firstQuarter = months.slice(0, 3)
+console.log(firstQuarter) //["Janeiro", "Fevereiro"le, "Março"]
 
-const secondQuarter = months.slice(3, 6);
-console.log(secondQuarter);//["Abril", "Maio", "Junho"]
+const secondQuarter = months.slice(3, 6)
+console.log(secondQuarter) //["Abril", "Maio", "Junho"]
 
-const thirdQuarter = months.slice(6, 9);
-console.log(thirdQuarter);//["Julho", "Agosto", "Setembro"]
+const thirdQuarter = months.slice(6, 9)
+console.log(thirdQuarter) //["Julho", "Agosto", "Setembro"]
 
-const fourthQuarter = months.slice(9);
-console.log(fourthQuarter);//["Outubro", "Novembro", "Dezembro"]
-
-{% endhighlight %}
+const fourthQuarter = months.slice(9)
+console.log(fourthQuarter) //["Outubro", "Novembro", "Dezembro"]
+```
 
 ## Cuidado quando o array possuir objetos
 
@@ -141,16 +155,25 @@ Apesar de o método `slice` não modificar o array original, caso o elemento do 
 
 Na prática isso significa que se modificarmos esse objeto no novo array retornado, essa modificação será refletida no array original. Veja no exemplo abaixo:
 
-{% highlight js linenos %}
+```javascript
+const avengers = [
+  { ironMan: "Tony Stark" },
+  { captainAmerica: "Steve Rogers" },
+  { blackWidow: "Natasha Romanoff" },
+]
 
-const avengers = [{ironMan: "Tony Stark"}, {captainAmerica: "Steve Rogers"}, {blackWidow: "Natasha Romanoff"}]
-
-const cap = avengers.slice(1,2);
+const cap = avengers.slice(1, 2)
 cap[0]["captainamerica"] = "Sam Wilson"
 
-console.log(avengers); // [{ironMan: "Tony Stark"}, {captainAmerica: "Sam Wilson"}, {blackWidow: "Natasha Romanoff"}]
-
-{% endhighlight %}
+console.log(avengers)
+/* 
+  [
+    {ironMan: "Tony Stark"}, 
+    {captainAmerica: "Sam Wilson"}, 
+    {blackWidow: "Natasha Romanoff"}
+  ]
+*/
+```
 
 ## Conclusão
 
