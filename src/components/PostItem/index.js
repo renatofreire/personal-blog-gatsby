@@ -1,9 +1,8 @@
 import React from "react"
 import propTypes from "prop-types"
 
-import CategoryBadge from "../CategoryBadge"
-
-import categoriesInfo from "../../utils/categories-info"
+import CategoryContainer from "../CategoryContainer"
+import TagsContainer from "../TagsContainer"
 
 import * as S from "./styled"
 
@@ -17,8 +16,6 @@ const PostItem = ({
   tags,
   url,
 }) => {
-  const postCategory = categoriesInfo(category)
-
   return (
     <S.PostContainer>
       <S.Title>{title}</S.Title>
@@ -27,26 +24,12 @@ const PostItem = ({
       </S.ImageContainer>
       <S.PostContent>
         <S.InfoContainer>
-          <S.CategoryContainer>
-            <CategoryBadge size={24} color={postCategory.color} />
-            <S.Category color={postCategory.color}>
-              {postCategory.label}
-            </S.Category>
-          </S.CategoryContainer>
+          <CategoryContainer category={category} />
           <S.Date>Postado em {date}</S.Date>
         </S.InfoContainer>
         <S.Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
       </S.PostContent>
-      {tags && (
-        <S.TagsContainer>
-          <S.TagsTitle>tags:</S.TagsTitle>
-          <S.TagsList>
-            {tags.map(tag => (
-              <S.TagItem key={tag}>{tag}</S.TagItem>
-            ))}
-          </S.TagsList>
-        </S.TagsContainer>
-      )}
+      {tags && <TagsContainer tags={tags} />}
       <S.PostLink to={url}>ver mais</S.PostLink>
     </S.PostContainer>
   )
