@@ -56,7 +56,7 @@ body {
 	font-size: 16px;
 }
 
-p > a{
+p > a {
 	color: ${colors.link};
 }
 
@@ -79,7 +79,6 @@ code {
 strong {
 	font-weight: bold;
 }
-
 `
 
 export default GlobalStyles

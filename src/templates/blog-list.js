@@ -46,14 +46,7 @@ const BlogList = props => {
             />
           )
         )}
-        <Pagination
-          isFirtst={null}
-          isLast={null}
-          current={currentPage}
-          numberOfPages={numberOfPages}
-          prevPage={null}
-          nextPage={null}
-        />
+        <Pagination current={currentPage} numberOfPages={numberOfPages} />
       </Container>
     </Layout>
   )

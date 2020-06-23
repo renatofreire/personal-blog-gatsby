@@ -2,6 +2,7 @@ const colors = {
   dark: "#333",
   lightGray: "#D3D3D3",
   white: "#FFF",
+  black: "#000",
   background: "#F0F0F0",
   category1: "#FFCC66", //carreira
   category2: "#F48576", //fundamentos
