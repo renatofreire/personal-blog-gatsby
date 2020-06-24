@@ -60,6 +60,10 @@ main {
 	overflow: auto;
 }
 
+em {
+	font-style: italic;
+}
+
 p > a {
 	color: ${colors.link};
 }
@@ -73,8 +77,7 @@ button:active, button:focus  {
 	border: 1px dotted ${colors.brand2};
 }
 
-table code,
-p > code {
+code {
 	font-family: "Courier New", Courier, monospace;
 	background-color: ${colors.codeBackground};
 	padding: 0px 2px;
@@ -96,6 +99,7 @@ strong {
 
 	code {
 		font-family: "Courier New", Courier, monospace;
+		padding: 0;
 	}
 }
 

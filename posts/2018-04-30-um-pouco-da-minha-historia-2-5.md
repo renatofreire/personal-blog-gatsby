@@ -20,7 +20,7 @@ Essa é uma sequência onde eu conto um pouco da minha história. No [post passa
 
 O ensino médio, teve um grande importância para mim também. Talvez nem tanto ligado ao lado profissional, mas foi uma fase de grande crescimento pessoal. Como falei anteriormente, passei a maior parte da minha infância morando em uma cidade do interior e fui fazer o ensino médio em uma cidade vizinha que apesar de também ser interior era bem maior. Pode parecer meio bobo, mas ir estudar em outra cidade e conhecer muita gente nova me fez amadurecer bastante.
 
-**Entendendo melhor as coisas**
+## Entendendo melhor as coisas
 
 Mas voltando a contar a minha história, como eu falei no [primeiro post](/um-pouco-da-minha-historia-1-5), a única forma de trabalhar com computadores que eu conhecia era em lojas de manutenção. E eu entrei no curso técnico pensando que eu iria aprender isso. Acho que eu tinha tanta certeza que queria fazer o técnico que eu acabei nem lendo a descrição do curso direito e já me matriculei.
 
@@ -28,7 +28,7 @@ Conforme foram passando as aulas eu fui aprendendo sobre lógica de programaçã
 
 Até esse momento a matéria de lógica de programação estava sendo toda teórica. Escrevia portugol e fluxogramas no caderno e entendia um pouco melhor alguns conceitos de algorítimo em uma sala de aula normal. Então um dia o professor chegou na sala de aula e disse que começaríamos a ter aulas práticas.
 
-**As primeiras lições**
+## As primeiras lições
 
 O professor nos levou até o laboratório de informática e nos apresentou o _Visual Studio_. Começamos fazendo _console aplications_ no _VB.NET_. O primeiro exercício (depois do “`Hello Word`“, claro) foi fazer uma calculadora. Foi nesse momento que minha cabeça explodiu! “Como assim? Eu consigo fazer o computador somar dois números quaisquer que eu mesmo digito!”. Achei aquilo incrível. Parecia mágica, e eu era o mágico. Cada novo comando que eu ia aprendendo eu ia ficando mais encantado. `if`, `for`, `while`, dava até para usar um `switch` e escolher se eu queria somar, subtrair, multiplicar ou dividir. Depois de vários exemplos com programas rodando em console, comecei a desenvolver os _Forms Aplications_. Agora dava para fazer botões e uma calculadora visualmente parecida com a original do _Windows_!
 
@@ -51,5 +51,3 @@ Só para deixar claro, todos esse projetos que citei até agora, não tinha nada
 Mas enfim, apresentei o TCC e terminei o curso. Agora eu era formado em Técnico em Informática. Sabia programar extremamente bem (pelo menos era o que estava na minha cabeça). No ano seguinte eu teria que escolher algum curso de faculdade para fazer e já sabia que seria algo na área de informática.
 
 As histórias da faculdade e os primeiros passos na vida profissional vão ficar para o [próximo post](/um-pouco-da-minha-historia-3-5/). Encerro essa parte da história por aqui.
-
-**Um grande abraço e até o próximo post!**

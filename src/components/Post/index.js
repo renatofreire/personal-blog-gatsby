@@ -7,7 +7,7 @@ import CategoryContainer from "../CategoryContainer"
 import * as S from "./styled"
 
 const Post = ({ title, tags, category, date, content }) => (
-  <div>
+  <S.PostContainer>
     <Title>{title}</Title>
     <S.InfosContainer>
       <CategoryContainer category={category} />
@@ -16,7 +16,7 @@ const Post = ({ title, tags, category, date, content }) => (
     <TagsContainer tags={tags} />
 
     <S.Content dangerouslySetInnerHTML={{ __html: content }}></S.Content>
-  </div>
+  </S.PostContainer>
 )
 
 export default Post

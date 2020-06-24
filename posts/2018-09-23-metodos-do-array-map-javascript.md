@@ -39,12 +39,12 @@ O _callback_ nada mais é do que uma função. Ou seja, vamos passar para o mét
 
 Para os exemplos desse post, vamos usar uma função bem simples como _callback_. Vamos pensar em uma função que receba um número e retorne o dobro desse número:
 
-````javascript
-const dobro = x => x\*2; //usando arrow function
+```javascript
+const dobro = x => x * 2 //usando arrow function
 
-dobro(1); //2
-dobro(2); //4
-dobro(3); //6
+dobro(1) //2
+dobro(2) //4
+dobro(3) //6
 ```
 
 ## Fazendo da maneira clássica: `for`
@@ -52,13 +52,13 @@ dobro(3); //6
 Se tivermos um _array_ com números e quisermos obter o dobro de cada número do _array_ usando a função que criamos acima, poderíamos fazer algo assim:
 
 ```javascript
-const dobro = x => x\*2;
+const dobro = x => x * 2
 
-var numeros = [1, 2, 3];
-var dobros = [];
+var numeros = [1, 2, 3]
+var dobros = []
 
-for(i=0; i < numeros.length; i++){
-dobros[i] = dobro(numeros[i]);
+for (i = 0; i < numeros.length; i++) {
+  dobros[i] = dobro(numeros[i])
 }
 
 console.log(dobros) //[2, 4, 6]
@@ -78,13 +78,13 @@ Relembrando: o método `map` recebe uma função, que será aplicada em cada ite
 Colocando isso em código fica:
 
 ```javascript
-const dobro = x => x \* 2;
+const dobro = x => x * 2
 
-const numeros = [1, 2 ,3];
+const numeros = [1, 2, 3]
 
-const dobros = numeros.map(dobro);
+const dobros = numeros.map(dobro)
 
-console.log(dobros); //[2 , 4, 6]
+console.log(dobros) //[2 , 4, 6]
 ```
 
 Um pouco mais limpo, certo? Não precisamos lidar com variáveis de controle, não precisamos acessar nenhum _array_ usando índices e definimos o valor de `dobros` diretamente em sua inicialização.
@@ -120,5 +120,4 @@ Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método
 
 [arrow-functions]: https://renatofreire.dev/falando-um-pouco-sobre-arrow-functions
 [map-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-[map-img]: /assets/imgs/posts/map.jpg
-````
+[map-img]: ./images/map.jpg

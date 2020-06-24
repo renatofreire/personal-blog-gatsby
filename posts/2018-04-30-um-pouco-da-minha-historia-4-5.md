@@ -22,19 +22,19 @@ Vou contar agora como foi a partir do sétimo semestre e como foi a nova fase pr
 
 Para não ficar com muito vai-e-volta na história, vou contar primeiro tudo o que aconteceu na faculdade, depois conto o que fiz no lado profissional, combinado?
 
-**Começando o TCC**
+## Começando o TCC
 
 Pois bem, no sétimo semestre começou a pressão para escolher um tema para o TCC. Como o curso era de engenharia, os professores recomendavam que o projeto envolvesse alguma parte de _hardware_ também ao invés de ser somente _software_. Inicialmente o projeto deveria ser individual. Pensei em fazer várias coisas, mas não consegui fechar nenhuma ideia. Perguntei para vários amigos e até para minha mãe sobre ideias, mas ainda assim não vinha nada legal o suficiente.
 
 A única coisa que eu sabia era que eu queria fazer um aplicativo _Android_, pois era algo que estava muito em alta e também porque queria me forçar a aprender sobre isso. Minha ideia inicial (a menos pior pelo menos) era usar um _Arduíno_ em uma bicicleta para fazer uma espécie de computador de bordo para ela.
 
-**Definindo um projeto**
+## Definindo um projeto
 
 Até que no oitavo semestre mudou o professor orientador, e o novo professor liberou para que fosse feito o trabalho em dupla, então juntei com um amigo para desenvolver o TCC. como nem eu nem ele estávamos gostando de nossos projetos iniciais, decidimos criar um novo. Ficamos vários dias conversando, tentando encontrar alguma ideia, estávamos pensando em algo relacionado com a área da saúde, quando lembrei de uma ideia que minha mãe (lembra que eu tinha perguntado para ela?) no semestre passado e que agora fazia mais sentido. Na época ela cuidava de minha avó e precisava de algo que ajudasse ela nessa tarefa.
 
 Contei sobre a ideia para meu amigo e ele gostou bastante, então resolvemos seguir adiante com o projeto. A ideia, basicamente era criar um aplicativo que usasse uma cinta cardíaca para monitorar uma pessoa.
 
-**Desenvolvendo o TCC**
+## Desenvolvendo o TCC
 
 Nesse período eu estava em um trabalho que me possibilitava ter um bom tempo para dedicar ao TCC(daqui a pouco eu te conto sobre isso), então eu estudei bastante sobre desenvolvimento _Android_. Aprendi muito sobre _Java_ e reforcei meus conhecimentos em orientação a objetos. Apesar de desafiador eu achei muito divertido meu TCC, porque eu consegui aprender muita coisa com ele, afinal de contas foi meu primeiro aplicativo criado.
 
@@ -45,5 +45,3 @@ No décimo semestre chegou a hora de apresentar o trabalho de conclusão de curs
 Depois de terminar o TCC fiquei extremamente feliz e aliviado, mas ainda não era o fim da faculdade. Sobraram três matérias para eu refazer. Como essas matérias não encaixaram na grade de um semestre, demorei mais um ano para me formar, mas no final de 2016 eu consegui realizar um sonho: eu estava formado no curso de Engenharia da Computação.
 
 Bom esse post ficou um pouco maior do que eu imaginei, então vou contar o que aconteceu profissionalmente durante esse período no [próximo post](/um-pouco-da-minha-historia-5-5), ok?
-
-**Um grande abraço e até o próximo post!**

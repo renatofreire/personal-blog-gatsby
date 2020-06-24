@@ -39,14 +39,13 @@ Bom, teoria é importante, mas geralmente fica mais fácil de entender vendo o c
 
 De maneira bem resumida, o _callback_ é uma função. E essa função será executada para cada item do _array_. Vamos usar como exemplo uma função que retorna `true` se um número é par e `false` caso não seja par:
 
-````javascript
-const par = x => x%2 === 0;
+```javascript
+const par = x => x % 2 === 0
 
-par(0); // true
-par(1); // false
-par(2); // true
-par(3); // false
-
+par(0) // true
+par(1) // false
+par(2) // true
+par(3) // false
 ```
 
 Vamos usar essa função nos exemplos a seguir.
@@ -56,18 +55,18 @@ Vamos usar essa função nos exemplos a seguir.
 Vamos realizar a missão de pegar um _array_ com vários números e selecionar somente os números pares, começando usando o `for()`:
 
 ```javascript
-const par = x => x%2 === 0;
+const par = x => x % 2 === 0
 
-const numeros = [1,2,3,4,20,22,38,41];
+const numeros = [1, 2, 3, 4, 20, 22, 38, 41]
 
-let pares = [];
+let pares = []
 
-for(i=0;i < numeros.length;i++){
-if(par(numeros[i])){
-pares.push(numeros[i]);
+for (i = 0; i < numeros.length; i++) {
+  if (par(numeros[i])) {
+    pares.push(numeros[i])
+  }
 }
-}
-console.log(pares);
+console.log(pares)
 //Array(5)[ 2, 4, 20, 22, 38 ]
 ```
 
@@ -80,14 +79,13 @@ Agora vamos usar uma abordagem diferente para resolver o mesmo problema.
 Nosso objetivo será o mesmo, vamos obter somente os números pares de um array com números:
 
 ```javascript
+const par = x => x % 2 === 0
 
-const par = x => x%2 === 0;
-
-const numeros = [1,2,3,4,20,22,38,41];
+const numeros = [1, 2, 3, 4, 20, 22, 38, 41]
 
 const pares = numeros.filter(par)
 
-console.log(pares);
+console.log(pares)
 //Array(5)[ 2, 4, 20, 22, 38 ]
 ```
 
@@ -97,11 +95,11 @@ Dessa forma conseguimos obter o mesmo resultado com um código mais simples.
 Podemos deixar esse código um pouco mais enxuto se, ao invés de criarmos a função `par` passarmos ela diretamente para o `filter`:
 
 ```javascript
-const numeros = [1,2,3,4,20,22,38,41];
+const numeros = [1, 2, 3, 4, 20, 22, 38, 41]
 
-const pares = numeros.filter(x => x%2===0);
+const pares = numeros.filter(x => x % 2 === 0)
 
-console.log(pares);
+console.log(pares)
 //Array(5)[ 2, 4, 20, 22, 38 ]
 ```
 
@@ -112,39 +110,41 @@ Se não precisarmos reutilizar a função `par` em outras partes do código, ess
 O método `filter` com certeza é muito útil e prático para o uso no dia a dia, porém tem alguns pontos que precisam ser considerados. Por exemplo se quisessemos obter dois _array_, um com números pares e outro com os números ímpares, teríamos que fazer o `filter` duas vezes, com duas funções diferentes. Já usando o `for` poderíamos fazer em um único laço.
 
 Usando `for`:
+
 ```javascript
-const numeros = [1,2,3,4,20,22,38,41];
+const numeros = [1, 2, 3, 4, 20, 22, 38, 41]
 
-let pares = [];
-let impares = [];
+let pares = []
+let impares = []
 
-for(i=0;i < numeros.length;i++){
-if( numeros[i]%2 === 0 ){
-pares.push(numeros[i]);
-}else{
-impares.push(numeros[i]);
- }
+for (i = 0; i < numeros.length; i++) {
+  if (numeros[i] % 2 === 0) {
+    pares.push(numeros[i])
+  } else {
+    impares.push(numeros[i])
+  }
 }
 
-console.log(pares);
+console.log(pares)
 //Array(5) [ 2, 4, 20, 22, 38 ]
 
-console.log(impares);
+console.log(impares)
 //Array(3) [ 1, 3, 41 ]
 ```
 
 Com `filter`:
+
 ```javascript
-const numeros = [1,2,3,4,20,22,38,41];
+const numeros = [1, 2, 3, 4, 20, 22, 38, 41]
 
-const pares = numeros.filter(x => x%2===0);
+const pares = numeros.filter(x => x % 2 === 0)
 
-const impares = numeros.filter(x => x%2!==0);
+const impares = numeros.filter(x => x % 2 !== 0)
 
-console.log(pares);
+console.log(pares)
 //Array(5) [ 2, 4, 20, 22, 38 ]
 
-console.log(impares);
+console.log(impares)
 //Array(3) [ 1, 3, 41 ]
 ```
 
@@ -160,66 +160,66 @@ Vamos supor que temos um _array_ com vários objetos que representam pessoas, co
 
 ```javascript
 const pessoas = [
-{
-nome: 'João',
-idade: 50
-},
-{
-nome: 'Andrea',
-idade: 10
-},
-{
-nome: 'Marcos',
-idade: 70
-},
-{
-nome: 'Geovana',
-idade: 65
-},
-{
-nome: 'Everton',
-idade: 36
-},
-{
-nome: 'Roberta',
-idade: 47
-},
-{
-nome: 'André',
-idade: 9
-},
-{
-nome: 'Raquel',
-idade: 83
-},
-{
-nome: 'Valdir',
-idade: 29
-},
-{
-nome: 'Helena',
-idade: 30
-}
-];
+  {
+    nome: "João",
+    idade: 50,
+  },
+  {
+    nome: "Andrea",
+    idade: 10,
+  },
+  {
+    nome: "Marcos",
+    idade: 70,
+  },
+  {
+    nome: "Geovana",
+    idade: 65,
+  },
+  {
+    nome: "Everton",
+    idade: 36,
+  },
+  {
+    nome: "Roberta",
+    idade: 47,
+  },
+  {
+    nome: "André",
+    idade: 9,
+  },
+  {
+    nome: "Raquel",
+    idade: 83,
+  },
+  {
+    nome: "Valdir",
+    idade: 29,
+  },
+  {
+    nome: "Helena",
+    idade: 30,
+  },
+]
 
-const menosDe18Anos = pessoas.filter(pessoa => pessoa.idade < 18 );
-const maisDe60Anos = pessoas.filter(pessoa => pessoa.idade >= 60 );
+const menosDe18Anos = pessoas.filter(pessoa => pessoa.idade < 18)
+const maisDe60Anos = pessoas.filter(pessoa => pessoa.idade >= 60)
 
-console.log(menosDe18Anos);
-/_
+console.log(menosDe18Anos)
+/*
 [
 { nome: 'Andrea', idade: 10 },
 { nome: 'André', idade: 9 }
 ]
-_/
-console.log(maisDe60Anos);
-/_
+*/
+console.log(maisDe60Anos)
+/*
 [
 { nome: 'Marcos', idade: 70 },
 { nome: 'Geovana', idade: 65 },
 { nome: 'Raquel', idade: 83 },
 ]
-_/
+*/
 ```
 
 ### Filtrando _strings_
@@ -229,14 +229,12 @@ Usando o mesmo _array_ `pessoas` do exemplo anterior, vamos filtrar as pessoas q
 ```javascript
 //o mesmo array pessoas usado no exemplo anterior
 
-const pessoasComRNoNome = pessoas.filter(
-pessoa => pessoa.nome
-.toLowerCase()
-.includes('r')
-);
+const pessoasComRNoNome = pessoas.filter(pessoa =>
+  pessoa.nome.toLowerCase().includes("r")
+)
 
-console.log(pessoasComRNoNome);
-/_
+console.log(pessoasComRNoNome)
+/*
 [
 { nome: "Andrea", idade: 10 },
 { nome: "Marcos", idade: 70 },
@@ -246,7 +244,7 @@ console.log(pessoasComRNoNome);
 { nome: "Raquel", idade: 83 },
 { nome: "Valdir", idade: 29 }
 ]
-_/
+*/
 ```
 
 ### Filtrando com base em outro _array_
@@ -255,74 +253,74 @@ Para esse exemplo vamos considerar dois _arrays_. Um deles terá a lista com as 
 
 ```javascript
 const capitais = [
-"Rio Branco",
-"Maceió",
-"Macapá",
-"Manaus",
-"Salvador",
-"Fortaleza",
-"Brasília",
-"Vitória",
-"Goiânia",
-"São Luís",
-"Cuiabá",
-"Campo Grande",
-"Belo Horizonte",
-"Belém",
-"João Pessoa",
-"Curitiba",
-"Recife",
-"Teresina",
-"Rio de Janeiro",
-"Natal",
-"Porto Alegre",
-"Porto Velho",
-"Boa Vista",
-"Florianópolis",
-"São Paulo",
-"Aracaju",
-"Palmas"
-];
+  "Rio Branco",
+  "Maceió",
+  "Macapá",
+  "Manaus",
+  "Salvador",
+  "Fortaleza",
+  "Brasília",
+  "Vitória",
+  "Goiânia",
+  "São Luís",
+  "Cuiabá",
+  "Campo Grande",
+  "Belo Horizonte",
+  "Belém",
+  "João Pessoa",
+  "Curitiba",
+  "Recife",
+  "Teresina",
+  "Rio de Janeiro",
+  "Natal",
+  "Porto Alegre",
+  "Porto Velho",
+  "Boa Vista",
+  "Florianópolis",
+  "São Paulo",
+  "Aracaju",
+  "Palmas",
+]
 
 const cidadesMaisPopulosas = [
-"São Paulo",
-"Rio de Janeiro",
-"Salvador",
-"Brasília",
-"Fortaleza",
-"Belo Horizonte",
-"Manaus",
-"Curitiba",
-"Recife",
-"Porto Alegre",
-"Belém",
-"Goiânia",
-"Guarulhos",
-"Campinas",
-"São Luís",
-"São Gonçalo",
-"Maceió",
-"Duque de Caxias",
-"Natal",
-"Campo Grande",
-"Teresina",
-"São Bernardo do Campo",
-"Nova Iguaçu",
-"João Pessoa",
-"Santo André",
-"Osasco",
-"São José dos Campos",
-"Jaboatão dos Guararapes",
-"Ribeirão Preto",
-"Uberlândia"
-];
+  "São Paulo",
+  "Rio de Janeiro",
+  "Salvador",
+  "Brasília",
+  "Fortaleza",
+  "Belo Horizonte",
+  "Manaus",
+  "Curitiba",
+  "Recife",
+  "Porto Alegre",
+  "Belém",
+  "Goiânia",
+  "Guarulhos",
+  "Campinas",
+  "São Luís",
+  "São Gonçalo",
+  "Maceió",
+  "Duque de Caxias",
+  "Natal",
+  "Campo Grande",
+  "Teresina",
+  "São Bernardo do Campo",
+  "Nova Iguaçu",
+  "João Pessoa",
+  "Santo André",
+  "Osasco",
+  "São José dos Campos",
+  "Jaboatão dos Guararapes",
+  "Ribeirão Preto",
+  "Uberlândia",
+]
 
 const capitiaisMaisPopulosas = capitais.filter(capital =>
-cidadesMaisPopulosas.includes(capital)
-);
+  cidadesMaisPopulosas.includes(capital)
+)
 
-console.log(capitiaisMaisPopulosas);
-/_
+console.log(capitiaisMaisPopulosas)
+/*
 Array(18) [
 "Maceió",
 "Manaus",
@@ -343,7 +341,7 @@ Array(18) [
 "Porto Alegre",
 "São Paulo"
 ]
-_/
+*/
 ```
 
 ## Resumindo
@@ -364,4 +362,3 @@ Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método
 [filter-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
 [lowercase-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 [includes-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
-````

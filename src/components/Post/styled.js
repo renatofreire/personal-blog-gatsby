@@ -3,6 +3,10 @@ import styled from "styled-components"
 import colors from "../../styles/colors"
 import fonts from "../../styles/fonts"
 
+export const PostContainer = styled.article`
+  margin-top: 5em;
+`
+
 export const InfosContainer = styled.div`
   margin: 1em 0em;
 

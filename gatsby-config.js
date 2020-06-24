@@ -38,6 +38,8 @@ module.exports = {
             options: {
               maxWidth: 980,
               linkImagesToOriginal: false,
+              quality: 100,
+              wrapperStyle: "margin: 0.5em 0;",
             },
           },
           "gatsby-remark-lazy-load",
