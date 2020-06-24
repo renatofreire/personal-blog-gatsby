@@ -1,5 +1,6 @@
 import React from "react"
 import propTypes from "prop-types"
+import { Link } from "gatsby"
 
 import CategoryContainer from "../CategoryContainer"
 import TagsContainer from "../TagsContainer"
@@ -18,7 +19,9 @@ const PostItem = ({
 }) => {
   return (
     <S.PostContainer>
-      <S.Title>{title}</S.Title>
+      <S.Title>
+        <Link to={url}>{title}</Link>
+      </S.Title>
       <S.ImageContainer to={url}>
         <S.CoverImage src={image?.publicURL} alt={altImage} />
       </S.ImageContainer>

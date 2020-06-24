@@ -56,6 +56,10 @@ body {
 	font-size: 16px;
 }
 
+main {
+	overflow: auto;
+}
+
 p > a {
 	color: ${colors.link};
 }

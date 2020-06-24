@@ -15,6 +15,11 @@ const defaultStyle = css`
   border-bottom: 1px solid ${colors.brand3};
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `
 
 const Heading1 = styled.h1`

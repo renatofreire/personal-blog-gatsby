@@ -4,21 +4,28 @@ import colors from "../../styles/colors"
 import fonts from "../../styles/fonts"
 
 export const InfosContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5em;
+  margin: 1em 0em;
+
+  @media (min-width: 500px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 
 export const Date = styled.p`
   font: ${fonts.infos};
   color: ${colors.font};
   font-weight: bold;
-  margin: 2em 0em;
+
+  @media (max-width: 499px) {
+    margin-top: 1em;
+  }
 `
 
 export const Content = styled.div`
   font: ${fonts.text};
   color: ${colors.dark};
+  margin-top: 2em;
 
   p {
     margin-bottom: 1em;

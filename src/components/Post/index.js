@@ -10,11 +10,11 @@ const Post = ({ title, tags, category, date, content }) => (
   <div>
     <Title>{title}</Title>
     <S.InfosContainer>
-      <TagsContainer tags={tags} />
       <CategoryContainer category={category} />
+      <S.Date>Postado em {date}.</S.Date>
     </S.InfosContainer>
+    <TagsContainer tags={tags} />
 
-    <S.Date>Postado em {date}.</S.Date>
     <S.Content dangerouslySetInnerHTML={{ __html: content }}></S.Content>
   </div>
 )

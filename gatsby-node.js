@@ -31,17 +31,6 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             id
-            frontmatter {
-              title
-              date(locale: "pt-br", formatString: "DD/MM/YYYY")
-              category
-              tags
-              image {
-                publicURL
-              }
-              altImage
-            }
-            excerpt(format: HTML)
             fields {
               url
             }
@@ -51,6 +40,17 @@ exports.createPages = ({ graphql, actions }) => {
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
+
+    posts.forEach(({ node }) => {
+      createPage({
+        path: node.fields.url,
+        component: path.resolve(`./src/templates/blog-post.js`),
+        context: {
+          id: node.id,
+          url: node.fields.url,
+        },
+      })
+    })
 
     // creating pages by pagination
     const postsPerPage = 5

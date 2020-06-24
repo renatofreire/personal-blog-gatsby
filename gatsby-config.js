@@ -3,6 +3,7 @@ module.exports = {
     title: `Renato Freire - Blog`,
     description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
     author: `@renatofreire`,
+    siteUrl: "https://renatofreire.dev",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
