@@ -24,8 +24,6 @@ const SharePost = ({ postURL, postTitle }) => {
   const encodedTitle = encodeURIComponent(postTitle)
   const completeURL = `${siteUrl}${postURL}`
 
-  console.log(siteUrl)
-
   return (
     <S.Container>
       <S.Text>Compartilhe:</S.Text>

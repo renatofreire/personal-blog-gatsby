@@ -31,6 +31,9 @@ exports.createPages = ({ graphql, actions }) => {
         edges {
           node {
             id
+            frontmatter {
+              category
+            }
             fields {
               url
             }
@@ -48,6 +51,7 @@ exports.createPages = ({ graphql, actions }) => {
         context: {
           id: node.id,
           url: node.fields.url,
+          category: node.frontmatter.category,
         },
       })
     })

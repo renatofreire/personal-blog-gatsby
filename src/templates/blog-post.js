@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import Post from "../components/Post"
 import SharePost from "../components/SharePost"
+import RecommendedPosts from "../components/RecommendedPosts"
 
 import PageContainer from "../styles/container"
 
@@ -16,7 +17,10 @@ const TestPage = ({ data }) => {
       fields: { url },
       html,
     },
+    allMarkdownRemark: { edges: relatedPosts },
   } = data
+
+  const hasRelatedPosts = relatedPosts.length > 1
 
   return (
     <Layout>
@@ -39,13 +43,19 @@ const TestPage = ({ data }) => {
         />
 
         <SharePost postURL={url} postTitle={title} />
+        {hasRelatedPosts && (
+          <RecommendedPosts
+            title="posts relacionados"
+            postsList={relatedPosts}
+          />
+        )}
       </PageContainer>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query Post($id: String!) {
+  query Post($id: String!, $category: String!) {
     markdownRemark(id: { eq: $id }) {
       fields {
         url
@@ -58,6 +68,24 @@ export const query = graphql`
         description
       }
       html
+    }
+    allMarkdownRemark(
+      limit: 2
+      filter: { id: { ne: $id }, frontmatter: { category: { eq: $category } } }
+    ) {
+      edges {
+        node {
+          fields {
+            url
+          }
+          frontmatter {
+            title
+            category
+            date(locale: "pt-br", formatString: "DD/MM/YYYY")
+            description
+          }
+        }
+      }
     }
   }
 `
