@@ -6,7 +6,7 @@ import fonts from "../../styles/fonts"
 
 export const HeaderSpacer = styled.div`
   width: 100%;
-  height: 60px;
+  height: 56px;
 `
 
 export const Header = styled.header`
