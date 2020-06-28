@@ -19,4 +19,4 @@ const colors = {
   visitedLink: "#6F69ED",
 }
 
-export default colors
+module.exports = colors

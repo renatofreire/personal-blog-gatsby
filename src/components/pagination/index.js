@@ -3,13 +3,15 @@ import PropTypes from "prop-types"
 
 import * as S from "./styled"
 
-const Pagination = ({ current, numberOfPages }) => {
+const Pagination = ({ current, numberOfPages, context }) => {
   const isFirstPage = current === 1
   const isLastPage = current === numberOfPages
 
   const previousIndex = current - 1
   const previousPage = previousIndex === 1 ? "" : previousIndex
   const nextPage = current + 1
+
+  const contextUrl = context ? `/${context}` : ""
 
   return (
     <S.Container>
@@ -18,7 +20,7 @@ const Pagination = ({ current, numberOfPages }) => {
           <S.LeftArrow disabled />
         </S.NoLink>
       ) : (
-        <S.Link to={`/${previousPage}`} title="página anterior">
+        <S.Link to={`${contextUrl}/${previousPage}`} title="página anterior">
           <S.LeftArrow />
         </S.Link>
       )}
@@ -30,7 +32,7 @@ const Pagination = ({ current, numberOfPages }) => {
           <S.RightArrow disabled />
         </S.NoLink>
       ) : (
-        <S.Link to={`/${nextPage}`} title="próxima página">
+        <S.Link to={`${contextUrl}/${nextPage}`} title="próxima página">
           <S.RightArrow />
         </S.Link>
       )}
@@ -38,7 +40,12 @@ const Pagination = ({ current, numberOfPages }) => {
   )
 }
 
+Pagination.defaultProps = {
+  context: "",
+}
+
 Pagination.propTypes = {
+  context: PropTypes.string,
   current: PropTypes.number.isRequired,
   numberOfPages: PropTypes.number.isRequired,
 }

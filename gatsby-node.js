@@ -1,6 +1,8 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
+const categoriesInfo = require("./src/utils/categories-info")
+
 // To add the url field to each post
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -39,11 +41,15 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        distinct(field: frontmatter___category)
       }
     }
   `).then(result => {
     const posts = result.data.allMarkdownRemark.edges
+    const categories = result.data.allMarkdownRemark.distinct
+    const postsPerPage = 5
 
+    // creating pages to each post
     posts.forEach(({ node }) => {
       createPage({
         path: node.fields.url,
@@ -57,7 +63,6 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     // creating pages by pagination
-    const postsPerPage = 5
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {
@@ -71,6 +76,34 @@ exports.createPages = ({ graphql, actions }) => {
           numberOfPages,
           currentPage,
         },
+      })
+    })
+
+    // creating pages for each category whith pagination
+    categories.forEach(categoryId => {
+      const totalPostsPerCategory = posts.reduce(
+        (acc, curr) =>
+          curr.node.frontmatter.category === categoryId ? acc + 1 : acc,
+        0
+      )
+
+      const numberOfPages = Math.ceil(totalPostsPerCategory / postsPerPage)
+
+      const { slug } = categoriesInfo(categoryId)
+
+      Array.from({ length: numberOfPages }).forEach((_, index) => {
+        const currentPage = index + 1
+        createPage({
+          path: index === 0 ? `/${slug}` : `/${slug}/${currentPage}`,
+          component: path.resolve("./src/templates/posts-per-category.js"),
+          context: {
+            limit: postsPerPage,
+            skip: index * postsPerPage,
+            numberOfPages,
+            currentPage,
+            categoryId,
+          },
+        })
       })
     })
   })

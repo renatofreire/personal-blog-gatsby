@@ -14,7 +14,7 @@ import fonts from "../styles/fonts"
 
 const Container = styled(PageContainer)`
   position: relative;
-  margin-top: 2em;
+  padding-top: 2em;
   z-index: 2;
 `
 

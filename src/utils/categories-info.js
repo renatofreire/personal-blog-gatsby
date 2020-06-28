@@ -1,4 +1,4 @@
-import colors from "../styles/colors"
+const colors = require("../styles/colors")
 
 const categories = {
   front: {
@@ -41,4 +41,4 @@ const blankCategory = {
 
 const categoriesInfo = category => categories[category] || blankCategory
 
-export default categoriesInfo
+module.exports = categoriesInfo
