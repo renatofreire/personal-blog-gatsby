@@ -22,30 +22,24 @@ export const CategoryList = styled.ul`
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
+  grid-gap: 1em;
+  justify-content: space-between;
 
   @media (min-width: 500px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
   }
 
   @media (min-width: 800px) {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: auto auto auto;
   }
 `
 
-export const Category = styled.li`
-  text-align: center;
-  margin: 0.5em 0;
-
-  @media (min-width: 800px) {
-    margin: 0;
-  }
-`
+export const Category = styled.li``
 
 export const CategoryLink = styled(Link)`
   font: ${fonts.text};
   color: ${colors.white};
-  display: flex;
+  display: inline-flex;
   align-items: center;
   padding: 0 0.5em;
   text-decoration: none;

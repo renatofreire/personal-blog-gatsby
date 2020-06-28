@@ -1,66 +1,65 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
 import logoDarkPath from "../../images/renato-freire-dark.svg"
-import colors from "../../styles/colors"
+import categoriesInfo from "../../utils/categories-info"
 
 import SocialLinks from "../SocialLinks"
 
 import * as S from "./styled"
 
-const Footer = () => (
-  <S.Footer>
-    <S.CategoriesContainer>
-      <S.CategoriesContent>
-        <S.CategoryList>
-          <S.Category>
-            <S.CategoryLink to="/">
-              <S.CategoryBadge size={16} color={colors.category1} />
-              Front-end
-            </S.CategoryLink>
-          </S.Category>
-          <S.Category>
-            <S.CategoryLink to="/">
-              <S.CategoryBadge size={16} color={colors.category2} />
-              Mobile
-            </S.CategoryLink>
-          </S.Category>
-          <S.Category>
-            <S.CategoryLink to="/">
-              <S.CategoryBadge size={16} color={colors.category3} />
-              Back-end
-            </S.CategoryLink>
-          </S.Category>
-          <S.Category>
-            <S.CategoryLink to="/">
-              <S.CategoryBadge size={16} color={colors.category4} />
-              Gestão de projetos
-            </S.CategoryLink>
-          </S.Category>
-          <S.Category>
-            <S.CategoryLink to="/">
-              <S.CategoryBadge size={16} color={colors.category5} />
-              Carreira
-            </S.CategoryLink>
-          </S.Category>
-        </S.CategoryList>
-      </S.CategoriesContent>
-    </S.CategoriesContainer>
+const Footer = () => {
+  const {
+    allMarkdownRemark: { distinct: categories },
+  } = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark {
+          distinct(field: frontmatter___category)
+        }
+      }
+    `
+  )
 
-    <S.LinksContainer>
-      <S.LinksContent>
-        <Link to="/">
-          <S.Logo src={logoDarkPath} />
-        </Link>
-        <S.SocialLinksContainer>
-          <S.SocialLinksText>
-            Me acompanhe nas redes sociais:{" "}
-          </S.SocialLinksText>
-          <SocialLinks iconSize={50} appearance="dark" />
-        </S.SocialLinksContainer>
-      </S.LinksContent>
-    </S.LinksContainer>
-  </S.Footer>
-)
+  return (
+    <S.Footer>
+      <S.CategoriesContainer>
+        <S.CategoriesContent>
+          <S.CategoryList>
+            {categories &&
+              categories.map(categorySlug => {
+                const category = categoriesInfo(categorySlug)
+                const { color, label, slug } = category
+                return (
+                  category && (
+                    <S.Category key={slug}>
+                      <S.CategoryLink to={`/${slug}`}>
+                        <S.CategoryBadge size={16} color={color} />
+                        {label}
+                      </S.CategoryLink>
+                    </S.Category>
+                  )
+                )
+              })}
+          </S.CategoryList>
+        </S.CategoriesContent>
+      </S.CategoriesContainer>
+
+      <S.LinksContainer>
+        <S.LinksContent>
+          <Link to="/">
+            <S.Logo src={logoDarkPath} />
+          </Link>
+          <S.SocialLinksContainer>
+            <S.SocialLinksText>
+              Me acompanhe nas redes sociais:{" "}
+            </S.SocialLinksText>
+            <SocialLinks iconSize={50} appearance="dark" />
+          </S.SocialLinksContainer>
+        </S.LinksContent>
+      </S.LinksContainer>
+    </S.Footer>
+  )
+}
 
 export default Footer
