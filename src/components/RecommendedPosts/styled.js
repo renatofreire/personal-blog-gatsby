@@ -5,7 +5,7 @@ import colors from "../../styles/colors"
 import fonts from "../../styles/fonts"
 
 export const Container = styled.div`
-  margin-top: 3em;
+  padding: 2em 1em 1em;
 `
 
 export const RecommendedPosts = styled.div`

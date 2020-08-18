@@ -9,11 +9,12 @@ import CategoryBadgeComponent from "../CategoryBadge"
 
 export const Footer = styled.footer`
   margin-top: 2em;
+  background-color: ${colors.brand2};
 `
 
 export const CategoriesContainer = styled.div`
-  padding: 0.5em 0;
   background-color: ${colors.dark};
+  margin-top: 3px;
 `
 
 export const CategoriesContent = styled(PageContainer)``
@@ -24,6 +25,7 @@ export const CategoryList = styled.ul`
   grid-template-columns: 1fr;
   grid-gap: 1em;
   justify-content: space-between;
+  padding: 1em 0;
 
   @media (min-width: 500px) {
     grid-template-columns: auto auto;
@@ -51,7 +53,6 @@ export const CategoryBadge = styled(CategoryBadgeComponent)`
 
 export const LinksContainer = styled.div`
   padding: 1em 0;
-  background-color: ${colors.brand2};
 `
 
 export const LinksContent = styled(PageContainer)`

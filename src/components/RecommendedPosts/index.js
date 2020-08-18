@@ -3,14 +3,14 @@ import PropTypes from "prop-types"
 
 import categoriesInfo from "../../utils/categories-info"
 
+import SectionContainer from "../SectionContainer"
 import CategoryBadge from "../CategoryBadge"
 
 import Title from "./SectionTitle"
 import * as S from "./styled"
 
-const RecommendedPosts = ({ title, postsList }) => {
-  console.log(postsList)
-  return (
+const RecommendedPosts = ({ curvedTop, curvedBottom, title, postsList }) => (
+  <SectionContainer curvedTop={curvedTop} curvedBottom={curvedBottom}>
     <S.Container>
       <Title>{title}</Title>
       <S.RecommendedPosts>
@@ -47,14 +47,18 @@ const RecommendedPosts = ({ title, postsList }) => {
           )}
       </S.RecommendedPosts>
     </S.Container>
-  )
-}
+  </SectionContainer>
+)
 
 RecommendedPosts.defaultProps = {
+  curvedTop: false,
+  curvedBottom: false,
   title: "posts relacionados",
 }
 
 RecommendedPosts.propTypes = {
+  curvedTop: PropTypes.bool,
+  curvedBottom: PropTypes.bool,
   title: PropTypes.string,
   postsList: PropTypes.arrayOf(PropTypes.object).isRequired,
 }

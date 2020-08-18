@@ -10,12 +10,19 @@ import SocialLinks from "../components/SocialLinks"
 
 import PageContainer from "../styles/container"
 import colors from "../styles/colors"
+import sizing from "../styles/sizing"
 import fonts from "../styles/fonts"
 
-const Container = styled(PageContainer)`
+const Page = styled(PageContainer)`
   position: relative;
-  padding-top: 2em;
   z-index: 2;
+`
+
+const Container = styled.div`
+  padding: 2em 1em;
+  margin-top: 2em;
+  background-color: ${colors.white};
+  border-radius: ${sizing.sectionRadius};
 `
 
 const Text = styled.p`
@@ -72,48 +79,52 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Sobre" />
-      <Container>
-        <Title>Sobre esse blog</Title>
-        <div>
-          <Text>
-            Olá! Meu nome é Renato Freire e eu desenvolvo soluções em front-end
-            e back-end. Gosto de adquirir novos conhecimentos, pois acredito que
-            a solução para um problema está na união das informações certas.
-            Para mim, a melhor forma de aprender é compartilhar o que foi
-            aprendido, porque dessa forma podemos somar nossos conhecimentos e
-            multiplicar os conhecimentos existentes no mundo.
-          </Text>
+      <Page>
+        <Container>
+          <Title>Sobre esse blog</Title>
+          <div>
+            <Text>
+              Olá! Meu nome é Renato Freire e eu desenvolvo soluções em
+              front-end e back-end. Gosto de adquirir novos conhecimentos, pois
+              acredito que a solução para um problema está na união das
+              informações certas. Para mim, a melhor forma de aprender é
+              compartilhar o que foi aprendido, porque dessa forma podemos somar
+              nossos conhecimentos e multiplicar os conhecimentos existentes no
+              mundo.
+            </Text>
 
-          <Text>
-            Acredito que o crescimento profissional e pessoal acontecem juntos,
-            por isso estou sempre conversando com outras pessoas, estudando,
-            fazendo cursos e lendo livros e publicações. Criei esse blog para
-            poder registrar essas experiências profissionais e pessoais, falando
-            sobre assuntos técnicos e não-técnicos, dessa forma, além de
-            aprender também posso compartilhar o conhecimento com mais pessoas.
-          </Text>
+            <Text>
+              Acredito que o crescimento profissional e pessoal acontecem
+              juntos, por isso estou sempre conversando com outras pessoas,
+              estudando, fazendo cursos e lendo livros e publicações. Criei esse
+              blog para poder registrar essas experiências profissionais e
+              pessoais, falando sobre assuntos técnicos e não-técnicos, dessa
+              forma, além de aprender também posso compartilhar o conhecimento
+              com mais pessoas.
+            </Text>
 
-          <Text>
-            Como pretendo registrar aqui o que estou estudando e vivenciando no
-            mundo da tecnologia, encare meus posts como "anotações de estudo" ao
-            invés de considerá-los como "palavra de especialista". Se você
-            encontrar algum erro de conceito ou código, ou se você discordar de
-            alguma ideia minha, converse comigo pelas redes sociais ou me mande
-            um e-mail. Vou adorar conversar com você e debater algum assunto
-            para expandirmos nossos conhecimentos.
-          </Text>
+            <Text>
+              Como pretendo registrar aqui o que estou estudando e vivenciando
+              no mundo da tecnologia, encare meus posts como "anotações de
+              estudo" ao invés de considerá-los como "palavra de especialista".
+              Se você encontrar algum erro de conceito ou código, ou se você
+              discordar de alguma ideia minha, converse comigo pelas redes
+              sociais ou me mande um e-mail. Vou adorar conversar com você e
+              debater algum assunto para expandirmos nossos conhecimentos.
+            </Text>
 
-          <SocialLinksContainer>
-            <Image fluid={image.childImageSharp.fluid} />
-            <SocialLinksText>
-              Enfim, estou aberto para qualquer tipo de feedback, então aqui
-              estão os links das minhas redes sociais:
-            </SocialLinksText>
+            <SocialLinksContainer>
+              <Image fluid={image.childImageSharp.fluid} />
+              <SocialLinksText>
+                Enfim, estou aberto para qualquer tipo de feedback, então aqui
+                estão os links das minhas redes sociais:
+              </SocialLinksText>
 
-            <StyledSocialLinks iconSize={50} />
-          </SocialLinksContainer>
-        </div>
-      </Container>
+              <StyledSocialLinks iconSize={50} />
+            </SocialLinksContainer>
+          </div>
+        </Container>
+      </Page>
     </Layout>
   )
 }

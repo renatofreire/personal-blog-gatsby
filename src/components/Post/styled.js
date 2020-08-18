@@ -4,7 +4,8 @@ import colors from "../../styles/colors"
 import fonts from "../../styles/fonts"
 
 export const PostContainer = styled.article`
-  margin-top: 5em;
+  margin-top: 2em;
+  padding: 2em 1em 1em;
 `
 
 export const InfosContainer = styled.div`

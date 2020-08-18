@@ -45,6 +45,7 @@ const TestPage = ({ data }) => {
         <SharePost postURL={url} postTitle={title} />
         {hasRelatedPosts && (
           <RecommendedPosts
+            curvedTop
             title="posts relacionados"
             postsList={relatedPosts}
           />

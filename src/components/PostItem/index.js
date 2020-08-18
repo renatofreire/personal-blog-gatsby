@@ -2,6 +2,7 @@ import React from "react"
 import propTypes from "prop-types"
 import { Link } from "gatsby"
 
+import SectionContainer from "../SectionContainer"
 import CategoryContainer from "../CategoryContainer"
 import TagsContainer from "../TagsContainer"
 
@@ -16,8 +17,8 @@ const PostItem = ({
   excerpt,
   tags,
   url,
-}) => {
-  return (
+}) => (
+  <SectionContainer curvedBottom>
     <S.PostContainer>
       <S.Title>
         <Link to={url}>{title}</Link>
@@ -35,8 +36,8 @@ const PostItem = ({
       {tags && <TagsContainer tags={tags} />}
       <S.PostLink to={url}>ver mais</S.PostLink>
     </S.PostContainer>
-  )
-}
+  </SectionContainer>
+)
 
 PostItem.propTypes = {
   title: propTypes.string.isRequired,

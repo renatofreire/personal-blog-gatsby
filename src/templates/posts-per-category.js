@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
@@ -9,6 +10,10 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
 import Pagination from "../components/Pagination"
+
+const PageContainer = styled(Container)`
+  padding-top: 2em;
+`
 
 const BlogList = props => {
   const postList = props.data.allMarkdownRemark.edges
@@ -26,7 +31,7 @@ const BlogList = props => {
           rel="stylesheet"
         />
       </Helmet>
-      <Container>
+      <PageContainer>
         {postList.map(
           ({
             node: {
@@ -54,7 +59,7 @@ const BlogList = props => {
           numberOfPages={numberOfPages}
           context={slug}
         />
-      </Container>
+      </PageContainer>
     </Layout>
   )
 }

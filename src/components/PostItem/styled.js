@@ -16,7 +16,7 @@ export const PostContainer = styled.article`
     "tags"
     "link";
 
-  margin-top: 100px;
+  padding: 2em 1em 1em;
 
   @media (min-width: 800px) {
     grid-template:

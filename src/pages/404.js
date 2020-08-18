@@ -8,6 +8,7 @@ import RecommendedPosts from "../components/RecommendedPosts"
 
 import Container from "../styles/container"
 import colors from "../styles/colors"
+import sizing from "../styles/sizing"
 import fonts from "../styles/fonts"
 
 const TitleRow = styled.div`
@@ -25,7 +26,14 @@ const Title = styled.h1`
 `
 
 const TextContainer = styled.div`
-  margin-top: 3em;
+  margin-top: 2em;
+`
+
+const Content = styled(Container)`
+  box-sizing: border-box;
+  background-color: ${colors.white};
+  padding: 1em;
+  border-radius: ${sizing.sectionRadius};
 `
 
 const Text = styled.p`
@@ -73,7 +81,7 @@ const NotFoundPage = () => {
       </TitleRow>
 
       <TextContainer>
-        <Container>
+        <Content>
           <Text>Não encontrei a página que você está procurando.</Text>
           <Text>
             Você pode <s>pesquisar por algum assunto no blog</s>(
@@ -81,11 +89,15 @@ const NotFoundPage = () => {
             ), ou ler um dos posts mais recentes.
           </Text>
           <Text>Se você preferir, também pode navegar pelas categorias.</Text>
-        </Container>
+        </Content>
       </TextContainer>
 
       <Container>
-        <RecommendedPosts title="posts recentes" postsList={recentPosts} />
+        <RecommendedPosts
+          curvedTop
+          title="posts recentes"
+          postsList={recentPosts}
+        />
       </Container>
     </Layout>
   )
