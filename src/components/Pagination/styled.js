@@ -2,15 +2,16 @@ import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
 import colors from "../../styles/colors"
+import sizing from "../../styles/sizing"
 import fonts from "../../styles/fonts"
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 5em;
-  padding: 3em 0;
-  border-top: 1px solid ${colors.lightGray};
+  padding: 1em 0;
+  background-color: #fff;
+  border-radius: ${sizing.sectionRadius};
 `
 
 export const Text = styled.p`
