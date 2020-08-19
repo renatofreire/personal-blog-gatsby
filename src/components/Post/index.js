@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from "prop-types"
 
 import SectionContainer from "../SectionContainer"
 import Title from "../Title"
@@ -22,4 +23,11 @@ const Post = ({ title, tags, category, date, content }) => (
   </SectionContainer>
 )
 
+Post.propTypes = {
+  title: propTypes.string.isRequired,
+  tags: propTypes.arrayOf(propTypes.string).isRequired,
+  category: propTypes.string.isRequired,
+  date: propTypes.string.isRequired,
+  content: propTypes.string.isRequired,
+}
 export default Post

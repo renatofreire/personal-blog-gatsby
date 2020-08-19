@@ -10,7 +10,7 @@ import RecommendedPosts from "../components/RecommendedPosts"
 
 import PageContainer from "../styles/container"
 
-const TestPage = ({ data }) => {
+const PostPage = ({ data }) => {
   const {
     markdownRemark: {
       frontmatter: { title, date, category, tags, description },
@@ -91,4 +91,4 @@ export const query = graphql`
   }
 `
 
-export default TestPage
+export default PostPage

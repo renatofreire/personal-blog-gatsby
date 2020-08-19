@@ -24,7 +24,7 @@ const RecommendedPosts = ({ curvedTop, curvedBottom, title, postsList }) => (
             }) => {
               const categoryInfo = categoriesInfo(category)
               return (
-                <S.PostContainer>
+                <S.PostContainer key={postTitle}>
                   <S.PostTitle to={url} title={`ver post ${postTitle}`}>
                     {postTitle}
                   </S.PostTitle>
