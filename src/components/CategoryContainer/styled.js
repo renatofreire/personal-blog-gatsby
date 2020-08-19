@@ -1,11 +1,13 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 import fonts from "../../styles/fonts"
 
-export const CategoryContainer = styled.div`
+export const CategoryContainer = styled(Link)`
   font: ${fonts.text};
   display: flex;
   align-items: center;
+  text-decoration: none;
 `
 
 export const Category = styled.p`

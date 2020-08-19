@@ -7,12 +7,12 @@ import categoriesInfo from "../../utils/categories-info"
 import * as S from "./styled"
 
 const CategoryContainer = ({ category }) => {
-  const postCategory = categoriesInfo(category)
+  const { color, label, slug } = categoriesInfo(category)
 
   return (
-    <S.CategoryContainer>
-      <CategoryBadge size={24} color={postCategory.color} />
-      <S.Category color={postCategory.color}>{postCategory.label}</S.Category>
+    <S.CategoryContainer to={`/${slug}`}>
+      <CategoryBadge size={24} color={color} />
+      <S.Category color={color}>{label}</S.Category>
     </S.CategoryContainer>
   )
 }
