@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 119.99999 120"
+   version="1.1"
+   id="svg25"
+   sodipodi:docname="renato-freire (cópia).svg"
+   width="119.99999"
+   height="119.99999"
+   inkscape:export-filename="/home/renato/Documentos/projects/renafreire.dev/new-blog/blog/src/images/renato-freire (cópia).png"
+   inkscape:export-xdpi="409.60004"
+   inkscape:export-ydpi="409.60004"
+   inkscape:version="1.0 (b51213c273, 2020-08-10)">
+  <metadata
+     id="metadata31">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs29" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     id="namedview27"
+     showgrid="false"
+     inkscape:zoom="5.9123066"
+     inkscape:cx="-2.7622006"
+     inkscape:cy="56.605085"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <style
+     id="style2">.st1{fill:#73e3e8}.st2{fill:#fff}</style>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1"
+     style="display:inline"
+     transform="translate(-0.17009172)">
+    <rect
+       style="fill:#333333;fill-opacity:1;stroke:#ff0000;stroke-width:0.999996;stroke-opacity:0"
+       id="rect33"
+       width="119"
+       height="119"
+       x="-119.67009"
+       y="-119.5"
+       transform="scale(-1)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     transform="translate(-0.17009172)">
+    <g
+       id="Camada_1"
+       transform="translate(4.945086,4.809999)">
+      <g
+         id="g22">
+        <path
+           class="st2"
+           d="M 75.46,105.04 H 35 c -5.26,0 -10.16,-2.83 -12.79,-7.38 L 1.97,62.61 a 14.81,14.81 0 0 1 0,-14.77 L 22.2,12.8 C 24.83,8.25 29.74,5.42 35,5.42 h 40.46 c 5.26,0 10.16,2.83 12.79,7.38 l 20.23,35.04 a 14.81,14.81 0 0 1 0,14.77 L 88.25,97.66 a 14.815,14.815 0 0 1 -12.79,7.38 z M 35,14.37 c -2.07,0 -4,1.11 -5.03,2.91 L 9.73,52.32 a 5.8,5.8 0 0 0 0,5.81 l 20.23,35.04 a 5.838,5.838 0 0 0 5.03,2.91 h 40.46 c 2.07,0 4,-1.11 5.03,-2.91 l 20.23,-35.04 a 5.8,5.8 0 0 0 0,-5.81 L 80.49,17.28 a 5.838,5.838 0 0 0 -5.03,-2.91 z"
+           id="path6" />
+        <path
+           class="st1"
+           d="M 28.47,110.38 V 0 L 92.05,55.19 Z M 37.43,19.63 V 90.75 L 78.4,55.19 Z"
+           id="path8" />
+        <path
+           class="st1"
+           d="M 28.47,0 92.05,55.19 65.84,77.94 59.04,71.99 78.4,55.19 37.43,19.63"
+           id="path10" />
+        <defs
+           id="defs13">
+          <path
+             id="SVGID_29_"
+             d="M 75.46,105.04 H 35 c -5.26,0 -10.16,-2.83 -12.79,-7.38 L 1.97,62.61 a 14.81,14.81 0 0 1 0,-14.77 L 22.2,12.8 C 24.83,8.25 29.74,5.42 35,5.42 h 40.46 c 5.26,0 10.16,2.83 12.79,7.38 l 20.23,35.04 a 14.81,14.81 0 0 1 0,14.77 L 88.25,97.66 a 14.815,14.815 0 0 1 -12.79,7.38 z" />
+        </defs>
+        <clipPath
+           id="SVGID_2_">
+          <use
+             xlink:href="#SVGID_29_"
+             overflow="visible"
+             id="use15"
+             x="0"
+             y="0"
+             width="100%"
+             height="100%" />
+        </clipPath>
+        <g
+           clip-path="url(#SVGID_2_)"
+           id="g20">
+          <path
+             fill="#6f69ed"
+             d="M 87.213068,108.58 56.099284,81.32 28.470404,57.32 V 45.68 l 33.507152,28.88 30.162445,27.08 z"
+             id="path18"
+             style="stroke-width:1" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
