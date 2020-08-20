@@ -1,9 +1,7 @@
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
-import colors from "../../styles/colors"
-import sizing from "../../styles/sizing"
-import fonts from "../../styles/fonts"
+import { colors, fonts, radius } from "../../styles/tokens"
 
 export const Container = styled.div`
   display: flex;
@@ -11,7 +9,7 @@ export const Container = styled.div`
   justify-content: center;
   padding: 1em 0;
   background-color: #fff;
-  border-radius: ${sizing.sectionRadius};
+  border-radius: ${radius.borderRadiusMedium};
 `
 
 export const Text = styled.p`

@@ -1,8 +1,7 @@
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
-import colors from "../../styles/colors"
-import fonts from "../../styles/fonts"
+import { colors, fonts } from "../../styles/tokens"
 
 export const Container = styled.div`
   padding: 2em 1em 1em;

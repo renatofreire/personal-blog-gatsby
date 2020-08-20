@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 
 import styled, { css } from "styled-components"
 
-import colors from "../../styles/colors"
-import fonts from "../../styles/fonts"
+import { colors, fonts } from "../../styles/tokens"
 
 const defaultStyle = css`
   font: ${fonts.title};

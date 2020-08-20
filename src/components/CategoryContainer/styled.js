@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import fonts from "../../styles/fonts"
+import { fonts } from "../../styles/tokens"
 
 export const CategoryContainer = styled(Link)`
   font: ${fonts.text};

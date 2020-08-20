@@ -9,9 +9,7 @@ import Title from "../components/Title"
 import SocialLinks from "../components/SocialLinks"
 
 import PageContainer from "../styles/container"
-import colors from "../styles/colors"
-import sizing from "../styles/sizing"
-import fonts from "../styles/fonts"
+import { colors, fonts, radius } from "../styles/tokens"
 
 const Page = styled(PageContainer)`
   position: relative;
@@ -22,7 +20,7 @@ const Container = styled.div`
   padding: 2em 1em;
   margin-top: 2em;
   background-color: ${colors.white};
-  border-radius: ${sizing.sectionRadius};
+  border-radius: ${radius.borderRadiusMedium};
 `
 
 const Text = styled.p`

@@ -1,13 +1,11 @@
 import styled from "styled-components"
 
-import colors from "../../styles/colors"
-import sizing from "../../styles/sizing"
-import fonts from "../../styles/fonts"
+import { colors, fonts, radius } from "../../styles/tokens"
 
 export const Container = styled.div`
   padding: 1em;
   background-color: ${colors.white};
-  border-radius: ${sizing.sectionRadius};
+  border-radius: ${radius.borderRadiusMedium};
 
   @media (min-width: 430px) {
     display: flex;

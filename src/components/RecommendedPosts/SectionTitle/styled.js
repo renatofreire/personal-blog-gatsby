@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
-import colors from "../../../styles/colors"
-import fonts from "../../../styles/fonts"
+import { colors, fonts } from "../../../styles/tokens"
 
 export const Container = styled.div`
   position: relative;

@@ -1,4 +1,4 @@
-const colors = require("../styles/colors")
+const { colors } = require("../styles/tokens")
 
 const categories = {
   front: {

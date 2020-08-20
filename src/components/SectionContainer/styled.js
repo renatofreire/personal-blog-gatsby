@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components"
 
-import colors from "../../styles/colors"
-import sizing from "../../styles/sizing"
+import { colors, radius } from "../../styles/tokens"
 
 const topRadius = css`
   border-top-right-radius: 0px;
@@ -13,8 +12,8 @@ const topRadius = css`
     width: 100%;
     height: 10px;
     background-color: ${colors.dark};
-    border-bottom-left-radius: ${sizing.sectionRadius};
-    border-bottom-right-radius: ${sizing.sectionRadius};
+    border-bottom-left-radius: ${radius.borderRadiusMedium};
+    border-bottom-right-radius: ${radius.borderRadiusMedium};
   }
 `
 
@@ -28,14 +27,14 @@ const bottomRadius = css`
     width: 100%;
     height: 10px;
     background-color: ${colors.dark};
-    border-top-left-radius: ${sizing.sectionRadius};
-    border-top-right-radius: ${sizing.sectionRadius};
+    border-top-left-radius: ${radius.borderRadiusMedium};
+    border-top-right-radius: ${radius.borderRadiusMedium};
   }
 `
 
 export const Content = styled.div`
   background-color: ${colors.white};
-  border-radius: ${sizing.sectionRadius};
+  border-radius: ${radius.borderRadiusMedium};
 
   ${({ curvedTop }) => curvedTop && topRadius}
   ${({ curvedBottom }) => curvedBottom && bottomRadius}

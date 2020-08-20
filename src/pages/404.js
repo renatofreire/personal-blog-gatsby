@@ -7,9 +7,7 @@ import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
 import Container from "../styles/container"
-import colors from "../styles/colors"
-import sizing from "../styles/sizing"
-import fonts from "../styles/fonts"
+import { colors, fonts, radius } from "../styles/tokens"
 
 const TitleRow = styled.div`
   background-color: ${colors.brand2};
@@ -33,7 +31,7 @@ const Content = styled(Container)`
   box-sizing: border-box;
   background-color: ${colors.white};
   padding: 1em;
-  border-radius: ${sizing.sectionRadius};
+  border-radius: ${radius.borderRadiusMedium};
 `
 
 const Text = styled.p`
