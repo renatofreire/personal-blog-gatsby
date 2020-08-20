@@ -9,6 +9,7 @@ import categoriesInfo from "../utils/categories-info"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
+import CategoryHeader from "../components/CategoryHeader"
 import Pagination from "../components/Pagination"
 
 const PageContainer = styled(Container)`
@@ -20,7 +21,7 @@ const BlogList = props => {
 
   const { currentPage, numberOfPages, categoryId } = props.pageContext
 
-  const { slug, label } = categoriesInfo(categoryId)
+  const { slug, label, description, color } = categoriesInfo(categoryId)
 
   return (
     <Layout>
@@ -32,6 +33,8 @@ const BlogList = props => {
         />
       </Helmet>
       <PageContainer>
+        <CategoryHeader color={color} description={description} name={label} />
+
         {postList.map(
           ({
             node: {
