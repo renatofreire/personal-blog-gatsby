@@ -18,6 +18,9 @@ export const RecommendedPosts = styled.div`
 `
 
 export const PostContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
   border: 1px solid ${colors.brand3};
   border-radius: 5px;
   padding: 0.5em;

@@ -42,6 +42,7 @@ export const ImageContainer = styled(Link)`
 
 export const CoverImage = styled.img`
   max-width: 250px;
+  max-height: 250px;
 
   @media (max-width: 799px) {
     width: 100%;
