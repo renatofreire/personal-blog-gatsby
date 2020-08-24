@@ -13,7 +13,7 @@ import PageContainer from "../styles/container"
 const PostPage = ({ data }) => {
   const {
     markdownRemark: {
-      frontmatter: { title, date, category, tags, description },
+      frontmatter: { title, date, category, tags, description, image },
       fields: { url },
       html,
     },
@@ -24,7 +24,7 @@ const PostPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} description={description} image={image} />
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
@@ -67,6 +67,9 @@ export const query = graphql`
         tags
         title
         description
+        image {
+          publicURL
+        }
       }
       html
     }

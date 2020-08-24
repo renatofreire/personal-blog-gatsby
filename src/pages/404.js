@@ -71,7 +71,12 @@ const NotFoundPage = () => {
 
   return (
     <Layout>
-      <SEO title="Página não encontrada" />
+      <SEO
+        title="Página não encontrada"
+        description={
+          "Não encontrei o que você procurou, mas você pode encontrar outros conteúdos legais aqui."
+        }
+      />
       <TitleRow>
         <Container>
           <Title>Essa página não existe</Title>

@@ -76,7 +76,10 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Sobre" />
+      <SEO
+        title="Sobre"
+        description={"Olá! Nessa página você conhece um pouco mais sobre mim."}
+      />
       <Page>
         <Container>
           <Title>Sobre esse blog</Title>

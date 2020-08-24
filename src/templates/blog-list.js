@@ -21,7 +21,7 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={`Home ${currentPage > 1 ? `[${currentPage}]` : ""}`} />
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
