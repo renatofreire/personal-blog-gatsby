@@ -44,6 +44,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "clean:build": "yarn clean && yarn build",
+    "clean:start": "yarn clean && yarn start",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
