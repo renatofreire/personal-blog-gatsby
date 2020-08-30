@@ -5,6 +5,7 @@
   "version": "2.1.0",
   "author": "Renato Freire <contato.renatofreire@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.11.1",
     "gatsby": "^2.22.15",
     "gatsby-image": "^2.4.5",
     "gatsby-plugin-manifest": "^2.4.9",
@@ -13,6 +14,7 @@
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-sitemap": "^2.4.12",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-remark-images": "^3.3.11",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-prismjs": "^3.5.5",
@@ -41,6 +43,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "clean:build": "yarn clean && yarn build",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

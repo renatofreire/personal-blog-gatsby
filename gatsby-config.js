@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Renato Freire - Blog`,
     description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
-    author: `@renatofreire`,
-    siteUrl: "https://renatofreire.dev",
+    siteUrl: `https://renatofreire.dev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -28,23 +27,24 @@ module.exports = {
         path: `${__dirname}/posts`,
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         excerpt_separator: `<!-- end_excerpt -->`,
         plugins: [
           {
-            resolve: "gatsby-remark-images",
+            resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 980,
               linkImagesToOriginal: false,
               quality: 100,
-              wrapperStyle: "margin: 0.5em 0;",
+              wrapperStyle: `margin: 0.5em 0;`,
             },
           },
-          "gatsby-remark-lazy-load",
+          `gatsby-remark-lazy-load`,
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: `gatsby-remark-prismjs`,
             options: {
               showLineNumbers: true,
               noInlineHighlight: true,
@@ -58,18 +58,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `renatofreire-blog`,
-        short_name: `renatofreire-blog`,
+        name: `Renato Freire - Blog`,
+        short_name: `Renato Ffreire`,
         description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
         start_url: `/`,
         background_color: `#333`,
         theme_color: `#73e3e8`,
         icon: `src/images/placeholder.png`, // This path is relative to the root of the site.
-        theme_color_in_head: false,
+        display: `minimal-ui`,
       },
     },
     {
-      resolve: "gatsby-plugin-robots-txt",
+      resolve: `gatsby-plugin-robots-txt`,
       options: {
         resolveEnv: () => process.env.GATSBY_ENV,
         env: {
@@ -82,9 +82,7 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sitemap",
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`, // To learn more, visit: https://gatsby.dev/offline
   ],
 }
