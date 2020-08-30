@@ -30,7 +30,7 @@ const SharePost = ({ postURL, postTitle }) => {
 
       <S.LinksContainer>
         <S.ShareLink
-          href={`http://twitter.com/intent/tweet?text=${encodedTitle}&url=${completeURL}&via=renatofreire_tw`}
+          href={`http://twitter.com/intent/tweet?text=${encodedTitle}&url=${completeURL}`}
           target="_new"
           title="compartilhe este post no Twitter"
         >

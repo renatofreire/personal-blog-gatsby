@@ -18,7 +18,6 @@ function SEO({ description, lang, meta, title, image }) {
           siteMetadata {
             title
             description
-            author
             siteUrl
           }
         }
