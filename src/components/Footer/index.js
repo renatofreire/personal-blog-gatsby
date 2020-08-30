@@ -48,7 +48,11 @@ const Footer = () => {
       <S.LinksContainer>
         <S.LinksContent>
           <Link to="/">
-            <S.Logo src={logoDarkPath} />
+            <S.Logo
+              src={logoDarkPath}
+              title="ir para página principal do blog"
+              alt=""
+            />
           </Link>
           <S.SocialLinksContainer>
             <S.SocialLinksText>

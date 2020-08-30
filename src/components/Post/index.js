@@ -14,7 +14,7 @@ const Post = ({ title, tags, category, date, content }) => (
       <Title>{title}</Title>
       <S.InfosContainer>
         <CategoryContainer category={category} />
-        <S.Date>Postado em {date}.</S.Date>
+        <S.Date>Postado em {date}</S.Date>
       </S.InfosContainer>
       <TagsContainer tags={tags} />
 

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import Container from "../styles/container"
 import categoriesInfo from "../utils/categories-info"
@@ -26,12 +25,6 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title={label} />
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
       <PageContainer>
         <CategoryHeader color={color} description={description} name={label} />
 

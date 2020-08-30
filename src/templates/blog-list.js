@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import Container from "../styles/container"
 
@@ -22,12 +21,6 @@ const BlogList = props => {
   return (
     <Layout>
       <SEO title={`Home ${currentPage > 1 ? `[${currentPage}]` : ""}`} />
-      <Helmet>
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap"
-          rel="stylesheet"
-        />
-      </Helmet>
       <PageContainer>
         {postList.map(
           ({

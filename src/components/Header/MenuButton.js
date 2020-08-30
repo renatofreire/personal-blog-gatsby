@@ -9,9 +9,10 @@ const MenuButton = ({ isMenuOpen, onClick }) => {
   }
 
   const className = isMenuOpen ? "menu-open" : ""
+  const buttonTitle = isMenuOpen ? "fechar menu" : "abrir menu"
 
   return (
-    <S.Button onClick={handleClick}>
+    <S.Button onClick={handleClick} title={buttonTitle}>
       <S.ButtonLine1 className={className} />
       <S.ButtonLine2 className={className} />
       <S.ButtonLine3 className={className} />

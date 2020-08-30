@@ -19,7 +19,6 @@ export const InfosContainer = styled.div`
 export const Date = styled.p`
   font: ${fonts.infos};
   color: ${colors.font};
-  font-weight: bold;
 
   @media (max-width: 499px) {
     margin-top: 1em;
