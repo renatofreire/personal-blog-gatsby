@@ -9,11 +9,6 @@ const socialInfos = [
     url: "https://github.com/",
     user: "renatofreire",
   },
-  {
-    name: "twitter",
-    url: "https://twitter.com/",
-    user: "renatofreire_tw",
-  },
 ]
 
 export default socialInfos
