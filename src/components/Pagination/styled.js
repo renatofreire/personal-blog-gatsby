@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import { Link as GatsbyLink } from "gatsby"
 
 import { colors, fonts, radius, shadows } from "../../styles/tokens"
+
+import Button from "../Button"
 
 export const Container = styled.div`
   display: flex;
@@ -20,14 +21,8 @@ export const Text = styled.p`
   margin: 0px 1em;
 `
 
-export const Link = styled(GatsbyLink)`
+export const Link = styled(Button)`
   padding: 0.5em 1em;
-  border-radius: ${radius.borderRadiusSmall};
-  background-color: ${colors.brand2};
-
-  &:hover {
-    background-color: ${colors.codeBackground};
-  }
 `
 
 const Arrow = styled.div`
