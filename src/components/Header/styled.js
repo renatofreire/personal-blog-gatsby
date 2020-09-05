@@ -18,6 +18,7 @@ export const Header = styled.header`
   left: 0;
   z-index: 99;
   max-height: 60px;
+  box-shadow: 0px 1px 5px 0px ${colors.headerShadow};
 `
 export const Navigation = styled.nav`
   display: flex;

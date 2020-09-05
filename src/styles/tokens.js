@@ -4,6 +4,7 @@ const colors = {
   white: "#FFF",
   black: "#000",
   background: "#F0F0F0",
+  headerShadow: "#000",
   category1: "#FFCC66",
   category2: "#F48576",
   category3: "#CA86Ef",
