@@ -9,7 +9,10 @@ const CategoryContainer = ({ category }) => {
   const { color, label, slug } = categoriesInfo(category)
 
   return (
-    <S.CategoryContainer to={`/${slug}`}>
+    <S.CategoryContainer
+      to={`/${slug}`}
+      title={`ver todos os post sobre ${label}`}
+    >
       <S.CategoryBadge size={16} color={color} />
       <S.Category color={color}>{label}</S.Category>
     </S.CategoryContainer>

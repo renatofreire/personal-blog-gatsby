@@ -73,6 +73,10 @@ p > a:visited {
 	color: ${colors.visitedLink}
 }
 
+a {
+  border: 1px solid transparent;
+}
+
 a:active, a:focus,
 button:active, button:focus  {
 	border: 1px dotted ${colors.brand2};

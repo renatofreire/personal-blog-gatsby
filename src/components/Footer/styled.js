@@ -52,6 +52,11 @@ export const CategoryBadge = styled(CategoryBadgeComponent)`
 
 export const LinksContainer = styled.div`
   padding: 1em 0;
+
+  & a:active,
+  & a:focus {
+    border: 1px dotted ${colors.black};
+  }
 `
 
 export const LinksContent = styled(PageContainer)`

@@ -28,7 +28,7 @@ const PostItem = ({
     </S.InfoContainer>
 
     <S.PostContent>
-      <S.ImageContainer to={url}>
+      <S.ImageContainer to={url} title="ver post completo">
         <S.CoverImage src={image?.publicURL || placeholder} alt={altImage} />
       </S.ImageContainer>
       <S.TextContainer>
@@ -37,7 +37,9 @@ const PostItem = ({
       </S.TextContainer>
     </S.PostContent>
 
-    <S.PostLink to={url}>ver post</S.PostLink>
+    <S.PostLink to={url} title="ver post completo">
+      ver post
+    </S.PostLink>
   </S.PostContainer>
 )
 
