@@ -1,10 +1,10 @@
 import React from "react"
-import propTypes from "prop-types"
+import PropTypes from "prop-types"
 
 import * as S from "./styled"
 
-const TagsContainer = ({ tags }) => (
-  <S.TagsContainer>
+const TagsContainer = ({ className, tags }) => (
+  <S.TagsContainer className={className}>
     <S.TagsTitle>tags:</S.TagsTitle>
     <S.TagsList>
       {tags.map(tag => (
@@ -14,8 +14,13 @@ const TagsContainer = ({ tags }) => (
   </S.TagsContainer>
 )
 
+TagsContainer.defaultProps = {
+  className: "",
+}
+
 TagsContainer.propTypes = {
-  tags: propTypes.arrayOf(propTypes.string).isRequired,
+  className: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default TagsContainer

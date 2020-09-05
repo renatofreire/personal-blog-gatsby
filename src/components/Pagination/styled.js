@@ -1,27 +1,29 @@
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
-import { colors, fonts, radius } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1em 0;
-  background-color: #fff;
-  border-radius: ${radius.borderRadiusMedium};
+  background-color: ${colors.font};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 `
 
 export const Text = styled.p`
   font: ${fonts.infos};
   font-weight: bold;
-  color: ${colors.dark};
+  color: ${colors.white};
   margin: 0px 1em;
 `
 
 export const Link = styled(GatsbyLink)`
   padding: 0.5em 1em;
-  border-radius: 5px;
+  border-radius: ${radius.borderRadiusSmall};
+  background-color: ${colors.brand2};
 
   &:hover {
     background-color: ${colors.codeBackground};
@@ -40,14 +42,16 @@ const Arrow = styled.div`
 `
 
 export const RightArrow = styled(Arrow)`
-  transform: rotate(45deg);
+  transform: translateX(-2px) rotate(45deg);
 `
 
 export const LeftArrow = styled(Arrow)`
-  transform: rotate(-135deg);
+  transform: translateX(2px) rotate(-135deg);
 `
 
 export const NoLink = styled.span`
   padding: 0.5em 1em;
   cursor: not-allowed;
+  background-color: #999;
+  border-radius: ${radius.borderRadiusSmall};
 `

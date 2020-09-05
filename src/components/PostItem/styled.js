@@ -1,43 +1,49 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { colors, fonts } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { lightenHexColor } from "../../utils/colors"
 
 import TitleComponent from "../Title"
+import TagsContainerComponent from "../TagsContainer"
 
 export const PostContainer = styled.article`
-  display: grid;
-  grid-gap: 1em 2em;
-  grid-template:
-    "title"
-    "image"
-    "content"
-    "tags"
-    "link";
-
-  padding: 2em 1em 1em;
-
-  @media (min-width: 800px) {
-    grid-template:
-      "title title title title"
-      "image content content content "
-      "tags tags tags link";
-  }
+  display: flex;
+  flex-direction: column;
+  background-color: ${colors.font};
+  margin-bottom: 2em;
+  overflow: hidden;
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 `
 
 export const Title = styled(TitleComponent)`
-  grid-area: title;
   font-size: 1.3em;
 `
 
-export const ImageContainer = styled(Link)`
-  grid-area: image;
+export const InfoContainer = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
 
   @media (max-width: 799px) {
-    justify-self: center;
+    flex-direction: column;
+    align-items: flex-start;
   }
+`
+
+export const TagsContainer = styled(TagsContainerComponent)`
+  margin: 0 1em 0 0;
+
+  @media (max-width: 799px) {
+    margin: 0.5em 0 0 1em;
+  }
+`
+
+export const ImageContainer = styled(Link)`
+  display: flex;
+  justify-content: center;
 `
 
 export const CoverImage = styled.img`
@@ -50,47 +56,59 @@ export const CoverImage = styled.img`
 `
 
 export const PostContent = styled.div`
-  grid-area: content;
+  margin: 1em;
+  display: flex;
+
+  @media (max-width: 799px) {
+    flex-direction: column;
+  }
 `
 
-export const InfoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0.5em 0 1.5em;
+export const TextContainer = styled.div`
+  margin: 0 0 0 2em;
+
+  @media (max-width: 799px) {
+    margin: 2em 0 0 0;
+  }
 `
 
 export const Date = styled.time`
   font: ${fonts.infos};
-  color: ${colors.font};
+  color: ${colors.white};
+  margin-bottom: 1em;
+  display: block;
 `
 
 export const Excerpt = styled.p`
   font: ${fonts.text};
+  color: ${colors.white};
 `
 
 export const PostLink = styled(Link)`
-  grid-area: link;
-  height: 2em;
-  color: ${colors.dark};
-  font: ${fonts.infos};
-  text-decoration: none;
   display: flex;
-  align-items: center;
   justify-content: center;
-  align-self: flex-end;
-  border-radius: 5px;
-  border: 2px solid ${colors.dark};
-  padding: 0 2em;
-  font-weight: bold;
-  transition: color 0.2s, background-color 0.2s;
 
-  &:hover {
-    color: ${colors.white};
-    background-color: ${colors.dark};
+  font: ${fonts.infos};
+  color: ${colors.dark};
+  font-weight: bold;
+  text-decoration: none;
+  background-color: ${colors.brand2};
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: ${colors.dark};
+    background-color: ${lightenHexColor(colors.brand2, 50)};
+    box-shadow: ${shadows.hover};
   }
 
-  @media (max-width: 799px) {
-    margin-top: 1em;
+  @media (min-width: 800px) {
+    min-width: 250px;
+    align-self: flex-end;
   }
 `

@@ -1,10 +1,9 @@
 import React from "react"
-import propTypes from "prop-types"
+import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import SectionContainer from "../SectionContainer"
+import placeholder from "../../images/placeholder.png"
 import CategoryContainer from "../CategoryContainer"
-import TagsContainer from "../TagsContainer"
 
 import * as S from "./styled"
 
@@ -18,36 +17,39 @@ const PostItem = ({
   tags,
   url,
 }) => (
-  <SectionContainer curvedBottom>
-    <S.PostContainer>
-      <S.Title>
-        <Link to={url}>{title}</Link>
-      </S.Title>
+  <S.PostContainer>
+    <S.Title>
+      <Link to={url}>{title}</Link>
+    </S.Title>
+
+    <S.InfoContainer>
+      <CategoryContainer category={category} />
+      {tags && <S.TagsContainer tags={tags} />}
+    </S.InfoContainer>
+
+    <S.PostContent>
       <S.ImageContainer to={url}>
-        <S.CoverImage src={image?.publicURL} alt={altImage} />
+        <S.CoverImage src={image?.publicURL || placeholder} alt={altImage} />
       </S.ImageContainer>
-      <S.PostContent>
-        <S.InfoContainer>
-          <CategoryContainer category={category} />
-          <S.Date>Postado em {date}</S.Date>
-        </S.InfoContainer>
+      <S.TextContainer>
+        <S.Date>Postado em {date}</S.Date>
         <S.Excerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
-      </S.PostContent>
-      {tags && <TagsContainer tags={tags} />}
-      <S.PostLink to={url}>ver mais</S.PostLink>
-    </S.PostContainer>
-  </SectionContainer>
+      </S.TextContainer>
+    </S.PostContent>
+
+    <S.PostLink to={url}>ver post</S.PostLink>
+  </S.PostContainer>
 )
 
 PostItem.propTypes = {
-  title: propTypes.string.isRequired,
-  category: propTypes.string.isRequired,
-  date: propTypes.string.isRequired,
-  image: propTypes.object.isRequired,
-  altImage: propTypes.string.isRequired,
-  excerpt: propTypes.string.isRequired,
-  tags: propTypes.arrayOf(propTypes.string).isRequired,
-  url: propTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  altImage: PropTypes.string.isRequired,
+  excerpt: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  url: PropTypes.string.isRequired,
 }
 
 export default PostItem

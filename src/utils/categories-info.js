@@ -36,7 +36,7 @@ const categories = {
   dev: {
     label: "desenvolvimento",
     slug: "desenvolvimento",
-    color: colors.brand3,
+    color: colors.category6,
     description: "Categoria onde abordo temas relacionados a desenvolvimento",
   },
 }

@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: #333;
+	background-color: ${colors.bodyBackground};
 }
 ol, ul {
 	list-style: none;
@@ -80,7 +80,6 @@ button:active, button:focus  {
 
 code {
 	font-family: "Courier New", Courier, monospace;
-	background-color: ${colors.codeBackground};
 	padding: 0px 2px;
 	color: ${colors.code}
 }

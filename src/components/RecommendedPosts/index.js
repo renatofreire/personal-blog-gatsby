@@ -1,10 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import categoriesInfo from "../../utils/categories-info"
-
 import SectionContainer from "../SectionContainer"
-import CategoryBadge from "../CategoryBadge"
+import CategoryContainer from "../CategoryContainer"
 
 import Title from "./SectionTitle"
 import * as S from "./styled"
@@ -22,17 +20,13 @@ const RecommendedPosts = ({ curvedTop, curvedBottom, title, postsList }) => (
                 fields: { url },
               },
             }) => {
-              const categoryInfo = categoriesInfo(category)
               return (
                 <S.PostContainer key={postTitle}>
                   <S.PostTitle to={url} title={`ver post ${postTitle}`}>
                     {postTitle}
                   </S.PostTitle>
                   <S.PostInfos>
-                    <S.PostCategory color={categoryInfo.color}>
-                      <CategoryBadge size={20} color={categoryInfo.color} />
-                      <span>{categoryInfo.label}</span>
-                    </S.PostCategory>
+                    <CategoryContainer category={category} />
                     <S.PostDate>{date}</S.PostDate>
                   </S.PostInfos>
                   <S.PostExcerpt>{description}</S.PostExcerpt>

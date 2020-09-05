@@ -7,13 +7,13 @@ import { colors, fonts } from "../../styles/tokens"
 
 const defaultStyle = css`
   font: ${fonts.title};
-  color: ${colors.dark};
+  background-color: ${colors.font};
+  color: ${colors.white};
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-bottom: 1px solid ${colors.brand3};
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border-bottom: 2px solid ${colors.brand2};
 
   a {
     color: inherit;
