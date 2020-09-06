@@ -4,7 +4,8 @@ const colors = {
   white: "#FFF", // X
   black: "#000", //X
   bodyBackground: "#222",
-  background: "#F0F0F0",
+  background: "#777777",
+  background2: "#999999",
   headerShadow: "#000",
   category1: "#FED98D",
   category2: "#F5A094",

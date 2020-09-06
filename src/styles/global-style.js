@@ -120,6 +120,11 @@ strong {
 	height: 100%;
 	justify-content: space-evenly;
 }
+
+.gatsby-highlight .token.comment {
+	color: #77CC77;
+}
+
 `
 
 export default GlobalStyles

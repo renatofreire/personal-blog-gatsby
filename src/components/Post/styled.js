@@ -1,34 +1,49 @@
 import styled from "styled-components"
 
-import { colors, fonts } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
+
+import TagsContainerComponent from "../TagsContainer"
 
 export const PostContainer = styled.article`
   margin-top: 2em;
-  padding: 2em 1em 1em;
+  padding-bottom: 1em;
+  background-color: ${colors.font};
+  overflow: hidden;
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 `
 
 export const InfosContainer = styled.div`
-  margin: 1em 0em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
 
-  @media (min-width: 500px) {
-    display: flex;
-    justify-content: space-between;
+  @media (max-width: 799px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+export const TagsContainer = styled(TagsContainerComponent)`
+  margin: 0 1em 0 0;
+
+  @media (max-width: 799px) {
+    margin: 0.5em 0 0 1em;
   }
 `
 
 export const Date = styled.p`
   font: ${fonts.infos};
-  color: ${colors.font};
-
-  @media (max-width: 499px) {
-    margin-top: 1em;
-  }
+  color: ${colors.white};
+  margin: 2em 1em;
+  font-weight: bold;
 `
 
 export const Content = styled.div`
   font: ${fonts.text};
-  color: ${colors.dark};
-  margin-top: 2em;
+  color: ${colors.white};
+  margin: 1em;
 
   p {
     margin-bottom: 1em;
@@ -37,8 +52,9 @@ export const Content = styled.div`
   blockquote {
     padding: 5px 5px 5px 10px;
     border-left: 3px solid #215c84;
-    border-left-color: ${colors.brand3};
+    border-left-color: ${colors.brand2};
     background-color: ${colors.background};
+    color: ${colors.black};
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     font-style: italic;
@@ -49,6 +65,10 @@ export const Content = styled.div`
     margin-bottom: 0;
   }
 
+  blockquote code {
+    color: ${colors.black};
+  }
+
   h2,
   h3,
   h4,
@@ -56,19 +76,11 @@ export const Content = styled.div`
   h6 {
     margin-top: 2em;
     font-weight: bold;
-    color: ${colors.black};
   }
 
   h2,
   h3 {
     margin-bottom: 1em;
-  }
-
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 0.5em;
-    font-size: 1.1em;
   }
 
   h2 {
@@ -77,6 +89,13 @@ export const Content = styled.div`
 
   h3 {
     font-size: 1.25em;
+  }
+
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5em;
+    font-size: 1.1em;
   }
 
   ol,
@@ -97,11 +116,12 @@ export const Content = styled.div`
 
   ol li {
     margin-bottom: 0.7em;
-    color: ${colors.dark};
+    color: ${colors.white};
   }
 
   ol li::marker {
     font-weight: bold;
+    color: ${colors.white};
   }
 
   table {
@@ -123,10 +143,16 @@ export const Content = styled.div`
 
   tbody tr:nth-child(odd) {
     background-color: ${colors.background};
+    color: ${colors.black};
   }
 
   tbody tr:nth-child(even) {
-    background-color: ${colors.lightGray};
+    background-color: ${colors.background2};
+    color: ${colors.black};
+  }
+
+  tbody tr code {
+    color: ${colors.black};
   }
 
   td {
