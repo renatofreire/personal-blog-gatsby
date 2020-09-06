@@ -1,30 +1,38 @@
 import styled from "styled-components"
 
-import { fonts } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
+
+import CategoryBadgeComponent from "../CategoryBadge"
+import TitleComponent from "../Title"
 
 export const Content = styled.div`
-  padding: 1em;
+  margin-bottom: 2em;
+  background-color: ${colors.font};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
+  overflow: hidden;
+`
+
+export const Title = styled(TitleComponent)`
+  background-color: ${colors.dark};
+  font-size: 1.3em;
 `
 
 export const CategoryContainer = styled.div`
-  font: ${fonts.text};
   display: flex;
   align-items: center;
-  text-decoration: none;
+`
+
+export const CategoryBadge = styled(CategoryBadgeComponent)`
+  margin-right: 0.5em;
 `
 
 export const Category = styled.p`
   color: ${({ color }) => color};
-  font-weight: bold;
-  margin-left: 0.5em;
-  font-size: 1.5em;
 `
 
 export const Description = styled.p`
   font: ${fonts.text};
-  margin-top: 0.5em;
-
-  @media (min-width: 500px) {
-    margin-left: 62px;
-  }
+  color: ${colors.white};
+  padding: 1em;
 `

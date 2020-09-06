@@ -1,19 +1,18 @@
 import React from "react"
-import CategoryBadge from "../CategoryBadge"
-import SectionContainer from "../SectionContainer"
 
 import * as S from "./styled"
 
-const CategoryHeader = ({ color, description, name }) => (
-  <SectionContainer curvedBottom>
-    <S.Content>
+const CategoryHeader = ({ category: { color, description, label } }) => (
+  <S.Content>
+    <S.Title>
       <S.CategoryContainer>
-        <CategoryBadge color={color} size={50} />
-        <S.Category color={color}>{name}</S.Category>
+        <S.CategoryBadge color={color} size={24} />
+        <S.Category color={color}>{label}</S.Category>
       </S.CategoryContainer>
-      <S.Description>{description}</S.Description>
-    </S.Content>
-  </SectionContainer>
+    </S.Title>
+
+    <S.Description>{description}</S.Description>
+  </S.Content>
 )
 
 export default CategoryHeader

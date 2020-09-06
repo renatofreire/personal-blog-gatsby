@@ -20,13 +20,13 @@ const BlogList = props => {
 
   const { currentPage, numberOfPages, categoryId } = props.pageContext
 
-  const { slug, label, description, color } = categoriesInfo(categoryId)
+  const category = categoriesInfo(categoryId)
 
   return (
     <Layout>
-      <SEO title={label} />
+      <SEO title={category.label} />
       <PageContainer>
-        <CategoryHeader color={color} description={description} name={label} />
+        <CategoryHeader category={category} />
 
         {postList.map(
           ({
@@ -53,7 +53,7 @@ const BlogList = props => {
         <Pagination
           current={currentPage}
           numberOfPages={numberOfPages}
-          context={slug}
+          context={category.slug}
         />
       </PageContainer>
     </Layout>

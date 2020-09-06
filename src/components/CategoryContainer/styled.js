@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import CategoryBadgeComponent from "../CategoryBadge"
 import { colors, fonts, shadows } from "../../styles/tokens"
 import { lightenHexColor } from "../../utils/colors"
+
+import CategoryBadgeComponent from "../CategoryBadge"
 
 export const CategoryContainer = styled(Link)`
   font: ${fonts.text};
