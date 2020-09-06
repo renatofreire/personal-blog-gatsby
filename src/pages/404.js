@@ -7,11 +7,12 @@ import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
 import Container from "../styles/container"
-import { colors, fonts, radius } from "../styles/tokens"
+import { colors, fonts, radius, shadows } from "../styles/tokens"
 
 const TitleRow = styled.div`
-  background-color: ${colors.brand2};
+  background-color: ${colors.font};
   padding: 5em 0;
+  box-shadow: ${shadows.default};
 `
 
 const Title = styled.h1`
@@ -20,23 +21,24 @@ const Title = styled.h1`
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: ${colors.dark};
+  color: ${colors.white};
 `
 
 const TextContainer = styled.div`
-  margin-top: 2em;
+  margin: 2em 0;
 `
 
 const Content = styled(Container)`
   box-sizing: border-box;
-  background-color: ${colors.white};
+  background-color: ${colors.font};
   padding: 1em;
-  border-radius: ${radius.borderRadiusMedium};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 `
 
 const Text = styled.p`
   font: ${fonts.text};
-  color: ${colors.font};
+  color: ${colors.white};
   text-align: center;
   margin-bottom: 0.5em;
 `
@@ -96,11 +98,7 @@ const NotFoundPage = () => {
       </TextContainer>
 
       <Container>
-        <RecommendedPosts
-          curvedTop
-          title="posts recentes"
-          postsList={recentPosts}
-        />
+        <RecommendedPosts title="posts recentes" postsList={recentPosts} />
       </Container>
     </Layout>
   )
