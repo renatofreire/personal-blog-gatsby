@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
-import { colors, fonts, radius } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
 
 export const Container = styled.div`
   padding: 1em;
-  background-color: ${colors.white};
-  border-radius: ${radius.borderRadiusMedium};
+  margin: 2em 0;
+  background-color: ${colors.font};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 
   @media (min-width: 430px) {
     display: flex;
@@ -15,7 +17,7 @@ export const Container = styled.div`
 `
 export const Text = styled.p`
   font: ${fonts.text};
-  color: ${colors.black};
+  color: ${colors.white};
   font-weight: bold;
 `
 
