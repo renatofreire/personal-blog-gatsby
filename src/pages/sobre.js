@@ -9,7 +9,7 @@ import Title from "../components/Title"
 import SocialLinks from "../components/SocialLinks"
 
 import PageContainer from "../styles/container"
-import { colors, fonts, radius } from "../styles/tokens"
+import { colors, fonts, radius, shadows } from "../styles/tokens"
 
 const Page = styled(PageContainer)`
   position: relative;
@@ -17,16 +17,20 @@ const Page = styled(PageContainer)`
 `
 
 const Container = styled.div`
-  padding: 2em 1em;
   margin-top: 2em;
-  background-color: ${colors.white};
-  border-radius: ${radius.borderRadiusMedium};
+  background-color: ${colors.font};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
+`
+
+const Content = styled.div`
+  padding: 1em;
 `
 
 const Text = styled.p`
   font: ${fonts.text};
-  color: ${colors.dark};
-  margin-bottom: 2em;
+  color: ${colors.white};
+  margin: 0em 0 2em;
 `
 
 const SocialLinksContainer = styled.div`
@@ -57,6 +61,7 @@ const Image = styled(Img)`
 
 const StyledSocialLinks = styled(SocialLinks)`
   grid-area: links;
+  height: 50px;
 `
 
 const IndexPage = () => {
@@ -83,7 +88,7 @@ const IndexPage = () => {
       <Page>
         <Container>
           <Title>Sobre esse blog</Title>
-          <div>
+          <Content>
             <Text>
               Olá! Meu nome é Renato Freire e eu desenvolvo soluções em
               front-end e back-end. Gosto de adquirir novos conhecimentos, pois
@@ -123,7 +128,7 @@ const IndexPage = () => {
 
               <StyledSocialLinks iconSize={50} />
             </SocialLinksContainer>
-          </div>
+          </Content>
         </Container>
       </Page>
     </Layout>
