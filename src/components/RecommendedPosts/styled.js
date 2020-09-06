@@ -1,16 +1,20 @@
 import styled from "styled-components"
-import { Link as GatsbyLink } from "gatsby"
 
-import { colors, fonts } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
 
-export const Container = styled.div`
-  padding: 2em 1em 1em;
+import Title from "../Title"
+import Button from "../Button"
+
+export const Container = styled.div``
+
+export const SectionTitle = styled(Title)`
+  background-color: ${colors.bodyBackground};
+  margin-bottom: 1em;
 `
 
 export const RecommendedPosts = styled.div`
   display: grid;
-  grid-gap: 3em;
-  margin-top: 2em;
+  grid-gap: 2em;
 
   @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr;
@@ -21,81 +25,46 @@ export const PostContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
-  border: 1px solid ${colors.brand3};
-  border-radius: 5px;
-  padding: 0.5em;
+  overflow: hidden;
+  background-color: ${colors.font};
+  border-radius: ${radius.borderRadiusSmall};
+  box-shadow: ${shadows.default};
 `
 
-export const PostTitle = styled(GatsbyLink)`
-  display: block;
-  font: ${fonts.title};
+export const PostTitle = styled(Title)`
   font-size: 1em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: ${colors.dark};
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid ${colors.brand3};
-  transition: color 0.3s;
-
-  &:hover {
-    color: ${colors.link};
-  }
 `
 export const PostInfos = styled.div`
-  margin: 1em 0;
-
-  @media (min-width: 400px) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-`
-
-export const PostCategory = styled.p`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  font: ${fonts.text};
-  font-weight: bold;
-  color: ${({ color }) => color};
+  margin-bottom: 1em;
 
-  span {
-    margin-left: 0.5em;
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
 export const PostDate = styled.p`
   font: ${fonts.infos};
-  color: ${colors.dark};
+  color: ${colors.white};
+  margin: 0 1em;
 
-  @media (max-width: 399px) {
-    margin-top: 0.5em;
+  @media (max-width: 500px) {
+    margin-top: 1em;
   }
 `
 
 export const PostExcerpt = styled.p`
   font: ${fonts.text};
-  font-size: 0.9em;
+  color: ${colors.white};
+  padding: 0 1em;
 `
 
-export const LinkContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0.5em;
-`
+export const LinkContainer = styled.div``
 
-export const Link = styled(GatsbyLink)`
-  font: ${fonts.text};
-  color: ${colors.dark};
-  text-decoration: none;
-  transition: color 0.3s;
-
-  &:after {
-    content: "→";
-    margin-left: 0.5em;
-  }
-
-  &:hover {
-    color: ${colors.link};
-  }
+export const Link = styled(Button)`
+  width: 1fr;
+  margin: 1em;
 `
