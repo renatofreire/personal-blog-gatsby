@@ -2,7 +2,7 @@
 title: "Métodos do Array: map - Javascript"
 date: 2018-09-23 14:12 -0300
 
-description: "Neste post vou explicar sobre o método map Javascript."
+description: "O método map em Javascript recebe uma função de callback e invoca ela para cada elemento do array, retornando um novo array."
 
 category: front
 tags:

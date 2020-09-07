@@ -24,7 +24,7 @@ const BlogList = props => {
 
   return (
     <Layout>
-      <SEO title={category.label} />
+      <SEO title={category.label} description={category.description} />
       <PageContainer>
         <CategoryHeader category={category} />
 

@@ -2,7 +2,7 @@
 title: Um pouco da minha história (3/5)
 date: 2018-04-30 13:48 -0300
 
-description: No terceiro post contando minha história falei sobre as experiências na faculdade, desde como foi a decisão do curso até o começo do TCC.
+description: No terceiro post contando minha história, falei sobre as experiências na faculdade, desde como foi a decisão do curso até o começo do TCC.
 
 category: career
 tags:

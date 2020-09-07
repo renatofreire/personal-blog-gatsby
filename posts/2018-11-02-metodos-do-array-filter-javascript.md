@@ -2,7 +2,7 @@
 title: "Métodos do Array: Filter - Javascript"
 date: 2018-11-02 10:35 -0300
 
-description: "Neste post vou explicar sobre o método filter em Javascript."
+description: "O método filter em Javascript retorna um novo array com todos os elementos que passarem no teste implementado pela função fornecida."
 
 category: front
 tags:

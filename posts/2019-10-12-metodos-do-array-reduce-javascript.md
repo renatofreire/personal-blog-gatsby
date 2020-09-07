@@ -2,7 +2,7 @@
 title: "Métodos do Array: reduce - Javascript"
 date: 2019-10-12 12:00 -0300
 
-description: "Neste post vou explicar sobre o método reduce do Array em Javascript."
+description: "O método reduce em Javascript recebe uma função e invoca ela para cada item do array, acumulando os resultados parciais, e retornando um único valor no final."
 
 category: front
 tags:

@@ -2,7 +2,7 @@
 title: Um pouco da minha historia (2/5)
 date: 2018-04-30 11:00 -0300
 
-description: "Neste segundo post eu conto como foi minha experiência no curso técnico de informática, onde eu descobri que manutenção de computadores não era a única opção para trabalhar com computadores e dei meus primeiros passos no universo do desenvolvimento de softwares."
+description: "Neste segundo post eu conto como foi minha experiência no curso técnico de informática, onde eu dei meus primeiros passos em desenvolvimento de softwares."
 
 category: career
 tags:

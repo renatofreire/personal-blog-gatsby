@@ -2,7 +2,7 @@
 title: "Métodos do Array: includes - Javascript"
 date: 2020-06-02 12:00 -0300
 
-description: "Neste post vou explicar sobre o método includes do Array em Javascript."
+description: "O método includes em Javascript retorna verdadeiro caso o array contenha o elemento procurado ou falso caso o array não contenha esse elemento."
 
 category: front
 tags:

@@ -2,7 +2,7 @@
 title: "Métodos do Array: slice - Javascript"
 date: 2020-05-25 12:00 -0300
 
-description: "Neste post vou explicar sobre o método slice do Array em Javascript."
+description: "O método slice em Javascript retorna uma cópia de uma parte de um array, delimitado pela posição inicial e final, sem modificar o array original."
 
 category: front
 tags:

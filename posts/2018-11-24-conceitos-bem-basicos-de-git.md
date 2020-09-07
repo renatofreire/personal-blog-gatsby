@@ -2,7 +2,7 @@
 title: Conceitos bem básicos de git
 date: 2018-11-24 20:25 -0300
 
-description: "Neste post vou deixar anotado alguns dos conceitos básicos que vi durante alguns estudos sobre git"
+description: "Neste post vou deixar anotado alguns dos conceitos básicos que vi durante alguns estudos sobre git. Vou falar sobre commit, branch, merge e rebase."
 
 category: dev
 tags:

@@ -2,7 +2,7 @@
 title: "Falando um pouco sobre Arrow Functions"
 date: "2018-05-01 18:00 -0300"
 
-description: "Neste post vou falar um pouco sobre Arrow Function. Uma feature que veio junto com as atualizações do ES6, e está facilitando muito a vida dos desenvolvedores Javascript."
+description: "Arrow function possui uma sintaxe mais curta, além de não fazer o bind do this em seu escopo."
 
 category: front
 tags:
@@ -11,7 +11,7 @@ tags:
   - arrow functions
 
 image: ./images/arrow-function.jpg
-altImage: Arrow functions
+altImage: Imagem representando a declaração de uma Arrow Function vazia `() => {}`
 ---
 
 Olá! Seja bem vindo(a) ao post sobre **Arrow Functions**, vou falar um pouco sobre essa _feature_ que veio com o ES6. Eu sei que esse assunto já não é mais uma “novidade”, pois esse tipo de função já vem sendo usada largamente, mas mesmo assim decidi falar sobre isso nessa minha primeira postagem com o tema _JavaScript_, pois apesar de as **Arrow Functions** ajudarem muito na produtividade, em alguns momentos seu funcionamento ainda pode gerar dúvidas.

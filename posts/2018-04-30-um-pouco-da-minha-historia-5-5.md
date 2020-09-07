@@ -10,15 +10,15 @@ tags:
   - minha história
 
 image: ./images/rua-em-movimento.jpg
-altImage: Grande avenida, com várias faixas e com efeito de movimento com as luzes dos carros, representando que já dei alguns passos, mas ainda tenho um caminho pela frente.
+altImage: Grande avenida, com efeito de movimento com as luzes dos carros, representando que já dei alguns passos, mas ainda tenho um caminho pela frente.
 ---
 
 Olá! Seja bem vindo(a) ao quinto e último post dessa sequência em que conto sobre a minha história.  
 Comecei falando da [infância](/um-pouco-da-minha-historia-1-5), depois falei do [ensino médio](/um-pouco-da-minha-historia-2-5), o [começo da faculdade](/um-pouco-da-minha-historia-3-5) e sobre o [TCC](/um-pouco-da-minha-historia-4-5).
 
-<!-- end_excerpt -->
-
 No último post falei somente sobre o final da faculdade e não falei vida profissional. Bom, agora vou voltar um pouco no tempo para contar como comecei a trabalhar como programador.
+
+<!-- end_excerpt -->
 
 ## Os primeiros passos como programador
 

@@ -1,7 +1,9 @@
+const siteDescription = `Este é o meu blog pessoal, onde escrevo sobre desenvolvimento de software com posts sobre front-end, back-end, mobile, gestão de projetos e carreira.`
+
 module.exports = {
   siteMetadata: {
     title: `Renato Freire - Blog`,
-    description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
+    description: siteDescription,
     siteUrl: `https://renatofreire.dev`,
   },
   plugins: [
@@ -59,8 +61,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Renato Freire - Blog`,
-        short_name: `Renato Ffreire`,
-        description: `Olá! Este é meu blog pessoal, onde escrevo sobre desenvolvimento web e mobile`,
+        short_name: `Renato Freire`,
+        description: siteDescription,
         start_url: `/`,
         background_color: `#333`,
         theme_color: `#73e3e8`,

@@ -76,7 +76,7 @@ const NotFoundPage = () => {
       <SEO
         title="Página não encontrada"
         description={
-          "Não encontrei o que você procurou, mas você pode encontrar outros conteúdos legais aqui."
+          "Essa página é exibida quando a página que você procurava não é encontrada, mas você pode acessar outro conteúdo interessante vendo os posts mais recentes ou navegando pelas categorias."
         }
       />
       <TitleRow>

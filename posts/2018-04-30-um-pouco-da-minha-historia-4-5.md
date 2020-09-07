@@ -2,7 +2,7 @@
 title: Um pouco da minha história (4/5)
 date: 2018-04-30 16:00 -0300
 
-description: No quarto post contando minha história falei sobre como foi o desenvolvimento do projeto do TCC.
+description: No quarto post contando minha história, falei sobre como foi o desenvolvimento do projeto do TCC.
 
 category: career
 tags:
@@ -16,9 +16,9 @@ altImage: Ilustração de um chip de computador com um chapéu de graduação no
 Olá! Seja bem vindo(a) ao meu quarto post sobre minha história.  
 Comecei falando da [minha infância](/um-pouco-da-minha-historia-1-5), depois falei sobre a época do [Ensino Médio](/um-pouco-da-minha-historia-2-5) e falei até do [começo da faculdade](/um-pouco-da-minha-historia-3-5).
 
-<!-- end_excerpt -->
-
 Vou contar agora como foi a partir do sétimo semestre e como foi a nova fase profissional depois que decidi sair do emprego onde estava trabalhando.
+
+<!-- end_excerpt -->
 
 Para não ficar com muito vai-e-volta na história, vou contar primeiro tudo o que aconteceu na faculdade, depois conto o que fiz no lado profissional, combinado?
 
