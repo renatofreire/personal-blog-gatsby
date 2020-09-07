@@ -10,10 +10,10 @@ import TagsContainerComponent from "../TagsContainer"
 export const PostContainer = styled.article`
   display: flex;
   flex-direction: column;
-  background-color: ${colors.font};
+  background-color: ${colors.backgrounds.level2};
   margin-bottom: 2em;
   overflow: hidden;
-  border-radius: ${radius.borderRadiusSmall};
+  border-radius: ${radius.small};
   box-shadow: ${shadows.default};
 `
 
@@ -74,14 +74,14 @@ export const TextContainer = styled.div`
 
 export const Date = styled.time`
   font: ${fonts.infos};
-  color: ${colors.white};
+  color: ${colors.fonts.info};
   margin-bottom: 1em;
   display: block;
 `
 
 export const Excerpt = styled.p`
   font: ${fonts.text};
-  color: ${colors.white};
+  color: ${colors.fonts.text};
 `
 
 export const PostLink = styled(Button)`

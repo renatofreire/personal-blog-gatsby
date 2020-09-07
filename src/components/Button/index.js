@@ -3,41 +3,39 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import { colors, fonts, radius, shadows } from "../../styles/tokens"
-import { lightenHexColor } from "../../utils/colors"
 
-const SButton = styled(Link)`
+const StyledButton = styled(Link)`
   display: flex;
   justify-content: center;
 
   font: ${fonts.infos};
-  color: ${colors.dark};
+  color: ${colors.fonts.primaryButton};
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  background-color: ${colors.brand2};
+  background-color: ${colors.backgrounds.primaryButton};
   padding: 0.5em;
-  border-radius: ${radius.borderRadiusSmall};
+  border-radius: ${radius.small};
   box-shadow: ${shadows.default};
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 
   &:hover,
   &:active,
   &:focus {
-    color: ${colors.dark};
-    background-color: ${lightenHexColor(colors.brand2, 50)};
+    background-color: ${colors.backgrounds.primaryButtonHover};
     box-shadow: ${shadows.hover};
   }
 
   &:active,
   &:focus {
-    border: 1px dotted ${colors.black};
+    border: 1px dotted ${colors.borders.a11yPrimaryButton};
   }
 `
 
 const Button = ({ children, className, to, ...props }) => (
-  <SButton className={className} to={to} {...props}>
+  <StyledButton className={className} to={to} {...props}>
     {children}
-  </SButton>
+  </StyledButton>
 )
 
 export default Button

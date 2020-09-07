@@ -18,8 +18,8 @@ const Page = styled(PageContainer)`
 
 const Container = styled.div`
   margin-top: 2em;
-  background-color: ${colors.font};
-  border-radius: ${radius.borderRadiusSmall};
+  background-color: ${colors.backgrounds.level2};
+  border-radius: ${radius.small};
   box-shadow: ${shadows.default};
 `
 
@@ -29,7 +29,7 @@ const Content = styled.div`
 
 const Text = styled.p`
   font: ${fonts.text};
-  color: ${colors.white};
+  color: ${colors.fonts.text};
   margin: 0em 0 2em;
 `
 

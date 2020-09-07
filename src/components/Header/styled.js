@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
-import { colors, fonts } from "../../styles/tokens"
+import { colors, fonts, radius, shadows } from "../../styles/tokens"
 
 export const HeaderSpacer = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ export const HeaderSpacer = styled.div`
 
 export const Header = styled.header`
   width: 100%;
-  background-color: ${colors.dark};
+  background-color: ${colors.backgrounds.level1};
   border-bottom: 3px solid ${colors.brand2};
   padding: 5px 0;
   position: fixed;
@@ -18,7 +18,7 @@ export const Header = styled.header`
   left: 0;
   z-index: 99;
   max-height: 60px;
-  box-shadow: 0px 1px 5px 0px ${colors.headerShadow};
+  box-shadow: ${shadows.header};
 `
 export const Navigation = styled.nav`
   display: flex;
@@ -46,11 +46,12 @@ export const LinksContainer = styled.div`
     flex-direction: column;
     align-content: space-around;
     top: 56px;
-    background-color: ${colors.dark};
+    background-color: ${colors.backgrounds.level1};
     padding: 32px 8px;
     height: 100px;
     justify-content: space-around;
-    box-shadow: 2px 2px 6px ${colors.dark};
+    box-shadow: ${shadows.default};
+    border-radius: ${radius.small};
   }
 
   &.menu-open {
@@ -61,7 +62,7 @@ export const LinksContainer = styled.div`
 export const Link = styled(GatsbyLink)`
   font: ${fonts.text};
   text-decoration: none;
-  color: ${colors.white};
+  color: ${colors.fonts.navigationLink};
   margin-left: 10px;
 `
 export const Button = styled.button`
@@ -86,7 +87,7 @@ export const Button = styled.button`
 export const ButtonLine1 = styled.div`
   width: 30px;
   height: 5px;
-  background-color: ${colors.white};
+  background-color: ${colors.backgrounds.contrast};
   transition: transform 0.1s;
 
   &.menu-open {
@@ -99,7 +100,7 @@ export const ButtonLine1 = styled.div`
 export const ButtonLine2 = styled.div`
   width: 30px;
   height: 5px;
-  background-color: ${colors.white};
+  background-color: ${colors.backgrounds.contrast};
   transition: width 0.1s;
 
   &.menu-open {
@@ -110,7 +111,7 @@ export const ButtonLine2 = styled.div`
 export const ButtonLine3 = styled.div`
   width: 30px;
   height: 5px;
-  background-color: ${colors.white};
+  background-color: ${colors.backgrounds.contrast};
   transition: transform 0.1s;
 
   &.menu-open {

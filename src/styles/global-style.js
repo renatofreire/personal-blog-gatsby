@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: ${colors.bodyBackground};
+	background-color: ${colors.backgrounds.base};
 }
 ol, ul {
 	list-style: none;
@@ -66,11 +66,11 @@ em {
 }
 
 p > a {
-	color: ${colors.link};
+	color: ${colors.fonts.link};
 }
 
 p > a:visited {
-	color: ${colors.visitedLink}
+	color: ${colors.fonts.visitedLink}
 }
 
 a {
@@ -79,13 +79,13 @@ a {
 
 a:active, a:focus,
 button:active, button:focus  {
-	border: 1px dotted ${colors.brand2};
+	border: 1px dotted ${colors.borders.a11yLink};
 }
 
 code {
 	font-family: "Courier New", Courier, monospace;
 	padding: 0px 2px;
-	color: ${colors.code}
+	color: ${colors.fonts.code}
 }
 
 strong {

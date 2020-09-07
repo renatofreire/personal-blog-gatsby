@@ -12,7 +12,7 @@ export const Footer = styled.footer`
 `
 
 export const CategoriesContainer = styled.div`
-  background-color: ${colors.dark};
+  background-color: ${colors.backgrounds.level1};
   margin-top: 3px;
 `
 
@@ -39,7 +39,7 @@ export const Category = styled.li``
 
 export const CategoryLink = styled(Link)`
   font: ${fonts.text};
-  color: ${colors.white};
+  color: ${colors.fonts.navigationLink};
   display: inline-flex;
   align-items: center;
   padding: 0 0.5em;
@@ -55,7 +55,7 @@ export const LinksContainer = styled.div`
 
   & a:active,
   & a:focus {
-    border: 1px dotted ${colors.black};
+    border: 1px dotted ${colors.borders.a11yFooterLink};
   }
 `
 
@@ -91,7 +91,7 @@ export const Logo = styled.img`
 
 export const SocialLinksText = styled.p`
   font: ${fonts.text};
-  color: ${colors.dark};
+  color: ${colors.fonts.footer};
   font-weight: bold;
   margin-right: 10px;
   text-align: center;

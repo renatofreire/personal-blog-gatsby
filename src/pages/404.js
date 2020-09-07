@@ -10,7 +10,7 @@ import Container from "../styles/container"
 import { colors, fonts, radius, shadows } from "../styles/tokens"
 
 const TitleRow = styled.div`
-  background-color: ${colors.font};
+  background-color: ${colors.backgrounds.level2};
   padding: 5em 0;
   box-shadow: ${shadows.default};
 `
@@ -21,7 +21,7 @@ const Title = styled.h1`
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: ${colors.white};
+  color: ${colors.fonts.title};
 `
 
 const TextContainer = styled.div`
@@ -30,15 +30,15 @@ const TextContainer = styled.div`
 
 const Content = styled(Container)`
   box-sizing: border-box;
-  background-color: ${colors.font};
+  background-color: ${colors.backgrounds.level2};
   padding: 1em;
-  border-radius: ${radius.borderRadiusSmall};
+  border-radius: ${radius.small};
   box-shadow: ${shadows.default};
 `
 
 const Text = styled.p`
   font: ${fonts.text};
-  color: ${colors.white};
+  color: ${colors.fonts.text};
   text-align: center;
   margin-bottom: 0.5em;
 `

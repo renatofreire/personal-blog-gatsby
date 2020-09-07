@@ -8,7 +8,7 @@ import Button from "../Button"
 export const Container = styled.div``
 
 export const SectionTitle = styled(Title)`
-  background-color: ${colors.bodyBackground};
+  background-color: ${colors.backgrounds.base};
   margin-bottom: 1em;
 `
 
@@ -26,8 +26,8 @@ export const PostContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   overflow: hidden;
-  background-color: ${colors.font};
-  border-radius: ${radius.borderRadiusSmall};
+  background-color: ${colors.backgrounds.level2};
+  border-radius: ${radius.small};
   box-shadow: ${shadows.default};
 `
 
@@ -48,7 +48,7 @@ export const PostInfos = styled.div`
 
 export const PostDate = styled.p`
   font: ${fonts.infos};
-  color: ${colors.white};
+  color: ${colors.fonts.info};
   margin: 0 1em;
 
   @media (max-width: 500px) {
@@ -58,7 +58,7 @@ export const PostDate = styled.p`
 
 export const PostExcerpt = styled.p`
   font: ${fonts.text};
-  color: ${colors.white};
+  color: ${colors.fonts.text};
   padding: 0 1em;
 `
 

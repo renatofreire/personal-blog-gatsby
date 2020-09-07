@@ -7,8 +7,8 @@ import { colors, fonts } from "../../styles/tokens"
 
 const defaultStyle = css`
   font: ${fonts.title};
-  background-color: ${colors.font};
-  color: ${colors.white};
+  background-color: ${colors.backgrounds.level2};
+  color: ${colors.fonts.title};
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
