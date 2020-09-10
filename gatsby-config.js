@@ -58,8 +58,8 @@ const plugins = [
       short_name: `Renato Freire`,
       description: siteDescription,
       start_url: `/`,
-      background_color: `#333`,
-      theme_color: `#73e3e8`,
+      background_color: `#333333`,
+      theme_color: `#333333`,
       icon: `src/images/placeholder.png`, // This path is relative to the root of the site.
       display: `minimal-ui`,
     },
