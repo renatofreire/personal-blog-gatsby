@@ -171,6 +171,6 @@ Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método
 Novamente, recomendo a leitura da [documentação da MDN][doc-mdn] para se aprofundar no assunto.
 Se tiver alguma dúvida ou sugestão de melhoria, é só deixar um comentário ou falar comigo nas redes sociais ;)
 
-[post-map]: https://renatofreire.dev/metodos-do-array-map-javascript
-[post-filter]: https://renatofreire.dev/metodos-do-array-filter-javascript
+[post-map]: /metodos-do-array-map-javascript
+[post-filter]: /metodos-do-array-filter-javascript
 [doc-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce

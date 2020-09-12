@@ -357,8 +357,8 @@ Basicamente, usamos o `filter` para obtermos apenas os itens de um _array_ que s
 
 Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método `filter`. Se tiver alguma dúvida ou sugestão de melhoria, é só deixar um comentário ou falar comigo nas redes sociais ;)
 
-[metodo-map]: https://renatofreire.dev/metodos-do-array-map-javascript
-[arrow-functions]: https://renatofreire.dev/falando-um-pouco-sobre-arrow-functions
+[metodo-map]: /metodos-do-array-map-javascript
+[arrow-functions]: /falando-um-pouco-sobre-arrow-functions
 [filter-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filtro
 [lowercase-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 [includes-mdn]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes

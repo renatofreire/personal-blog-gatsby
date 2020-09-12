@@ -118,6 +118,6 @@ Ná pratica, podemos usar o `map` onde normalmente usaríamos um laço `for`, po
 
 Espero que esse post tenha te ajudado a entender um pouco melhor sobre o método `map`. Se tiver alguma dúvida ou sugestão de melhoria, é só deixar um comentário ou falar comigo nas redes sociais ;)
 
-[arrow-functions]: https://renatofreire.dev/falando-um-pouco-sobre-arrow-functions
+[arrow-functions]: /falando-um-pouco-sobre-arrow-functions
 [map-mdn]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 [map-img]: ./images/map.jpg
