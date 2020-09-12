@@ -3,6 +3,8 @@ import { Link as GatsbyLink } from "gatsby"
 
 import { colors, fonts, radius, shadows } from "../../styles/tokens"
 
+import SocialLinksComponents from "../SocialLinks"
+
 export const HeaderSpacer = styled.div`
   width: 100%;
   height: 56px;
@@ -45,10 +47,9 @@ export const LinksContainer = styled.div`
     box-sizing: border-box;
     flex-direction: column;
     align-content: space-around;
-    top: 56px;
+    top: 58px;
     background-color: ${colors.backgrounds.level1};
     padding: 32px 8px;
-    height: 100px;
     justify-content: space-around;
     box-shadow: ${shadows.default};
     border-radius: ${radius.small};
@@ -59,12 +60,29 @@ export const LinksContainer = styled.div`
   }
 `
 
+export const SocialLinks = styled(SocialLinksComponents)`
+  @media (max-width: 450px) {
+    & a {
+      margin: 0 1em;
+    }
+    & img {
+      width: 50px;
+    }
+  }
+`
+
 export const Link = styled(GatsbyLink)`
   font: ${fonts.text};
   text-decoration: none;
   color: ${colors.fonts.navigationLink};
   margin-left: 10px;
+
+  @media (max-width: 450px) {
+    margin-top: 2em;
+    margin-left: 0;
+  }
 `
+
 export const Button = styled.button`
   display: none;
   background: transparent;
@@ -119,4 +137,13 @@ export const ButtonLine3 = styled.div`
     top: 12px;
     transform: rotate(-45deg);
   }
+`
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: ${colors.backgrounds.base}99;
 `
