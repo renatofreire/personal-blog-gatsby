@@ -79,7 +79,7 @@ export const Date = styled.time`
   display: block;
 `
 
-export const Excerpt = styled.p`
+export const Excerpt = styled.div`
   font: ${fonts.text};
   color: ${colors.fonts.text};
 `
