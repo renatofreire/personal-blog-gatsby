@@ -1,4 +1,14 @@
 const siteDescription = `Este é o meu blog pessoal, onde escrevo sobre desenvolvimento de software com posts sobre front-end, back-end, mobile, gestão de projetos e carreira.`
+const productionURL = `https://renatofreire.dev`
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = productionURL,
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+const isNetlifyProduction = NETLIFY_ENV === "production"
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
 
 const plugins = [
   `gatsby-plugin-react-helmet`,
@@ -68,22 +78,28 @@ const plugins = [
   {
     resolve: `gatsby-plugin-robots-txt`,
     options: {
-      resolveEnv: () => process.env.GATSBY_ENV,
+      resolveEnv: () => NETLIFY_ENV,
       env: {
-        development: {
-          policy: [{ userAgent: "*", disallow: ["/"] }],
-        },
         production: {
           policy: [{ userAgent: "*", allow: "/" }],
+        },
+        "branch-deploy": {
+          policy: [{ userAgent: "*", disallow: ["/"] }],
+          sitemap: null,
+          host: null,
+        },
+        "deploy-preview": {
+          policy: [{ userAgent: "*", disallow: ["/"] }],
+          sitemap: null,
+          host: null,
         },
       },
     },
   },
-  `gatsby-plugin-sitemap`,
   `gatsby-plugin-offline`, // To learn more, visit: https://gatsby.dev/offline
 ]
 
-if (process.env.GATSBY_ENV === "production") {
+if (isNetlifyProduction) {
   const analytics = {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
@@ -92,13 +108,14 @@ if (process.env.GATSBY_ENV === "production") {
     },
   }
   plugins.push(analytics)
+  plugins.push(`gatsby-plugin-sitemap`)
 }
 
 module.exports = {
   siteMetadata: {
     title: `Renato Freire - Blog`,
     description: siteDescription,
-    siteUrl: `https://renatofreire.dev`,
+    siteUrl,
   },
   plugins,
 }
