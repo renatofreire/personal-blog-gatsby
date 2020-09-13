@@ -47,11 +47,15 @@ export const ImageContainer = styled(Link)`
 `
 
 export const CoverImage = styled.img`
+  width: 100%;
   max-width: 250px;
-  max-height: 250px;
 
-  @media (max-width: 799px) {
-    width: 100%;
+  @media (min-width: 800px) {
+    width: 250px;
+  }
+
+  @media (min-width: 400px) {
+    height: 250px;
   }
 `
 
