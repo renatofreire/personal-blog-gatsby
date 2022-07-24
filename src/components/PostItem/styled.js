@@ -1,11 +1,13 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import Button from "../Button"
 import TitleComponent from "../Title"
 import TagsContainerComponent from "../TagsContainer"
+
+const { colors, fonts, radius, shadows } = darkTheme;
 
 export const PostContainer = styled.article`
   display: flex;

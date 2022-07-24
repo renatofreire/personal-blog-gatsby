@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import SocialLinksComponents from "../SocialLinks"
+
+const {colors, fonts, radius, shadows} = darkTheme;
 
 export const HeaderSpacer = styled.div`
   width: 100%;

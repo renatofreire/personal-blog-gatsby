@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { colors, fonts, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import CategoryBadgeComponent from "../CategoryBadge"
+
+const {colors, fonts, shadows} = darkTheme;
 
 export const CategoryContainer = styled(Link)`
   font: ${fonts.text};
@@ -28,6 +30,6 @@ export const CategoryBadge = styled(CategoryBadgeComponent)`
   margin-right: 0.5em;
 `
 export const Category = styled.p`
-  color: ${({ color }) => color};
+  color: ${({ color }) => `var(--${color})`};
   font-weight: bold;
 `

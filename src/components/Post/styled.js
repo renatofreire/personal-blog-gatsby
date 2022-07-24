@@ -1,8 +1,10 @@
 import styled from "styled-components"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import TagsContainerComponent from "../TagsContainer"
+
+const { colors, fonts, radius, shadows } = darkTheme
 
 export const PostContainer = styled.article`
   margin-top: 2em;

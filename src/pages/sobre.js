@@ -9,7 +9,9 @@ import Title from "../components/Title"
 import SocialLinks from "../components/SocialLinks"
 
 import PageContainer from "../styles/container"
-import { colors, fonts, radius, shadows } from "../styles/tokens"
+import { darkTheme } from "../styles/tokens"
+
+const { colors, fonts, radius, shadows } = darkTheme
 
 const Page = styled(PageContainer)`
   position: relative;

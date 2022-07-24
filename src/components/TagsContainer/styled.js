@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
-import { colors, fonts } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
+
+const {colors, fonts} = darkTheme;
 
 export const TagsContainer = styled.div`
   grid-area: tags;
