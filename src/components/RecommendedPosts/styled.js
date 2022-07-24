@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import Title from "../Title"
 import Button from "../Button"
+
+const {colors, fonts, radius, shadows} = darkTheme
 
 export const Container = styled.div``
 

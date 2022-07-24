@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import { colors } from "./tokens"
+import {darkTheme as dark }from "./tokens"
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: var(--backgroundColor);
+	background-color: var(--color-background-base);
 }
 ol, ul {
 	list-style: none;
@@ -66,11 +66,11 @@ em {
 }
 
 p > a {
-	color: ${colors.fonts.link};
+	color: var(--color-font-link);
 }
 
 p > a:visited {
-	color: ${colors.fonts.visitedLink}
+	color: var(--color-font-visitedLink);
 }
 
 a {
@@ -79,13 +79,13 @@ a {
 
 a:active, a:focus,
 button:active, button:focus  {
-	border: 1px dotted ${colors.borders.a11yLink};
+	border: 1px dotted var(--color-border-a11yLink);
 }
 
 code {
 	font-family: "Courier New", Courier, monospace;
 	padding: 0px 2px;
-	color: ${colors.fonts.code}
+	color: var(--color-font-code);
 }
 
 strong {
@@ -125,13 +125,41 @@ strong {
 	color: #77CC77;
 }
 
-// criando variáveis CSS
+// creating CSS variables
 body.dark {
-	--backgroundColor: ${colors.backgrounds.base}
+	--color-background-base: ${dark.colors.backgrounds.base};
+	--color-font-link: ${dark.colors.fonts.link};
+	--color-font-visitedLink: ${dark.colors.fonts.visitedLink};
+	--color-font-code: ${dark.colors.fonts.code};
+	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
+	--color-category1: ${dark.colors.category1};
+	--color-category2: ${dark.colors.category2};
+	--color-category3: ${dark.colors.category3};
+	--color-category4: ${dark.colors.category4};
+	--color-category5: ${dark.colors.category5};
+	--color-category6: ${dark.colors.category6};
+	--color-dark: ${dark.colors.dark};
+	
+
+	--fontFamily-infos: ${dark.fonts.infos};
 }
 
 body.light {
-	--backgroundColor: ${colors.backgrounds.level2}
+	--color-background-base: ${dark.colors.backgrounds.base};
+	--color-font-link: ${dark.colors.fonts.link};
+	--color-font-visitedLink: ${dark.colors.fonts.visitedLink};
+	--color-font-code: ${dark.colors.fonts.code};
+	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
+	--color-category1: ${dark.colors.category1};
+	--color-category2: ${dark.colors.category2};
+	--color-category3: ${dark.colors.category3};
+	--color-category4: ${dark.colors.category4};
+	--color-category5: ${dark.colors.category5};
+	--color-category6: ${dark.colors.category6};
+	--color-dark: ${dark.colors.dark};
+	
+
+	--fontFamily-infos: ${dark.fonts.infos};
 }
 `
 

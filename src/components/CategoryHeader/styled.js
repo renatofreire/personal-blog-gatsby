@@ -1,9 +1,11 @@
 import styled from "styled-components"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import CategoryBadgeComponent from "../CategoryBadge"
 import TitleComponent from "../Title"
+
+const { colors, fonts, radius, shadows } = darkTheme;
 
 export const Content = styled.div`
   margin-bottom: 2em;

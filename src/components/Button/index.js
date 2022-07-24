@@ -2,7 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
+
+const {colors, fonts, radius, shadows} = darkTheme;
 
 const StyledButton = styled(Link)`
   display: flex;

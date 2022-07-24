@@ -1,6 +1,8 @@
 import styled from "styled-components"
 
-import { colors, fonts, radius, shadows } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
+
+const { colors, fonts, radius, shadows } = darkTheme;
 
 export const Container = styled.div`
   display: flex;

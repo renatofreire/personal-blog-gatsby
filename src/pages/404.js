@@ -7,7 +7,9 @@ import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
 import Container from "../styles/container"
-import { colors, fonts, radius, shadows } from "../styles/tokens"
+import { darkTheme } from "../styles/tokens"
+
+const { colors, fonts, radius, shadows } = darkTheme;
 
 const TitleRow = styled.div`
   background-color: ${colors.backgrounds.level2};

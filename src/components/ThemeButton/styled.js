@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { colors } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
+
+const { colors } = darkTheme;
 
 export const Switch = styled.label`
   position: relative;

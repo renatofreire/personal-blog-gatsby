@@ -2,9 +2,11 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import PageContainer from "../../styles/container"
-import { colors, fonts } from "../../styles/tokens"
+import { darkTheme } from "../../styles/tokens"
 
 import CategoryBadgeComponent from "../CategoryBadge"
+
+const {colors, fonts} = darkTheme;
 
 export const Footer = styled.footer`
   margin-top: 2em;
