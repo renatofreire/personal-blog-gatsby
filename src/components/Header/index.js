@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import PageContainer from "../../styles/container"
 import logoPath from "../../images/renato-freire.svg"
+import ThemeButton from "../ThemeButton"
 
 import * as S from "./styled"
 import MenuButton from "./MenuButton"
@@ -24,6 +25,7 @@ const Header = () => {
             </Link>
             <MenuButton isMenuOpen={isMenuOpen} onClick={setIsMenuOpen} />
             <S.LinksContainer className={isMenuOpen ? "menu-open" : ""}>
+              <ThemeButton />
               <S.SocialLinks iconSize={30} />
               <S.Link to="/sobre" onClick={closeMenu}>
                 Sobre

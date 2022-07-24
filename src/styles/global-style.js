@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	background-color: ${colors.backgrounds.base};
+	background-color: var(--backgroundColor);
 }
 ol, ul {
 	list-style: none;
@@ -125,6 +125,14 @@ strong {
 	color: #77CC77;
 }
 
+// criando variáveis CSS
+body.dark {
+	--backgroundColor: ${colors.backgrounds.base}
+}
+
+body.light {
+	--backgroundColor: ${colors.backgrounds.level2}
+}
 `
 
 export default GlobalStyles
