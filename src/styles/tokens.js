@@ -1,5 +1,7 @@
 const darkTheme = require("./darkThemeTokens");
+const lightTheme = require("./lightThemeTokens");
 
 module.exports = {
-  darkTheme
+  darkTheme,
+  lightTheme
 }

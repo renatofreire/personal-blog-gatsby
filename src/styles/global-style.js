@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import {darkTheme as dark }from "./tokens"
+import {darkTheme as dark, lightTheme as light }from "./tokens"
 
 const GlobalStyles = createGlobalStyle`
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -126,40 +126,112 @@ strong {
 }
 
 // creating CSS variables
-body.dark {
-	--color-background-base: ${dark.colors.backgrounds.base};
-	--color-font-link: ${dark.colors.fonts.link};
-	--color-font-visitedLink: ${dark.colors.fonts.visitedLink};
-	--color-font-code: ${dark.colors.fonts.code};
-	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
+body.dark{
+	--color-brand1: ${dark.colors.brand1};
+	--color-brand2: ${dark.colors.brand2};
+	--color-brand3: ${dark.colors.brand3};
 	--color-category1: ${dark.colors.category1};
 	--color-category2: ${dark.colors.category2};
 	--color-category3: ${dark.colors.category3};
 	--color-category4: ${dark.colors.category4};
 	--color-category5: ${dark.colors.category5};
 	--color-category6: ${dark.colors.category6};
-	--color-dark: ${dark.colors.dark};
-	
 
-	--fontFamily-infos: ${dark.fonts.infos};
+	--color-font-title: ${dark.colors.fonts.title};
+	--color-font-text: ${dark.colors.fonts.text};
+	--color-font-boxedText: ${dark.colors.fonts.boxedText};
+	--color-font-info: ${dark.colors.fonts.info};
+	--color-font-code: ${dark.colors.fonts.code};
+	--color-font-link: ${dark.colors.fonts.link};
+	--color-font-visitedLink: ${dark.colors.fonts.visitedLink};
+	--color-font-navigationLink: ${dark.colors.fonts.navigationLink};
+	--color-font-primaryButton: ${dark.colors.fonts.primaryButton};
+	--color-font-primaryButtonDisabled: ${dark.colors.fonts.primaryButtonDisabled};
+	--color-font-tableHeader: ${dark.colors.fonts.tableHeader};
+	--color-font-footer: ${dark.colors.fonts.footer};
+
+	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
+	--color-border-a11yPrimaryButton: ${dark.colors.borders.a11yPrimaryButton};
+	--color-border-a11yFooterLink: ${dark.colors.borders.a11yFooterLink};
+	--color-border-tableHeader: ${dark.colors.borders.tableHeader};
+	--color-border-tableRow: ${dark.colors.borders.tableRow};
+
+	--color-background-base: ${dark.colors.backgrounds.base};
+	--color-background-contrast: ${dark.colors.backgrounds.contrast};
+	--color-background-level1: ${dark.colors.backgrounds.level1};
+	--color-background-level2: ${dark.colors.backgrounds.level2};
+	--color-background-level3: ${dark.colors.backgrounds.level3};
+	--color-background-categoryLabel: ${dark.colors.backgrounds.categoryLabel};
+	--color-background-categoryLabelHover: ${dark.colors.backgrounds.categoryLabelHover};
+	--color-background-primaryButton: ${dark.colors.backgrounds.primaryButton};
+	--color-background-primaryButtonHover: ${dark.colors.backgrounds.primaryButtonHover};
+	--color-background-tableHeader: ${dark.colors.backgrounds.tableHeader};
+	--color-background-tableRowOdd: ${dark.colors.backgrounds.tableRowOdd};
+	--color-background-tableRowEven: ${dark.colors.backgrounds.tableRowEven};
+
+	--font-text: ${dark.fonts.text};
+	--font-title: ${dark.fonts.title};
+	--font-infos: ${dark.fonts.infos};
+
+	--radius-small: ${dark.radius.small};
+
+	--shadow-default: ${dark.shadows.default};
+	--shadow-hover: ${dark.shadows.hover};
+	--shadow-header: ${dark.shadows.header};
 }
 
-body.light {
-	--color-background-base: ${dark.colors.backgrounds.base};
-	--color-font-link: ${dark.colors.fonts.link};
-	--color-font-visitedLink: ${dark.colors.fonts.visitedLink};
-	--color-font-code: ${dark.colors.fonts.code};
-	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
-	--color-category1: ${dark.colors.category1};
-	--color-category2: ${dark.colors.category2};
-	--color-category3: ${dark.colors.category3};
-	--color-category4: ${dark.colors.category4};
-	--color-category5: ${dark.colors.category5};
-	--color-category6: ${dark.colors.category6};
-	--color-dark: ${dark.colors.dark};
-	
+body.light{
+	--color-brand1: ${light.colors.brand1};
+	--color-brand2: ${light.colors.brand2};
+	--color-brand3: ${light.colors.brand3};
+	--color-category1: ${light.colors.category1};
+	--color-category2: ${light.colors.category2};
+	--color-category3: ${light.colors.category3};
+	--color-category4: ${light.colors.category4};
+	--color-category5: ${light.colors.category5};
+	--color-category6: ${light.colors.category6};
 
-	--fontFamily-infos: ${dark.fonts.infos};
+	--color-font-title: ${light.colors.fonts.title};
+	--color-font-text: ${light.colors.fonts.text};
+	--color-font-boxedText: ${light.colors.fonts.boxedText};
+	--color-font-info: ${light.colors.fonts.info};
+	--color-font-code: ${light.colors.fonts.code};
+	--color-font-link: ${light.colors.fonts.link};
+	--color-font-visitedLink: ${light.colors.fonts.visitedLink};
+	--color-font-navigationLink: ${light.colors.fonts.navigationLink};
+	--color-font-primaryButton: ${light.colors.fonts.primaryButton};
+	--color-font-primaryButtonDisabled: ${light.colors.fonts.primaryButtonDisabled};
+	--color-font-tableHeader: ${light.colors.fonts.tableHeader};
+	--color-font-footer: ${light.colors.fonts.footer};
+
+	--color-border-a11yLink: ${light.colors.borders.a11yLink};
+	--color-border-a11yPrimaryButton: ${light.colors.borders.a11yPrimaryButton};
+	--color-border-a11yFooterLink: ${light.colors.borders.a11yFooterLink};
+	--color-border-tableHeader: ${light.colors.borders.tableHeader};
+	--color-border-tableRow: ${light.colors.borders.tableRow};
+
+	--color-background-base: ${light.colors.backgrounds.base};
+	--color-background-contrast: ${light.colors.backgrounds.contrast};
+	--color-background-level1: ${light.colors.backgrounds.level1};
+	--color-background-level2: ${light.colors.backgrounds.level2};
+	--color-background-level3: ${light.colors.backgrounds.level3};
+	--color-background-categoryLabel: ${light.colors.backgrounds.categoryLabel};
+	--color-background-categoryLabelHover: ${light.colors.backgrounds.categoryLabelHover};
+	--color-background-primaryButton: ${light.colors.backgrounds.primaryButton};
+	--color-background-primaryButtonHover: ${light.colors.backgrounds.primaryButtonHover};
+	--color-background-tableHeader: ${light.colors.backgrounds.tableHeader};
+	--color-background-tableRowOdd: ${light.colors.backgrounds.tableRowOdd};
+	--color-background-tableRowEven: ${light.colors.backgrounds.tableRowEven};
+
+	--font-text: ${light.fonts.text};
+	--font-title: ${light.fonts.title};
+	--font-infos: ${light.fonts.infos};
+
+	--radius-small: ${light.radius.small};
+
+	--shadow-default: ${light.shadows.default};
+	--shadow-hover: ${light.shadows.hover};
+	--shadow-header: ${light.shadows.header};
 }
 `
 
