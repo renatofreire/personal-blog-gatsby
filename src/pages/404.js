@@ -7,23 +7,20 @@ import SEO from "../components/seo"
 import RecommendedPosts from "../components/RecommendedPosts"
 
 import Container from "../styles/container"
-import { darkTheme } from "../styles/tokens"
-
-const { colors, fonts, radius, shadows } = darkTheme;
 
 const TitleRow = styled.div`
-  background-color: ${colors.backgrounds.level2};
+  background-color: var(--color-background-jumboTitle);
   padding: 5em 0;
-  box-shadow: ${shadows.default};
+  box-shadow: var(--shadow-default);
 `
 
 const Title = styled.h1`
-  font: ${fonts.title};
+  font: var(--font-title);
   font-size: 2em;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: ${colors.fonts.title};
+  color: var(--color-font-jumboTitle);
 `
 
 const TextContainer = styled.div`
@@ -32,15 +29,15 @@ const TextContainer = styled.div`
 
 const Content = styled(Container)`
   box-sizing: border-box;
-  background-color: ${colors.backgrounds.level2};
+  background-color: var(--color-background-level2);
   padding: 1em;
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 const Text = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   text-align: center;
   margin-bottom: 0.5em;
 `

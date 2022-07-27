@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import { darkTheme } from "../../styles/tokens"
-
-const { colors } = darkTheme;
 
 export const Switch = styled.label`
   position: relative;
@@ -26,7 +23,7 @@ export const Slider = styled.span`
   bottom: 0;
   transition: .4s;
   border-radius: 24px;
-  background-color: ${({ checked }) => checked ? colors.backgrounds.base : colors.backgrounds.level3};
+  background-color: var(--color-background-themeButtonSlider);
 
   &:before {
     position: absolute;
@@ -34,8 +31,11 @@ export const Slider = styled.span`
     height: 18px;
     width: 18px;
     left: 3px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
     bottom: 3px;
-    background-color: ${({ checked }) => checked ? colors.backgrounds.level3 : colors.backgrounds.base};
+    background-color: var(--color-background-themeButtonToggle);
     transition: .4s;
     border-radius: 50%;
     ${({ checked }) => checked && 

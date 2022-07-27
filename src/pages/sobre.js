@@ -8,9 +8,6 @@ import Title from "../components/Title"
 import SocialLinks from "../components/SocialLinks"
 
 import PageContainer from "../styles/container"
-import { darkTheme } from "../styles/tokens"
-
-const { colors, fonts, radius, shadows } = darkTheme
 
 const Page = styled(PageContainer)`
   position: relative;
@@ -19,9 +16,9 @@ const Page = styled(PageContainer)`
 
 const Container = styled.div`
   margin-top: 2em;
-  background-color: ${colors.backgrounds.level2};
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  background-color: var(--color-background-level2);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 const Content = styled.div`
@@ -29,8 +26,8 @@ const Content = styled.div`
 `
 
 const Text = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   margin: 0em 0 2em;
 `
 

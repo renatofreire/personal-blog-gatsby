@@ -1,18 +1,15 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
 import TagsContainerComponent from "../TagsContainer"
 
-const { colors, fonts, radius, shadows } = darkTheme
 
 export const PostContainer = styled.article`
   margin-top: 2em;
   padding-bottom: 1em;
-  background-color: ${colors.backgrounds.level2};
+  background-color: var(--color-background-level2);
   overflow: hidden;
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 export const InfosContainer = styled.div`
@@ -36,15 +33,15 @@ export const TagsContainer = styled(TagsContainerComponent)`
 `
 
 export const Date = styled.p`
-  font: ${fonts.infos};
-  color: ${colors.fonts.info};
+  font: var(--font-infos);
+  color: var(--color-font-info);
   margin: 2em 1em;
   font-weight: bold;
 `
 
 export const Content = styled.div`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   margin: 1em;
 
   p {
@@ -54,9 +51,9 @@ export const Content = styled.div`
   blockquote {
     padding: 5px 5px 5px 10px;
     border-left: 3px solid #215c84;
-    border-left-color: ${colors.brand2};
-    background-color: ${colors.backgrounds.level3};
-    color: ${colors.fonts.boxedText};
+    border-left-color: var(--color-brand2);
+    background-color: var(--color-background-level3);
+    color: var(--color-font-boxedText);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     font-style: italic;
@@ -68,7 +65,7 @@ export const Content = styled.div`
   }
 
   blockquote code {
-    color: ${colors.fonts.boxedText};
+    color: var(--color-font-boxedText);
   }
 
   h2,
@@ -118,12 +115,12 @@ export const Content = styled.div`
 
   ol li {
     margin-bottom: 0.7em;
-    color: ${colors.fonts.text};
+    color: var(--color-font-text);
   }
 
   ol li::marker {
     font-weight: bold;
-    color: ${colors.fonts.text};
+    color: var(--color-font-text);
   }
 
   table {
@@ -135,35 +132,35 @@ export const Content = styled.div`
   }
 
   th {
-    background-color: ${colors.backgrounds.tableHeader};
-    color: ${colors.fonts.tableHeader};
+    background-color: var(--color-background-tableHeader);
+    color: var(--color-font-tableHeader);
     font-weight: bold;
     padding: 10px;
     text-align: left;
-    border-left: 3px solid ${colors.borders.tableHeader};
+    border-left: 3px solid var(--color-border-tableHeader);
   }
 
   tbody tr:nth-child(odd) {
-    background-color: ${colors.backgrounds.tableRowOdd};
-    color: ${colors.fonts.boxedText};
+    background-color: var(--color-background-tableRowOdd);
+    color: var(--color-font-boxedText);
   }
 
   tbody tr:nth-child(even) {
-    background-color: ${colors.backgrounds.tableRowEven};
-    color: ${colors.fonts.boxedText};
+    background-color: var(--color-background-tableRowEven);
+    color: var(--color-font-boxedText);
   }
 
   tbody tr code {
-    color: ${colors.fonts.boxedText};
+    color: var(--color-font-boxedText);
   }
 
   thead th code {
-    color: ${colors.fonts.tableHeader};
+    color: var(--color-font-tableHeader);
   }
 
   td {
     padding: 10px;
-    border-left: 3px solid ${colors.borders.tableRow};
+    border-left: 3px solid var(--color-border-tableRow);
   }
 
   th:first-child,

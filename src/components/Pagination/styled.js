@@ -1,25 +1,22 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
 import Button from "../Button"
 
-const { colors, fonts, radius, shadows } = darkTheme;
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1em 0;
-  background-color: ${colors.backgrounds.level2};
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  background-color: var(--color-background-level2);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 export const Text = styled.p`
-  font: ${fonts.infos};
+  font: var(--font-infos);
   font-weight: bold;
-  color: ${colors.fonts.text};
+  color: var(--color-font-text);
   margin: 0px 1em;
 `
 
@@ -35,7 +32,7 @@ const Arrow = styled.div`
   border-top-style: solid;
   border-right-style: solid;
   border-color: ${({ disabled }) =>
-    disabled ? colors.fonts.primaryButtonDisabled : colors.fonts.primaryButton};
+    disabled ? 'var(--color-font-primaryButtonDisabled)' : 'var(--color-font-primaryButton)'};
 `
 
 export const RightArrow = styled(Arrow)`
@@ -50,5 +47,5 @@ export const NoLink = styled.span`
   padding: 0.5em 1em;
   cursor: not-allowed;
   background-color: #999;
-  border-radius: ${radius.small};
+  border-radius: var(--radius-small);
 `

@@ -7,6 +7,10 @@ const GlobalStyles = createGlobalStyle`
    License: none (public domain)
 */
 
+* {
+	transition: background-color 1s ease, color 1s ease;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -149,6 +153,13 @@ body.dark{
 	--color-font-primaryButtonDisabled: ${dark.colors.fonts.primaryButtonDisabled};
 	--color-font-tableHeader: ${dark.colors.fonts.tableHeader};
 	--color-font-footer: ${dark.colors.fonts.footer};
+	--color-font-category1: ${dark.colors.fonts.category1};
+	--color-font-category2: ${dark.colors.fonts.category2};
+	--color-font-category3: ${dark.colors.fonts.category3};
+	--color-font-category4: ${dark.colors.fonts.category4};
+	--color-font-category5: ${dark.colors.fonts.category5};
+	--color-font-category6: ${dark.colors.fonts.category6};
+	--color-font-jumboTitle: ${dark.colors.fonts.jumboTitle};
 
 	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
 	--color-border-a11yPrimaryButton: ${dark.colors.borders.a11yPrimaryButton};
@@ -168,6 +179,10 @@ body.dark{
 	--color-background-tableHeader: ${dark.colors.backgrounds.tableHeader};
 	--color-background-tableRowOdd: ${dark.colors.backgrounds.tableRowOdd};
 	--color-background-tableRowEven: ${dark.colors.backgrounds.tableRowEven};
+	--color-background-title: ${dark.colors.backgrounds.title};
+	--color-background-jumboTitle: ${dark.colors.backgrounds.jumboTitle};
+	--color-background-themeButtonSlider: ${dark.colors.backgrounds.themeButtonSlider};
+	--color-background-themeButtonToggle: ${dark.colors.backgrounds.themeButtonToggle};
 
 	--font-text: ${dark.fonts.text};
 	--font-title: ${dark.fonts.title};
@@ -203,6 +218,13 @@ body.light{
 	--color-font-primaryButtonDisabled: ${light.colors.fonts.primaryButtonDisabled};
 	--color-font-tableHeader: ${light.colors.fonts.tableHeader};
 	--color-font-footer: ${light.colors.fonts.footer};
+	--color-font-category1: ${light.colors.fonts.category1};
+	--color-font-category2: ${light.colors.fonts.category2};
+	--color-font-category3: ${light.colors.fonts.category3};
+	--color-font-category4: ${light.colors.fonts.category4};
+	--color-font-category5: ${light.colors.fonts.category5};
+	--color-font-category6: ${light.colors.fonts.category6};
+	--color-font-jumboTitle: ${light.colors.fonts.jumboTitle};
 
 	--color-border-a11yLink: ${light.colors.borders.a11yLink};
 	--color-border-a11yPrimaryButton: ${light.colors.borders.a11yPrimaryButton};
@@ -222,6 +244,10 @@ body.light{
 	--color-background-tableHeader: ${light.colors.backgrounds.tableHeader};
 	--color-background-tableRowOdd: ${light.colors.backgrounds.tableRowOdd};
 	--color-background-tableRowEven: ${light.colors.backgrounds.tableRowEven};
+	--color-background-title: ${light.colors.backgrounds.title};
+	--color-background-jumboTitle: ${light.colors.backgrounds.jumboTitle};
+	--color-background-themeButtonSlider: ${light.colors.backgrounds.themeButtonSlider};
+	--color-background-themeButtonToggle: ${light.colors.backgrounds.themeButtonToggle};
 
 	--font-text: ${light.fonts.text};
 	--font-title: ${light.fonts.title};

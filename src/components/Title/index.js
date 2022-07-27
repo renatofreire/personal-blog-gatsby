@@ -1,21 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-
 import styled, { css } from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
-const {colors, fonts} = darkTheme
-
 const defaultStyle = css`
-  font: ${fonts.title};
-  background-color: ${colors.backgrounds.level2};
-  color: ${colors.fonts.title};
+  font: var(--font-title);
+  background-color: var(--color-background-title);
+  color: var(--color-font-title);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 0.5em;
-  border-bottom: 2px solid ${colors.brand2};
+  padding: 1em;
+  border-bottom: 2px solid var(--color-brand2);
 
   a {
     color: inherit;

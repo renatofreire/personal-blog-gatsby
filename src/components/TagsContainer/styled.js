@@ -1,9 +1,5 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
-const {colors, fonts} = darkTheme;
-
 export const TagsContainer = styled.div`
   grid-area: tags;
   display: flex;
@@ -16,8 +12,8 @@ export const TagsContainer = styled.div`
 `
 
 export const TagsTitle = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.info};
+  font: var(--font-text);
+  color: var(--color-font-info);
   font-weight: bold;
   margin-right: 0.5em;
 `
@@ -28,15 +24,15 @@ export const TagsList = styled.ul`
 `
 
 export const TagItem = styled.li`
-  font: ${fonts.infos};
-  color: ${colors.fonts.info};
+  font: var(--font-infos);
+  color: var(--color-font-info);
   margin: 0.5em 0;
 
   &:after {
     content: "";
     width: 5px;
     height: 5px;
-    background-color: ${colors.fonts.info};
+    background-color: var(--color-font-info);
     border-radius: 5px;
     margin: 0px 0.5em;
     display: inline-block;

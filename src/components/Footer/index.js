@@ -29,12 +29,12 @@ const Footer = () => {
             {categories &&
               categories.map(categorySlug => {
                 const category = categoriesInfo(categorySlug)
-                const { cssVariable, label, slug } = category
+                const { categoryColor, label, slug } = category
                 return (
                   category && (
                     <S.Category key={slug}>
                       <S.CategoryLink to={`/${slug}`}>
-                        <S.CategoryBadge size={16} color={cssVariable} />
+                        <S.CategoryBadge size={16} color={categoryColor} />
                         {label}
                       </S.CategoryLink>
                     </S.Category>
