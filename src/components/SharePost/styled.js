@@ -1,18 +1,14 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
-const { colors, fonts, radius, shadows } = darkTheme;
-
 export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
   margin: 2em 0;
-  background-color: ${colors.backgrounds.level2};
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  background-color: var(--color-background-level2);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 
   @media (max-width: 430px) {
     flex-direction: column;
@@ -20,8 +16,8 @@ export const Container = styled.div`
   }
 `
 export const Text = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   font-weight: bold;
 `
 

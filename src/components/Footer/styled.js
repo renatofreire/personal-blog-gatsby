@@ -2,19 +2,16 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 import PageContainer from "../../styles/container"
-import { darkTheme } from "../../styles/tokens"
 
 import CategoryBadgeComponent from "../CategoryBadge"
 
-const {colors, fonts} = darkTheme;
-
 export const Footer = styled.footer`
   margin-top: 2em;
-  background-color: ${colors.brand2};
+  background-color: var(--color-brand2);
 `
 
 export const CategoriesContainer = styled.div`
-  background-color: ${colors.backgrounds.level1};
+  background-color: var(--color-background-level1);
   margin-top: 3px;
 `
 
@@ -40,8 +37,8 @@ export const CategoryList = styled.ul`
 export const Category = styled.li``
 
 export const CategoryLink = styled(Link)`
-  font: ${fonts.text};
-  color: ${colors.fonts.navigationLink};
+  font: var(--font-text);
+  color: var(--color-font-navigationLink);
   display: inline-flex;
   align-items: center;
   padding: 0 0.5em;
@@ -57,7 +54,7 @@ export const LinksContainer = styled.div`
 
   & a:active,
   & a:focus {
-    border: 1px dotted ${colors.borders.a11yFooterLink};
+    border: 1px dotted var(--color-border-a11yFooterLink);
   }
 `
 
@@ -92,8 +89,8 @@ export const Logo = styled.img`
 `
 
 export const SocialLinksText = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.footer};
+  font: var(--font-text);
+  color: var(--color-font-footer);
   font-weight: bold;
   margin-right: 10px;
   text-align: center;

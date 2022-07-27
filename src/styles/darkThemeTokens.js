@@ -23,6 +23,13 @@ const fontColors = {
   primaryButtonDisabled: "#D3D3D3",
   tableHeader: "#333333",
   footer: "#333333",
+  category1: rawColors.category1,
+  category2: rawColors.category2,
+  category3: rawColors.category3,
+  category4: rawColors.category4,
+  category5: rawColors.category5,
+  category6: rawColors.category6,
+  jumboTitle: "#FFFFFF",
 }
 
 const borderColors = {
@@ -46,6 +53,10 @@ const backgrounds = {
   tableHeader: "#73E3E8",
   tableRowOdd: "#777777",
   tableRowEven: "#999999",
+  title: "#555555",
+  jumboTitle: "#555555",
+  themeButtonSlider: "#222222",
+  themeButtonToggle: "#777777" 
 }
 
 const colors = {

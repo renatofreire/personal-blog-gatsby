@@ -1,22 +1,18 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
 import CategoryBadgeComponent from "../CategoryBadge"
 import TitleComponent from "../Title"
 
-const { colors, fonts, radius, shadows } = darkTheme;
-
 export const Content = styled.div`
   margin-bottom: 2em;
-  background-color: ${colors.backgrounds.level2};
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  background-color: var(--color-background-level2);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
   overflow: hidden;
 `
 
 export const Title = styled(TitleComponent)`
-  background-color: ${colors.backgrounds.level1};
+  background-color: var(--color-background-level1);
   font-size: 1.3em;
 `
 
@@ -30,11 +26,11 @@ export const CategoryBadge = styled(CategoryBadgeComponent)`
 `
 
 export const Category = styled.p`
-  color: ${({ color }) => color};
+  color: ${({ color }) => `var(--${color})`};
 `
 
 export const Description = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   padding: 1em;
 `

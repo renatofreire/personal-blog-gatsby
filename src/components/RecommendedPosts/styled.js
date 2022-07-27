@@ -1,16 +1,11 @@
 import styled from "styled-components"
 
-import { darkTheme } from "../../styles/tokens"
-
 import Title from "../Title"
 import Button from "../Button"
-
-const {colors, fonts, radius, shadows} = darkTheme
 
 export const Container = styled.div``
 
 export const SectionTitle = styled(Title)`
-  background-color: ${colors.backgrounds.base};
   margin-bottom: 1em;
 `
 
@@ -28,9 +23,9 @@ export const PostContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr auto;
   overflow: hidden;
-  background-color: ${colors.backgrounds.level2};
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  background-color: var(--color-background-level2);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 export const PostTitle = styled(Title)`
@@ -49,8 +44,8 @@ export const PostInfos = styled.div`
 `
 
 export const PostDate = styled.p`
-  font: ${fonts.infos};
-  color: ${colors.fonts.info};
+  font: var(--font-infos);
+  color: var(--color-font-info);
   margin: 0 1em;
 
   @media (max-width: 500px) {
@@ -59,8 +54,8 @@ export const PostDate = styled.p`
 `
 
 export const PostExcerpt = styled.p`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
   padding: 0 1em;
 `
 

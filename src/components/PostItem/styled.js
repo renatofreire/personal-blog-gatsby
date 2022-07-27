@@ -1,22 +1,18 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { darkTheme } from "../../styles/tokens"
-
 import Button from "../Button"
 import TitleComponent from "../Title"
 import TagsContainerComponent from "../TagsContainer"
 
-const { colors, fonts, radius, shadows } = darkTheme;
-
 export const PostContainer = styled.article`
   display: flex;
   flex-direction: column;
-  background-color: ${colors.backgrounds.level2};
+  background-color: var(--color-background-level2);
   margin-bottom: 2em;
   overflow: hidden;
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-default);
 `
 
 export const Title = styled(TitleComponent)`
@@ -79,15 +75,15 @@ export const TextContainer = styled.div`
 `
 
 export const Date = styled.time`
-  font: ${fonts.infos};
-  color: ${colors.fonts.info};
+  font: var(--font-infos);
+  color: var(--color-font-info);
   margin-bottom: 1em;
   display: block;
 `
 
 export const Excerpt = styled.div`
-  font: ${fonts.text};
-  color: ${colors.fonts.text};
+  font: var(--font-text);
+  color: var(--color-font-text);
 `
 
 export const PostLink = styled(Button)`

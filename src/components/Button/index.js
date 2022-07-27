@@ -2,35 +2,31 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { darkTheme } from "../../styles/tokens"
-
-const {colors, fonts, radius, shadows} = darkTheme;
-
 const StyledButton = styled(Link)`
   display: flex;
   justify-content: center;
 
-  font: ${fonts.infos};
-  color: ${colors.fonts.primaryButton};
+  font: var(--font-infos);
+  color: var(--color-font-primaryButton);
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
-  background-color: ${colors.backgrounds.primaryButton};
+  background-color: var(--color-background-primaryButton);
   padding: 0.5em;
-  border-radius: ${radius.small};
-  box-shadow: ${shadows.default};
+  border-radius:var(--radius-small);
+  box-shadow: var(--shadows-default);
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: ${colors.backgrounds.primaryButtonHover};
-    box-shadow: ${shadows.hover};
+    background-color: var(--color-background-primaryButtonHover);
+    box-shadow: var(--shadow-hover);
   }
 
   &:active,
   &:focus {
-    border: 1px dotted ${colors.borders.a11yPrimaryButton};
+    border: 1px dotted var(--color-border-a11yPrimaryButton);
   }
 `
 
