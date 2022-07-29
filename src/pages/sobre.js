@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import {StaticImage} from "gatsby-plugin-image"
 
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
@@ -53,8 +52,8 @@ const SocialLinksText = styled(Text)`
   margin-bottom: 0;
 `
 
-const Image = styled(Img)`
-  width: 250px;
+const ImageWrapper = styled.div`
+
   grid-area: img;
 `
 
@@ -64,19 +63,7 @@ const StyledSocialLinks = styled(SocialLinks)`
 `
 
 const IndexPage = () => {
-  const { image } = useStaticQuery(
-    graphql`
-      query {
-        image: file(relativePath: { eq: "placeholder.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 250) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
-      }
-    `
-  )
+ 
 
   return (
     <Layout>
@@ -116,7 +103,17 @@ const IndexPage = () => {
             </Text>
 
             <SocialLinksContainer>
-              <Image fluid={image.childImageSharp.fluid} />
+              <ImageWrapper>
+
+              <StaticImage 
+                src="../images/placeholder.png" 
+                alt="Logo do blog" 
+                width={250}
+                height={250}
+                placeholder="tracedSVG"
+                />
+              </ImageWrapper>
+              
               <SocialLinksText>
                 Enfim, estou aberto para qualquer tipo de feedback, então aqui
                 estão os links das minhas redes sociais:
