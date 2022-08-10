@@ -30,6 +30,8 @@ const fontColors = {
   category5: "#333333",
   category6: "#333333",
   jumboTitle: "#FFFFFF",
+  menuTitle: "#73E3E8",
+  menuItem: "#FFFFFF"
 }
 
 const borderColors = {
@@ -56,7 +58,8 @@ const backgrounds = {
   title: "#FFFFFF",
   jumboTitle: "#333333",
   themeButtonSlider: "#DDDDDD",
-  themeButtonToggle: "#777777"
+  themeButtonToggle: "#777777",
+  sideBar: "#333333"
 }
 
 const colors = {
@@ -70,6 +73,7 @@ const fonts = {
   text: "1em/1.5em Verdana, Tahoma, sans-serif",
   title: "1.5em Verdana, Tahoma, sans-serif",
   infos: "0.9em Verdana, Tahoma, sans-serif",
+  menuTitle: "1em Open Sans, Verdana, Tahoma, sans-serif",
 }
 
 const radius = {
