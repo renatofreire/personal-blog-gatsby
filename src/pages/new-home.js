@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import {StaticImage} from "gatsby-plugin-image"
 
-import Layout from "../components/new/NewLayout"
+import Layout from "../components/new/Layout"
 import SEO from "../components/seo"
 import Title from "../components/Title"
 import SocialLinks from "../components/SocialLinks"

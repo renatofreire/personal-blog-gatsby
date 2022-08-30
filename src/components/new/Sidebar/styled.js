@@ -8,8 +8,10 @@ export const Bar = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 3px #000;
+  box-shadow: var(--shadow-sideBar);
   overflow: auto;
+  position: sticky;
+  top: 0;
 `
 
 export const Logo = styled.img`

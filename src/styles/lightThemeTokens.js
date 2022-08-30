@@ -14,7 +14,7 @@ const fontColors = {
   title: "#333333",
   text: "#222222",
   boxedText: "#000000",
-  info: "#222222",
+  infos: "#222222",
   code: "#222222",
   link: "#6F69ED",
   visitedLink: "#2c2a5e",
@@ -43,7 +43,7 @@ const borderColors = {
 }
 
 const backgrounds = {
-  base: "#DDDDDD",
+  base: "#FFFFFF",
   contrast: "#FFFFFF",
   level1: "#333333",
   level2: "#FFFFFF",
@@ -57,9 +57,12 @@ const backgrounds = {
   tableRowEven: "#DDDDDD",
   title: "#FFFFFF",
   jumboTitle: "#333333",
-  themeButtonSlider: "#DDDDDD",
-  themeButtonToggle: "#777777",
-  sideBar: "#333333"
+  themeButtonSlider: "#BBBBBB",
+  themeButtonToggle: "#FFFFFF",
+  sideBar: "#333333",
+  iconFill: "#FFF",
+  paginationIcon: "#FFFFFF",
+  paginationIconDisabled: "#333333",
 }
 
 const colors = {
@@ -71,8 +74,8 @@ const colors = {
 
 const fonts = {
   text: "1em/1.5em Verdana, Tahoma, sans-serif",
-  title: "1.5em Verdana, Tahoma, sans-serif",
-  infos: "0.9em Verdana, Tahoma, sans-serif",
+  title: "2em Verdana, Tahoma, sans-serif",
+  infos: "0.875em Verdana, Tahoma, sans-serif",
   menuTitle: "1em Open Sans, Verdana, Tahoma, sans-serif",
 }
 
@@ -86,6 +89,8 @@ const shadows = {
   hover:
     "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
   header: "0px 1px 5px 0px #333333",
+  sideBar: "2px 0 3px #444444",
+  controlComponent: "0px 0px 5px 0px #000000",
 }
 
 module.exports = {

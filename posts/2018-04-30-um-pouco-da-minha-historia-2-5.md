@@ -1,10 +1,11 @@
 ---
 title: Um pouco da minha historia (2/5)
 date: 2018-04-30 11:00 -0300
+updatedAt: 2018-06-30 11:00 -0300
 
 description: "Neste segundo post eu conto como foi minha experiência no curso técnico de informática, onde eu dei meus primeiros passos em desenvolvimento de softwares."
 
-category: career
+category: mobile
 tags:
   - início de carreira
   - minha história

@@ -14,7 +14,7 @@ const fontColors = {
   title: "#FFFFFF",
   text: "#FFFFFF",
   boxedText: "#000000",
-  info: "#FFFFFF",
+  infos: "#FFFFFF",
   code: "#FFFFFF",
   link: "#73E3E8",
   visitedLink: "#C7C7FA",
@@ -57,9 +57,12 @@ const backgrounds = {
   tableRowEven: "#999999",
   title: "#555555",
   jumboTitle: "#555555",
-  themeButtonSlider: "#222222",
+  themeButtonSlider: "#000000",
   themeButtonToggle: "#777777",
-  sideBar: "#333333"
+  sideBar: "#333333",
+  iconFill: "#FFFFFF",
+  paginationIcon: "#FFFFFF",
+  paginationIconDisabled: "#333333",
 }
 
 const colors = {
@@ -71,8 +74,8 @@ const colors = {
 
 const fonts = {
   text: "1em/1.5em Open Sans, Verdana, Tahoma, sans-serif",
-  title: "1.5em Open Sans, Verdana, Tahoma, sans-serif",
-  infos: "0.9em Open Sans, Verdana, Tahoma, sans-serif",
+  title: "2em Open Sans, Verdana, Tahoma, sans-serif",
+  infos: "0.875em Open Sans, Verdana, Tahoma, sans-serif",
   menuTitle: "1em  Open Sans, Verdana, Tahoma, sans-serif",
 }
 
@@ -86,6 +89,8 @@ const shadows = {
   hover:
     "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
   header: "0px 1px 5px 0px #000000",
+  sideBar: "2px 0 3px rgba(0, 0, 0, 0.5)",
+  controlComponent: "0px 0px 5px 0px #FFFFFF",
 }
 
 module.exports = {

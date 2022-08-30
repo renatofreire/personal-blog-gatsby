@@ -4,7 +4,7 @@ date: 2018-04-30 09:41 -0300
 
 description: "Neste post conto um pouco do começo da minha história. Começando desde a infância, falando um pouco sobre meu primerio contato com um computador e como fui aprendendo as coisas aos pouco."
 
-category: career
+category: back
 tags:
   - início de carreira
   - minha história

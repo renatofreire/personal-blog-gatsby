@@ -4,13 +4,13 @@ import { graphql } from "gatsby"
 
 import Container from "../styles/container"
 
-import Layout from "../components/Layout"
+import Layout from "../components/new/Layout"
 import SEO from "../components/seo"
-import PostItem from "../components/PostItem"
-import Pagination from "../components/Pagination"
+import PostItem from "../components/new/PostItem"
+import Pagination from "../components/new/Pagination"
 
 const PageContainer = styled(Container)`
-  padding-top: 2em;
+  padding-top: 5em;
 `
 
 const BlogList = props => {
@@ -26,7 +26,7 @@ const BlogList = props => {
           ({
             node: {
               id,
-              frontmatter: { title, category, date, tags, image, altImage },
+              frontmatter: { title, category, date, updatedAt, tags, image, altImage },
               excerpt,
               fields: { url },
             },
@@ -36,6 +36,7 @@ const BlogList = props => {
               title={title}
               category={category}
               date={date}
+              updatedAt={updatedAt}
               image={image}
               altImage={altImage}
               excerpt={excerpt}
@@ -63,6 +64,7 @@ export const query = graphql`
           frontmatter {
             title
             date(locale: "pt-br", formatString: "DD/MM/YYYY")
+            updatedAt(locale: "pt-br", formatString: "DD/MM/YYYY")
             category
             tags
             image {

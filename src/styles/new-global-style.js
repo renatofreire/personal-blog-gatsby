@@ -83,6 +83,7 @@ a {
 
 a:active, a:focus,
 button:active, button:focus  {
+	outline: none;
 	border: 1px dotted var(--color-border-a11yLink);
 }
 
@@ -150,15 +151,27 @@ body.dark{
 
 	--color-font-title: ${dark.colors.fonts.title};
 	--color-font-text: ${dark.colors.fonts.text};
+	--color-font-infos: ${dark.colors.fonts.infos};
 	--color-font-menuTitle: ${dark.colors.fonts.menuTitle};
 	--color-font-menuItem: ${dark.colors.fonts.menuItem};
 
+	--color-background-base: ${dark.colors.backgrounds.base};
 	--color-background-sideBar: ${dark.colors.backgrounds.sideBar};
+	--color-background-iconFill: ${dark.colors.backgrounds.iconFill};
+	--color-background-paginationIcon: ${dark.colors.backgrounds.paginationIcon};
+	--color-background-paginationIconDisabled: ${dark.colors.backgrounds.paginationIconDisabled};
+	--color-background-themeButtonSlider: ${dark.colors.backgrounds.themeButtonSlider};
+	--color-background-themeButtonToggle: ${dark.colors.backgrounds.themeButtonToggle};
+	
+	--color-border-a11yLink: ${dark.colors.borders.a11yLink};
 
 	--font-text: ${dark.fonts.text};
 	--font-title: ${dark.fonts.title};
 	--font-infos: ${dark.fonts.infos};
 	--font-menuTitle: ${dark.fonts.menuTitle};
+
+	--shadow-controlComponent: ${dark.shadows.controlComponent};
+	--shadow-sideBar: ${dark.shadows.sideBar};
 }
 
 body.light{
@@ -181,15 +194,27 @@ body.light{
 
 	--color-font-title: ${light.colors.fonts.title};
 	--color-font-text: ${light.colors.fonts.text};
+	--color-font-infos: ${light.colors.fonts.infos};
 	--color-font-menuTitle: ${light.colors.fonts.menuTitle};
 	--color-font-menuItem: ${light.colors.fonts.menuItem};
 
+	--color-background-base: ${light.colors.backgrounds.base};
 	--color-background-sideBar: ${light.colors.backgrounds.sideBar};
+	--color-background-iconFill: ${light.colors.backgrounds.iconFill};
+	--color-background-paginationIcon: ${light.colors.backgrounds.paginationIcon};
+	--color-background-paginationIconDisabled: ${light.colors.backgrounds.paginationIconDisabled};
+	--color-background-themeButtonSlider: ${light.colors.backgrounds.themeButtonSlider};
+	--color-background-themeButtonToggle: ${light.colors.backgrounds.themeButtonToggle};
+
+	--color-border-a11yLink: ${light.colors.borders.a11yLink};	
 
 	--font-text: ${light.fonts.text};
 	--font-title: ${light.fonts.title};
 	--font-infos: ${light.fonts.infos};
 	--font-menuTitle: ${light.fonts.menuTitle};
+
+	--shadow-controlComponent: ${light.shadows.controlComponent};
+	--shadow-sideBar: ${light.shadows.sideBar};
 }
 `
 
